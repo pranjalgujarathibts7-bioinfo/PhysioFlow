@@ -1,5 +1,6 @@
 import json
 import streamlit as st
+from utils.shapes import get_shape_for_system
 
 st.set_page_config(page_title="PhysioFlow", page_icon="🫀", layout="wide")
 
@@ -26,27 +27,13 @@ st.markdown(f"## {sysdata['icon']} {sysdata['name']}")
 st.write(sysdata["summary"])
 
 st.divider()
-
-import numpy as np
-import plotly.graph_objects as go
-
 st.subheader("3D preview")
 
-u = np.linspace(0, 2 * np.pi, 60)
-v = np.linspace(0, np.pi, 60)
-U, V = np.meshgrid(u, v)
+import plotly.graph_objects as go
 
-# Heart-shaped parametric surface
-x = np.sin(V) * (15 * np.sin(U) - 4 * np.sin(3 * U))
-y = np.sin(V) * (15 * np.cos(U) - 5 * np.cos(2 * U) - 2 * np.cos(3 * U) - np.cos(4 * U))
-z = 8 * np.cos(V) * 6
+x, y, z, colorscale = get_shape_for_system(selected)
 
-# Normalize so it's a reasonable, consistent size
-x = x / np.abs(x).max()
-y = y / np.abs(y).max()
-z = z / np.abs(z).max()
-
-fig = go.Figure(data=[go.Surface(x=x, y=y, z=z, colorscale="Reds", showscale=False)])
+fig = go.Figure(data=[go.Surface(x=x, y=y, z=z, colorscale=colorscale, showscale=False)])
 
 fig.update_layout(
     scene=dict(
