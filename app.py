@@ -58,4 +58,6 @@ for i in range(0, len(keys), cols_per_row):
                 """,
                 unsafe_allow_html=True,
             )
-            st.button("Explore →", key=f"btn_{key}")
+            if st.button("Explore →", key=f"btn_{key}"):
+                st.session_state["selected_system"] = key
+                st.switch_page("pages/1_Organ_View.py")
