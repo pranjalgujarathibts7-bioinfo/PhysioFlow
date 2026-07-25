@@ -1,0 +1,13 @@
+{
+  "cardiovascular": {"name": "Cardiovascular", "icon": "❤️", "summary": "Heart and blood flow"},
+  "nervous": {"name": "Nervous system", "icon": "🧠", "summary": "Brain and signaling"},
+  "respiratory": {"name": "Respiratory", "icon": "🫁", "summary": "Lungs and gas exchange"},
+  "digestive": {"name": "Digestive", "icon": "🍽️", "summary": "Gut and nutrient uptake"},
+  "renal": {"name": "Renal", "icon": "🫘", "summary": "Kidneys and filtration"},
+  "skeletal": {"name": "Skeletal", "icon": "🦴", "summary": "Bones and structural support"},
+  "muscular": {"name": "Muscular", "icon": "💪", "summary": "Movement and force"},
+  "endocrine": {"name": "Endocrine", "icon": "⚗️", "summary": "Hormones and regulation"},
+  "lymphatic": {"name": "Lymphatic / immune", "icon": "🛡️", "summary": "Defense and fluid balance"},
+  "reproductive": {"name": "Reproductive", "icon": "🌸", "summary": "Reproduction and hormones"},
+  "integumentary": {"name": "Integumentary", "icon": "🧴", "summary": "Skin and temperature regulation"}
+}
