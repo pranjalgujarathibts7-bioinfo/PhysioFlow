@@ -60,28 +60,67 @@ def get_shape_for_system(key: str):
     return x, y, z, entry["color"]
 
 def anatomical_heart():
-    u = np.linspace(0, 2 * np.pi, 60)
-    v = np.linspace(0, np.pi, 60)
-    U, V = np.meshgrid(u, v)
+    # Classic 2D heart outline (parametric heart curve), then extrude/taper into 3D
+    t = np.linspace(0, 2 * np.pi, 80)
+    outline_x = 16 * np.sin(t) ** 3
+    outline_y = 13 * np.cos(t) - 5 * np.cos(2 * t) - 2 * np.cos(3 * t) - np.cos(4 * t)
 
-    # Rounder, more compact heart silhouette than the previous version
-    r = 1 - 0.35 * np.cos(V)
-    x = r * np.sin(V) * np.cos(U) * 0.85
-    y = r * np.sin(V) * np.sin(U)
-    z = np.cos(V) * 1.15 - 0.25 * np.sin(V) ** 4
+    depth = np.linspace(-1, 1, 40)
+    T, D = np.meshgrid(t, depth)
 
-    x, y, z = _normalize(x, y, z)
+    taper = 1 - 0.65 * np.abs(D) ** 1.3  # pinches front/back toward a rounded taper
+
+    X = (16 * np.sin(T) ** 3) * taper
+    Y = (13 * np.cos(T) - 5 * np.cos(2 * T) - 2 * np.cos(3 * T) - np.cos(4 * T)) * taper
+    Z = D * 14
+
+    x, y, z = _normalize(X, Z, Y)  # reorient so the point aims downward
     return x, y, z
 
 
-def heart_landmarks():
-    # Approximate label positions on the normalized heart surface
+def heart_landmarks_v2():
+    """Labeled points with short functional descriptions for hover display."""
     return [
-        {"name": "Left ventricle", "x": -0.35, "y": 0.1, "z": -0.55},
-        {"name": "Right ventricle", "x": 0.35, "y": 0.1, "z": -0.5},
-        {"name": "Left atrium", "x": -0.4, "y": 0.15, "z": 0.55},
-        {"name": "Right atrium", "x": 0.4, "y": 0.15, "z": 0.5},
-        {"name": "Aorta", "x": 0.0, "y": 0.2, "z": 0.9},
+        {
+            "name": "Aorta",
+            "x": 0.1, "y": 0.3, "z": 1.6,
+            "desc": "Carries oxygen-rich blood from the heart to the entire body.",
+        },
+        {
+            "name": "Pulmonary artery",
+            "x": -0.6, "y": 0.3, "z": 1.3,
+            "desc": "Carries deoxygenated blood from the right ventricle to the lungs.",
+        },
+        {
+            "name": "Superior vena cava",
+            "x": 0.75, "y": 0.1, "z": 1.4,
+            "desc": "Returns deoxygenated blood from the upper body into the right atrium.",
+        },
+        {
+            "name": "Inferior vena cava",
+            "x": 0.6, "y": -0.3, "z": -1.3,
+            "desc": "Returns deoxygenated blood from the lower body into the right atrium.",
+        },
+        {
+            "name": "Left ventricle",
+            "x": -0.65, "y": -0.5, "z": -0.6,
+            "desc": "Pumps oxygenated blood into the aorta and out to the body.",
+        },
+        {
+            "name": "Right ventricle",
+            "x": 0.65, "y": -0.5, "z": -0.55,
+            "desc": "Pumps deoxygenated blood into the pulmonary artery toward the lungs.",
+        },
+        {
+            "name": "Left atrium",
+            "x": -0.7, "y": -0.4, "z": 0.6,
+            "desc": "Receives oxygenated blood returning from the lungs.",
+        },
+        {
+            "name": "Right atrium",
+            "x": 0.7, "y": -0.4, "z": 0.5,
+            "desc": "Receives deoxygenated blood returning from the body.",
+        },
     ]
 
 def _cylinder(start, end, radius, n=20):

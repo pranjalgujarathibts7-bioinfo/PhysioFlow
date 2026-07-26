@@ -1,7 +1,8 @@
 import json
 import streamlit as st
+import numpy as np
 import plotly.graph_objects as go
-from utils.shapes import get_shape_for_system, anatomical_heart, heart_landmarks
+from utils.shapes import get_shape_for_system, anatomical_heart, heart_landmarks_v2, heart_vessels
 
 st.set_page_config(page_title="PhysioFlow", page_icon="🫀", layout="wide")
 
@@ -35,36 +36,30 @@ with col_3d:
     st.subheader("3D preview")
 
     if selected == "cardiovascular":
-        from utils.shapes import anatomical_heart, heart_vessels, heart_landmarks_v2
+        from utils.mesh_loader import load_heart_mesh
 
-        x, y, z = anatomical_heart()
-        fig = go.Figure(data=[go.Surface(
-            x=x, y=y, z=z,
-            colorscale=[[0, "#8A2A2A"], [0.5, "#B23A3A"], [1, "#CC5555"]],
+        mesh_data = load_heart_mesh()
+
+        y_vals = np.array(mesh_data["y"])
+        y_min, y_max = y_vals.min(), y_vals.max()
+        # Normalize so the top ~25% of the mesh (where vessels are) shades toward blue
+        intensity = (y_vals - y_min) / (y_max - y_min)
+
+        fig = go.Figure(data=[go.Mesh3d(
+            x=mesh_data["x"], y=mesh_data["y"], z=mesh_data["z"],
+            i=mesh_data["i"], j=mesh_data["j"], k=mesh_data["k"],
+            intensity=intensity,
+            colorscale=[
+                [0.0, "#9E3A3A"],
+                [0.65, "#9E3A3A"],
+                [0.8, "#7A4A6E"],
+                [1.0, "#3B6FC2"],
+            ],
             showscale=False,
-            lighting=dict(ambient=0.55, diffuse=0.85, specular=0.4, roughness=0.4),
-            hoverinfo="skip",
+            opacity=1.0,
+            lighting=dict(ambient=0.35, diffuse=0.9, specular=0.25, roughness=0.65, fresnel=0.1),
+            flatshading=False,
         )])
-
-        for vessel in heart_vessels():
-            fig.add_trace(go.Surface(
-                x=vessel["x"], y=vessel["y"], z=vessel["z"],
-                colorscale=[[0, vessel["color"]], [1, vessel["color"]]],
-                showscale=False,
-                hoverinfo="skip",
-            ))
-
-        for pt in heart_landmarks_v2():
-            fig.add_trace(go.Scatter3d(
-                x=[pt["x"]], y=[pt["y"]], z=[pt["z"]],
-                mode="markers+text",
-                marker=dict(size=5, color="#F5EDE8", line=dict(width=1, color="#000000")),
-                text=[pt["name"]],
-                textposition="top center",
-                textfont=dict(size=10, color="#F5EDE8"),
-                hovertemplate=f"<b>{pt['name']}</b><br>{pt['desc']}<extra></extra>",
-                showlegend=False,
-            ))
 
     else:
         x, y, z, colorscale = get_shape_for_system(selected)
@@ -76,6 +71,8 @@ with col_3d:
             yaxis=dict(visible=False),
             zaxis=dict(visible=False),
             camera=dict(eye=dict(x=0, y=-2.2, z=0.3)),
+            dragmode="orbit",
+            aspectmode="cube",
         ),
         margin=dict(l=0, r=0, t=0, b=0),
         height=500,
