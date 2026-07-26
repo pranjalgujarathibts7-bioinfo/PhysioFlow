@@ -235,3 +235,53 @@ def heart_landmarks_v2():
             "desc": "Receives deoxygenated blood returning from the body.",
         },
     ]
+
+def real_heart_landmarks():
+    """Labeled points positioned on the actual NIH heart mesh, confirmed by hovering."""
+    return [
+        {
+            "name": "Aorta",
+            "x": 0.0198, "y": 0.2868, "z": -0.0515,
+            "desc": "Carries oxygen-rich blood from the heart to the entire body.",
+        },
+        {
+            "name": "Pulmonary artery",
+            "x": -0.0220, "y": 0.2803, "z": -0.2348,
+            "desc": "Carries deoxygenated blood from the right ventricle to the lungs.",
+        },
+        {
+            "name": "Pulmonary veins",
+            "x": -0.1100, "y": 0.1023, "z": -0.2024,
+            "desc": "Carry oxygenated blood from the lungs into the left atrium.",
+        },
+        {
+            "name": "Superior vena cava",
+            "x": 0.0793, "y": 0.3428, "z": 0.1447,
+            "desc": "Returns deoxygenated blood from the upper body into the right atrium.",
+        },
+        {
+            "name": "Inferior vena cava",
+            "x": 0.0771, "y": -0.4078, "z": 0.1758,
+            "desc": "Returns deoxygenated blood from the lower body into the right atrium.",
+        },
+        {
+            "name": "Right atrium",
+            "x": 0.1808, "y": 0.0458, "z": 0.1358,
+            "desc": "Receives deoxygenated blood returning from the body.",
+        },
+        {
+            "name": "Left atrium",
+            "x": 0.0249, "y": 0.0791, "z": -0.1813,
+            "desc": "Receives oxygenated blood returning from the lungs.",
+        },
+        {
+            "name": "Right ventricle",
+            "x": 0.2355, "y": -0.2555, "z": -0.0514,
+            "desc": "Pumps deoxygenated blood into the pulmonary artery toward the lungs.",
+        },
+        {
+            "name": "Left ventricle",
+            "x": 0.0943, "y": -0.2439, "z": -0.3079,
+            "desc": "Pumps oxygenated blood into the aorta and out to the body.",
+        },
+    ]

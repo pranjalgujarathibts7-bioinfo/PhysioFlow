@@ -1,8 +1,9 @@
 import json
-import streamlit as st
 import numpy as np
+import streamlit as st
 import plotly.graph_objects as go
-from utils.shapes import get_shape_for_system, anatomical_heart, heart_landmarks_v2, heart_vessels
+from utils.shapes import get_shape_for_system, real_heart_landmarks
+from utils.mesh_loader import load_heart_mesh
 
 st.set_page_config(page_title="PhysioFlow", page_icon="🫀", layout="wide")
 
@@ -30,19 +31,18 @@ st.write(sysdata["summary"])
 
 st.divider()
 
-col_3d, col_info = st.columns([3, 2])
+col_3d, col_legend, col_info = st.columns([3, 1.3, 2])
+
+landmarks = []
 
 with col_3d:
     st.subheader("3D preview")
 
     if selected == "cardiovascular":
-        from utils.mesh_loader import load_heart_mesh
-
         mesh_data = load_heart_mesh()
 
         y_vals = np.array(mesh_data["y"])
         y_min, y_max = y_vals.min(), y_vals.max()
-        # Normalize so the top ~25% of the mesh (where vessels are) shades toward blue
         intensity = (y_vals - y_min) / (y_max - y_min)
 
         fig = go.Figure(data=[go.Mesh3d(
@@ -59,27 +59,68 @@ with col_3d:
             opacity=1.0,
             lighting=dict(ambient=0.35, diffuse=0.9, specular=0.25, roughness=0.65, fresnel=0.1),
             flatshading=False,
+            hoverinfo="skip",
         )])
 
+        landmarks = real_heart_landmarks()
+        mesh_center = np.array([
+            np.mean(mesh_data["x"]),
+            np.mean(mesh_data["y"]),
+            np.mean(mesh_data["z"]),
+        ])
+
+        for idx, pt in enumerate(landmarks, start=1):
+            point = np.array([pt["x"], pt["y"], pt["z"]])
+            direction = point - mesh_center
+            direction = direction / (np.linalg.norm(direction) + 1e-6)
+            offset_point = point + direction * 0.08
+
+            fig.add_trace(go.Scatter3d(
+                x=[offset_point[0]], y=[offset_point[1]], z=[offset_point[2]],
+                mode="markers+text",
+                marker=dict(size=16, color="#F5EDE8", line=dict(width=2, color="#1F1A18")),
+                text=[str(idx)],
+                textposition="middle center",
+                textfont=dict(size=12, color="#1F1A18", family="Arial Black"),
+                hovertemplate=f"<b>{idx}. {pt['name']}</b><br>{pt['desc']}<extra></extra>",
+                showlegend=False,
+            ))
     else:
         x, y, z, colorscale = get_shape_for_system(selected)
         fig = go.Figure(data=[go.Surface(x=x, y=y, z=z, colorscale=colorscale, showscale=False)])
 
     fig.update_layout(
         scene=dict(
-            xaxis=dict(visible=False),
-            yaxis=dict(visible=False),
-            zaxis=dict(visible=False),
-            camera=dict(eye=dict(x=0, y=-2.2, z=0.3)),
+            xaxis=dict(visible=False, range=[-1.2, 1.2]),
+            yaxis=dict(visible=False, range=[-1.2, 1.2]),
+            zaxis=dict(visible=False, range=[-1.2, 1.2]),
+            camera=dict(eye=dict(x=0, y=-2.8, z=0.4)),
             dragmode="orbit",
             aspectmode="cube",
         ),
-        margin=dict(l=0, r=0, t=0, b=0),
-        height=500,
+        margin=dict(l=40, r=40, t=20, b=20),
+        height=520,
         paper_bgcolor="rgba(0,0,0,0)",
     )
 
     st.plotly_chart(fig, use_container_width=True)
+
+    if selected == "cardiovascular":
+        st.caption("Heart model: HannahNewey / University of Dundee — CC BY-NC-SA")
+
+with col_legend:
+    if selected == "cardiovascular" and landmarks:
+        st.caption("Tap a number:")
+        legend_box = st.container(height=520, border=True)
+        with legend_box:
+            for idx, pt in enumerate(landmarks, start=1):
+                if st.button(f"{idx}. {pt['name']}", key=f"landmark_{idx}", use_container_width=True):
+                    st.session_state["active_landmark"] = idx
+
+            active = st.session_state.get("active_landmark")
+            if active:
+                pt = landmarks[active - 1]
+                st.info(f"**{active}. {pt['name']}**\n\n{pt['desc']}")
 
 with col_info:
     def render_sections(sections):
@@ -105,11 +146,12 @@ with col_info:
         if st.button("🧫 Histology", use_container_width=True):
             st.session_state["info_panel"] = "histology"
 
-    st.markdown("")
+    content_box = st.container(height=520, border=True)
 
-    if st.session_state["info_panel"] == "physiology":
-        render_sections(sysdata.get("physiology"))
-    elif st.session_state["info_panel"] == "histology":
-        render_sections(sysdata.get("histology"))
-    else:
-        st.caption("Select Physiology or Histology to view detailed content.")
+    with content_box:
+        if st.session_state["info_panel"] == "physiology":
+            render_sections(sysdata.get("physiology"))
+        elif st.session_state["info_panel"] == "histology":
+            render_sections(sysdata.get("histology"))
+        else:
+            st.caption("Select Physiology or Histology to view detailed content.")
