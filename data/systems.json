@@ -1,5 +1,89 @@
 {
-  "cardiovascular": {"name": "Cardiovascular", "icon": "❤️", "summary": "Heart and blood flow"},
+"cardiovascular": {
+    "name": "Cardiovascular",
+    "icon": "❤️",
+    "summary": "Heart and blood flow",
+    "physiology": [
+      {
+        "heading": "Cardiac chambers and valves",
+        "points": [
+          "The heart has four chambers: right atrium, right ventricle, left atrium, left ventricle, separated by the interatrial and interventricular septa.",
+          "The atrioventricular (AV) valves — tricuspid on the right, mitral (bicuspid) on the left — prevent backflow from ventricles into atria during systole.",
+          "The semilunar valves — pulmonary and aortic — prevent backflow from the great arteries into the ventricles during diastole.",
+          "Chordae tendineae anchor the AV valve cusps to papillary muscles, preventing valve prolapse into the atria under high ventricular pressure.",
+          "The left ventricle wall is roughly three times thicker than the right, reflecting the higher pressure workload of the systemic circuit versus the pulmonary circuit."
+        ]
+      },
+      {
+        "heading": "The cardiac cycle",
+        "points": [
+          "Diastole (relaxation/filling) and systole (contraction/ejection) alternate; at rest, a full cycle takes ~0.8 seconds at 75 bpm.",
+          "Isovolumetric contraction: ventricular pressure rises with all valves closed, until it exceeds arterial pressure and semilunar valves open.",
+          "Ejection phase: rapid ejection followed by reduced ejection as ventricular pressure falls toward the end of systole.",
+          "Isovolumetric relaxation: pressure falls with all valves closed, until it drops below atrial pressure and AV valves open.",
+          "Rapid filling, then diastasis (slow filling), then atrial systole ('atrial kick') contributes the final ~20% of ventricular filling.",
+          "Stroke volume = end-diastolic volume − end-systolic volume; ejection fraction (normal ~55-70%) = stroke volume / end-diastolic volume."
+        ]
+      },
+      {
+        "heading": "Cardiac conduction system",
+        "points": [
+          "The sinoatrial (SA) node, in the right atrial wall near the superior vena cava, is the primary pacemaker, intrinsically firing ~60-100 times/min.",
+          "Impulses spread through atrial myocardium to the atrioventricular (AV) node, which imposes a ~0.1s delay, allowing atrial contraction to complete before ventricular contraction begins.",
+          "From the AV node, the signal travels down the bundle of His, then the left and right bundle branches, then Purkinje fibers, which rapidly distribute the impulse through the ventricular myocardium.",
+          "Purkinje fibers conduct faster than any other cardiac tissue (up to 4 m/s), ensuring near-simultaneous ventricular contraction.",
+          "If the SA node fails, the AV node (intrinsic rate ~40-60 bpm) or Purkinje fibers (~20-40 bpm) can act as backup pacemakers."
+        ]
+      },
+      {
+        "heading": "Regulation of cardiac output",
+        "points": [
+          "Cardiac output (CO) = heart rate × stroke volume; typical resting CO is ~5 L/min.",
+          "The Frank-Starling mechanism: increased venous return stretches myocardial fibers, increasing the force of contraction (within physiological limits) — intrinsic regulation, independent of nervous control.",
+          "Sympathetic stimulation (via norepinephrine acting on β1 receptors) increases heart rate, contractility, and AV conduction velocity.",
+          "Parasympathetic stimulation (via the vagus nerve, acting on the SA and AV nodes) decreases heart rate.",
+          "Baroreceptors in the carotid sinus and aortic arch detect blood pressure changes and reflexively adjust autonomic output to the heart and vasculature."
+        ]
+      }
+    ],
+    "histology": [
+      {
+        "heading": "Layers of the heart wall",
+        "points": [
+          "Epicardium (visceral pericardium): outer layer, simple squamous mesothelium over connective tissue, often containing adipose tissue and coronary vessels.",
+          "Myocardium: the thick middle layer of cardiac muscle responsible for contraction; thickness varies by chamber, thickest in the left ventricle.",
+          "Endocardium: inner lining of simple squamous endothelium over a thin connective tissue layer, continuous with the endothelium of blood vessels."
+        ]
+      },
+      {
+        "heading": "Cardiac muscle cell structure",
+        "points": [
+          "Cardiomyocytes are striated (due to organized actin-myosin sarcomeres) but branched, unlike skeletal muscle fibers.",
+          "Each cell typically has one or two centrally located nuclei, distinguishing it from multinucleated skeletal muscle fibers.",
+          "Mitochondria are extremely abundant (up to 30-40% of cell volume), reflecting the heart's continuous, high aerobic energy demand.",
+          "Intercalated discs join adjacent cardiomyocytes end-to-end, containing three junction types: fascia adherens and desmosomes (mechanical coupling) and gap junctions (electrical coupling).",
+          "Gap junctions allow ions to pass directly between cells, enabling the myocardium to function as an electrical syncytium — a coordinated wave of depolarization rather than independent cell firing."
+        ]
+      },
+      {
+        "heading": "Conduction tissue histology",
+        "points": [
+          "Purkinje fibers are histologically distinct from contractile cardiomyocytes: larger diameter, fewer myofibrils, more glycogen, and located subendocardially.",
+          "SA and AV nodal cells are smaller, pale-staining, with fewer myofibrils than working myocardium, specialized for pacemaker activity rather than forceful contraction."
+        ]
+      },
+      {
+        "heading": "Blood vessel wall histology",
+        "points": [
+          "Tunica intima: innermost layer, simple squamous endothelium on a basement membrane, providing a non-thrombogenic surface.",
+          "Tunica media: middle layer of smooth muscle and elastic fibers; thickest in arteries (especially elastic arteries like the aorta), thin or absent in capillaries.",
+          "Tunica adventitia: outer connective tissue layer anchoring the vessel to surrounding tissue; contains vasa vasorum (small vessels supplying the vessel wall itself) in larger vessels.",
+          "Capillaries are classified as continuous (tight endothelium, e.g. muscle, CNS), fenestrated (small pores, e.g. kidney glomeruli, endocrine glands), or sinusoidal/discontinuous (large gaps, e.g. liver, spleen, bone marrow) based on permeability needs."
+        ]
+      }
+    ]
+
+},
   "nervous": {"name": "Nervous system", "icon": "🧠", "summary": "Brain and signaling"},
   "respiratory": {"name": "Respiratory", "icon": "🫁", "summary": "Lungs and gas exchange"},
   "digestive": {"name": "Digestive", "icon": "🍽️", "summary": "Gut and nutrient uptake"},
