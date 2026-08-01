@@ -2,8 +2,8 @@ import json
 import numpy as np
 import streamlit as st
 import plotly.graph_objects as go
-from utils.shapes import get_shape_for_system, real_heart_landmarks
-from utils.mesh_loader import load_heart_mesh
+from utils.shapes import get_shape_for_system, real_heart_landmarks, real_brain_landmarks
+from utils.mesh_loader import load_heart_mesh, load_brain_mesh
 
 st.set_page_config(page_title="PhysioFlow", page_icon="🫀", layout="wide")
 
@@ -85,12 +85,59 @@ with col_3d:
                 hovertemplate=f"<b>{idx}. {pt['name']}</b><br>{pt['desc']}<extra></extra>",
                 showlegend=False,
             ))
-    else:
-        x, y, z, colorscale = get_shape_for_system(selected)
-        fig = go.Figure(data=[go.Surface(x=x, y=y, z=z, colorscale=colorscale, showscale=False)])
+        else:
+            x, y, z, colorscale = get_shape_for_system(selected)
+            fig = go.Figure(data=[go.Surface(x=x, y=y, z=z, colorscale=colorscale, showscale=False)])
+
+    elif selected == "nervous":
+        mesh_data = load_brain_mesh()
+
+        z_vals = np.array(mesh_data["z"])
+        z_min, z_max = z_vals.min(), z_vals.max()
+        intensity = (z_vals - z_min) / (z_max - z_min)
+
+        fig = go.Figure(data=[go.Mesh3d(
+            x=mesh_data["x"], y=mesh_data["y"], z=mesh_data["z"],
+            i=mesh_data["i"], j=mesh_data["j"], k=mesh_data["k"],
+            intensity=intensity,
+            colorscale=[
+                [0.0, "#7A9E5A"],
+                [0.5, "#B08A6E"],
+                [1.0, "#9B7FC2"],
+            ],
+            showscale=False,
+            opacity=1.0,
+            lighting=dict(ambient=0.45, diffuse=0.85, specular=0.3, roughness=0.55),
+            flatshading=False,
+            hoverinfo="skip",
+        )])
+
+    landmarks = real_brain_landmarks()
+    mesh_center = np.array([
+            np.mean(mesh_data["x"]),
+            np.mean(mesh_data["y"]),
+            np.mean(mesh_data["z"]),
+        ])
+
+    for idx, pt in enumerate(landmarks, start=1):
+            point = np.array([pt["x"], pt["y"], pt["z"]])
+            direction = point - mesh_center
+            direction = direction / (np.linalg.norm(direction) + 1e-6)
+            offset_point = point + direction * 0.08
+
+            fig.add_trace(go.Scatter3d(
+                x=[offset_point[0]], y=[offset_point[1]], z=[offset_point[2]],
+                mode="markers+text",
+                marker=dict(size=16, color="#F5EDE8", line=dict(width=2, color="#1F1A18")),
+                text=[str(idx)],
+                textposition="middle center",
+                textfont=dict(size=12, color="#1F1A18", family="Arial Black"),
+                hovertemplate=f"<b>{idx}. {pt['name']}</b><br>{pt['desc']}<extra></extra>",
+                showlegend=False,
+            ))
 
     fig.update_layout(
-        scene=dict(
+          scene=dict(
             xaxis=dict(visible=False, range=[-1.2, 1.2]),
             yaxis=dict(visible=False, range=[-1.2, 1.2]),
             zaxis=dict(visible=False, range=[-1.2, 1.2]),
@@ -107,9 +154,11 @@ with col_3d:
 
     if selected == "cardiovascular":
         st.caption("Heart model: HannahNewey / University of Dundee — CC BY-NC-SA")
+    elif selected == "nervous":
+        st.caption("Brain model: Johnson J / NIH 3D — CC BY")
 
 with col_legend:
-    if selected == "cardiovascular" and landmarks:
+    if selected in ("cardiovascular", "nervous") and landmarks:
         st.caption("Tap a number:")
         legend_box = st.container(height=520, border=True)
         with legend_box:

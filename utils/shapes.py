@@ -285,3 +285,53 @@ def real_heart_landmarks():
             "desc": "Pumps oxygenated blood into the aorta and out to the body.",
         },
     ]
+
+def real_brain_landmarks():
+    """Labeled points on the brain mesh, confirmed by hovering."""
+    return [
+        {
+            "name": "Cerebral cortex",
+            "x": 0.1497, "y": 0.4811, "z": 0.0642,
+            "desc": "The outer layer of the cerebrum; processes sensory information, motor commands, and higher cognitive functions.",
+        },
+        {
+            "name": "Frontal lobe",
+            "x": 0.1860, "y": 0.1285, "z": 0.7256,
+            "desc": "Governs motor control, executive function, planning, and personality.",
+        },
+        {
+            "name": "Parietal lobe",
+            "x": 0.2945, "y": 0.4166, "z": -0.1870,
+            "desc": "Processes somatosensory information and spatial awareness.",
+        },
+        {
+            "name": "Occipital lobe",
+            "x": 0.3626, "y": 0.0823, "z": -0.4955,
+            "desc": "Primary center for visual processing.",
+        },
+        {
+            "name": "Temporal lobe",
+            "x": 0.3528, "y": -0.2236, "z": 0.3818,
+            "desc": "Processes auditory information, and supports memory and language comprehension.",
+        },
+        {
+            "name": "Thalamus",
+            "x": 0.4750, "y": 0.0690, "z": 0.1424,
+            "desc": "Relays and filters nearly all sensory information (except smell) on its way to the cortex.",
+        },
+        {
+            "name": "Cerebellum",
+            "x": 0.2574, "y": -0.3233, "z": -0.4374,
+            "desc": "Coordinates fine motor control, balance, posture, and motor learning.",
+        },
+        {
+            "name": "Brainstem",
+            "x": 0.0735, "y": -0.4040, "z": 0.0075,
+            "desc": "Connects the brain to the spinal cord; controls vital functions like breathing, heart rate, and consciousness.",
+        },
+        {
+            "name": "Medulla oblongata",
+            "x": 0.1055, "y": -0.6567, "z": -0.2988,
+            "desc": "The lowest part of the brainstem; regulates breathing, heart rate, and blood pressure.",
+        }
+    ]

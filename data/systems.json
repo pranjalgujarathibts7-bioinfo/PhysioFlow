@@ -1,5 +1,5 @@
 {
-"cardiovascular": {
+  "cardiovascular": {
     "name": "Cardiovascular",
     "icon": "❤️",
     "summary": "Heart and blood flow",
@@ -21,7 +21,7 @@
           "Isovolumetric contraction: ventricular pressure rises with all valves closed, until it exceeds arterial pressure and semilunar valves open.",
           "Ejection phase: rapid ejection followed by reduced ejection as ventricular pressure falls toward the end of systole.",
           "Isovolumetric relaxation: pressure falls with all valves closed, until it drops below atrial pressure and AV valves open.",
-          "Rapid filling, then diastasis (slow filling), then atrial systole ('atrial kick') contributes the final ~20% of ventricular filling.",
+          "Rapid filling, diastasis, then atrial systole ('atrial kick') contributes the final ~20% of ventricular filling.",
           "Stroke volume = end-diastolic volume − end-systolic volume; ejection fraction (normal ~55-70%) = stroke volume / end-diastolic volume."
         ]
       },
@@ -29,20 +29,29 @@
         "heading": "Cardiac conduction system",
         "points": [
           "The sinoatrial (SA) node, in the right atrial wall near the superior vena cava, is the primary pacemaker, intrinsically firing ~60-100 times/min.",
-          "Impulses spread through atrial myocardium to the atrioventricular (AV) node, which imposes a ~0.1s delay, allowing atrial contraction to complete before ventricular contraction begins.",
-          "From the AV node, the signal travels down the bundle of His, then the left and right bundle branches, then Purkinje fibers, which rapidly distribute the impulse through the ventricular myocardium.",
+          "Impulses spread through atrial myocardium to the atrioventricular (AV) node, which imposes a ~0.1s delay, letting atrial contraction complete before ventricular contraction begins.",
+          "From the AV node, the signal travels down the bundle of His, then left/right bundle branches, then Purkinje fibers, which rapidly distribute the impulse through ventricular myocardium.",
           "Purkinje fibers conduct faster than any other cardiac tissue (up to 4 m/s), ensuring near-simultaneous ventricular contraction.",
-          "If the SA node fails, the AV node (intrinsic rate ~40-60 bpm) or Purkinje fibers (~20-40 bpm) can act as backup pacemakers."
+          "If the SA node fails, the AV node (~40-60 bpm) or Purkinje fibers (~20-40 bpm) act as backup pacemakers."
         ]
       },
       {
         "heading": "Regulation of cardiac output",
         "points": [
           "Cardiac output (CO) = heart rate × stroke volume; typical resting CO is ~5 L/min.",
-          "The Frank-Starling mechanism: increased venous return stretches myocardial fibers, increasing the force of contraction (within physiological limits) — intrinsic regulation, independent of nervous control.",
-          "Sympathetic stimulation (via norepinephrine acting on β1 receptors) increases heart rate, contractility, and AV conduction velocity.",
-          "Parasympathetic stimulation (via the vagus nerve, acting on the SA and AV nodes) decreases heart rate.",
-          "Baroreceptors in the carotid sinus and aortic arch detect blood pressure changes and reflexively adjust autonomic output to the heart and vasculature."
+          "The Frank-Starling mechanism: increased venous return stretches myocardial fibers, increasing contraction force — intrinsic regulation, independent of nervous control.",
+          "Sympathetic stimulation (via norepinephrine on β1 receptors) increases heart rate, contractility, and AV conduction velocity.",
+          "Parasympathetic stimulation (via the vagus nerve) decreases heart rate, primarily acting on the SA and AV nodes.",
+          "Baroreceptors in the carotid sinus and aortic arch detect blood pressure changes and reflexively adjust autonomic output."
+        ]
+      },
+      {
+        "heading": "Blood pressure and circulation dynamics",
+        "points": [
+          "Mean arterial pressure (MAP) ≈ diastolic pressure + 1/3 (systolic − diastolic pressure); MAP = CO × total peripheral resistance.",
+          "The pulmonary circuit is a low-pressure, low-resistance system; the systemic circuit operates at much higher pressure to perfuse the whole body.",
+          "Capillary exchange is governed by Starling forces: hydrostatic pressure pushes fluid out at the arterial end, oncotic pressure draws fluid back in at the venous end.",
+          "Venous return is aided by the skeletal muscle pump, respiratory pump (thoracic pressure changes), and one-way venous valves."
         ]
       }
     ],
@@ -50,48 +59,632 @@
       {
         "heading": "Layers of the heart wall",
         "points": [
-          "Epicardium (visceral pericardium): outer layer, simple squamous mesothelium over connective tissue, often containing adipose tissue and coronary vessels.",
-          "Myocardium: the thick middle layer of cardiac muscle responsible for contraction; thickness varies by chamber, thickest in the left ventricle.",
-          "Endocardium: inner lining of simple squamous endothelium over a thin connective tissue layer, continuous with the endothelium of blood vessels."
+          "Epicardium (visceral pericardium): outer layer, simple squamous mesothelium over connective tissue, often with adipose tissue and coronary vessels.",
+          "Myocardium: thick middle layer of cardiac muscle responsible for contraction; thickness varies by chamber, thickest in the left ventricle.",
+          "Endocardium: inner lining of simple squamous endothelium over thin connective tissue, continuous with vessel endothelium."
         ]
       },
       {
         "heading": "Cardiac muscle cell structure",
         "points": [
-          "Cardiomyocytes are striated (due to organized actin-myosin sarcomeres) but branched, unlike skeletal muscle fibers.",
-          "Each cell typically has one or two centrally located nuclei, distinguishing it from multinucleated skeletal muscle fibers.",
-          "Mitochondria are extremely abundant (up to 30-40% of cell volume), reflecting the heart's continuous, high aerobic energy demand.",
-          "Intercalated discs join adjacent cardiomyocytes end-to-end, containing three junction types: fascia adherens and desmosomes (mechanical coupling) and gap junctions (electrical coupling).",
-          "Gap junctions allow ions to pass directly between cells, enabling the myocardium to function as an electrical syncytium — a coordinated wave of depolarization rather than independent cell firing."
-        ]
-      },
-      {
-        "heading": "Conduction tissue histology",
-        "points": [
-          "Purkinje fibers are histologically distinct from contractile cardiomyocytes: larger diameter, fewer myofibrils, more glycogen, and located subendocardially.",
-          "SA and AV nodal cells are smaller, pale-staining, with fewer myofibrils than working myocardium, specialized for pacemaker activity rather than forceful contraction."
+          "Cardiomyocytes are striated (organized actin-myosin sarcomeres) but branched, unlike skeletal muscle fibers.",
+          "Each cell typically has one or two centrally located nuclei, unlike multinucleated skeletal fibers.",
+          "Mitochondria are extremely abundant (up to 30-40% of cell volume), reflecting continuous high aerobic energy demand.",
+          "Intercalated discs join adjacent cardiomyocytes end-to-end via fascia adherens and desmosomes (mechanical coupling) and gap junctions (electrical coupling), letting the myocardium act as an electrical syncytium.",
+          "Purkinje fibers are histologically distinct: larger diameter, fewer myofibrils, more glycogen, located subendocardially."
         ]
       },
       {
         "heading": "Blood vessel wall histology",
         "points": [
           "Tunica intima: innermost layer, simple squamous endothelium on a basement membrane, providing a non-thrombogenic surface.",
-          "Tunica media: middle layer of smooth muscle and elastic fibers; thickest in arteries (especially elastic arteries like the aorta), thin or absent in capillaries.",
-          "Tunica adventitia: outer connective tissue layer anchoring the vessel to surrounding tissue; contains vasa vasorum (small vessels supplying the vessel wall itself) in larger vessels.",
-          "Capillaries are classified as continuous (tight endothelium, e.g. muscle, CNS), fenestrated (small pores, e.g. kidney glomeruli, endocrine glands), or sinusoidal/discontinuous (large gaps, e.g. liver, spleen, bone marrow) based on permeability needs."
+          "Tunica media: smooth muscle and elastic fibers; thickest in arteries, thin or absent in capillaries.",
+          "Tunica adventitia: outer connective tissue anchoring the vessel; contains vasa vasorum (vessels supplying the vessel wall) in larger vessels.",
+          "Capillaries are classified as continuous (tight, e.g. muscle, CNS), fenestrated (small pores, e.g. kidney, endocrine glands), or sinusoidal (large gaps, e.g. liver, spleen, bone marrow)."
         ]
       }
     ]
-
-},
-  "nervous": {"name": "Nervous system", "icon": "🧠", "summary": "Brain and signaling"},
-  "respiratory": {"name": "Respiratory", "icon": "🫁", "summary": "Lungs and gas exchange"},
-  "digestive": {"name": "Digestive", "icon": "🍽️", "summary": "Gut and nutrient uptake"},
-  "renal": {"name": "Renal", "icon": "🫘", "summary": "Kidneys and filtration"},
-  "skeletal": {"name": "Skeletal", "icon": "🦴", "summary": "Bones and structural support"},
-  "muscular": {"name": "Muscular", "icon": "💪", "summary": "Movement and force"},
-  "endocrine": {"name": "Endocrine", "icon": "⚗️", "summary": "Hormones and regulation"},
-  "lymphatic": {"name": "Lymphatic / immune", "icon": "🛡️", "summary": "Defense and fluid balance"},
-  "reproductive": {"name": "Reproductive", "icon": "🌸", "summary": "Reproduction and hormones"},
-  "integumentary": {"name": "Integumentary", "icon": "🧴", "summary": "Skin and temperature regulation"}
+  },
+  "nervous": {
+    "name": "Nervous system",
+    "icon": "🧠",
+    "summary": "Brain and signaling",
+    "physiology": [
+      {
+        "heading": "Resting and action potentials",
+        "points": [
+          "Resting membrane potential (~-70mV) arises from unequal ion distribution (high extracellular Na+, high intracellular K+) maintained by the Na+/K+ ATPase pump, and differential membrane permeability (higher resting permeability to K+).",
+          "An action potential is triggered when depolarization reaches threshold (~-55mV), opening voltage-gated Na+ channels for rapid depolarization, followed by voltage-gated K+ channel opening for repolarization.",
+          "The absolute refractory period (Na+ channels inactivated) prevents the action potential from traveling backward, ensuring unidirectional propagation.",
+          "Myelinated axons use saltatory conduction — the action potential jumps between nodes of Ranvier — dramatically increasing conduction velocity versus unmyelinated fibers."
+        ]
+      },
+      {
+        "heading": "Synaptic transmission",
+        "points": [
+          "An arriving action potential opens voltage-gated Ca2+ channels at the presynaptic terminal; Ca2+ influx triggers neurotransmitter vesicle fusion and release into the synaptic cleft.",
+          "Neurotransmitters diffuse across the cleft and bind postsynaptic receptors, producing excitatory (EPSP, e.g. via Na+ influx) or inhibitory (IPSP, e.g. via Cl- influx) postsynaptic potentials.",
+          "Spatial and temporal summation of multiple postsynaptic potentials determines whether the postsynaptic neuron reaches threshold.",
+          "Neurotransmitter action is terminated by reuptake (e.g. serotonin, dopamine, norepinephrine transporters), enzymatic degradation (e.g. acetylcholinesterase), or diffusion away from the synapse."
+        ]
+      },
+      {
+        "heading": "CNS organization and higher function",
+        "points": [
+          "The cerebral cortex is organized into four lobes: frontal (motor control, executive function, personality), parietal (somatosensory processing, spatial awareness), temporal (auditory processing, memory, language comprehension), occipital (visual processing).",
+          "The cerebellum coordinates fine motor control, balance, posture, and motor learning, comparing intended movement to actual movement via feedback loops.",
+          "The basal ganglia (caudate, putamen, globus pallidus) regulate voluntary movement initiation and inhibition of unwanted movement.",
+          "The limbic system (hippocampus, amygdala, cingulate cortex) governs memory formation, emotional processing, and motivation.",
+          "The brainstem (midbrain, pons, medulla oblongata) houses vital autonomic centers controlling breathing, heart rate, and consciousness/arousal (reticular activating system)."
+        ]
+      },
+      {
+        "heading": "Autonomic nervous system",
+        "points": [
+          "The sympathetic division ('fight-or-flight') originates from thoracolumbar spinal segments, releasing norepinephrine at most target organs, increasing heart rate, dilating pupils, and diverting blood flow to skeletal muscle.",
+          "The parasympathetic division ('rest-and-digest') originates from craniosacral outflow (notably the vagus nerve), releasing acetylcholine, promoting digestion and lowering heart rate.",
+          "Most organs receive dual innervation with antagonistic effects, allowing fine-tuned physiological control."
+        ]
+      },
+      {
+        "heading": "Reflexes and spinal cord function",
+        "points": [
+          "A monosynaptic reflex arc (e.g. the patellar/knee-jerk reflex) involves a sensory receptor, single afferent neuron synapsing directly onto a motor neuron, and an effector muscle — enabling extremely rapid response.",
+          "Polysynaptic reflexes (e.g. the withdrawal reflex) involve interneurons and can trigger the crossed-extensor reflex in the contralateral limb for postural stabilization.",
+          "The spinal cord itself can mediate reflexes independently of the brain, though descending tracts normally modulate reflex sensitivity."
+        ]
+      }
+    ],
+    "histology": [
+      {
+        "heading": "Neuron structure",
+        "points": [
+          "A typical neuron has dendrites (receive input, often highly branched), a cell body/soma (contains the nucleus, Nissl bodies/rough ER, Golgi apparatus), and a single axon (transmits output away from the soma).",
+          "The axon hillock is the site of action potential initiation, having the highest density of voltage-gated Na+ channels.",
+          "Axon terminals form synaptic boutons containing neurotransmitter-filled synaptic vesicles."
+        ]
+      },
+      {
+        "heading": "Glial cell types",
+        "points": [
+          "Astrocytes are the most abundant CNS glial cell: they support neurons metabolically, regulate extracellular ion/neurotransmitter concentrations, and form the blood-brain barrier via end-feet on capillaries.",
+          "Oligodendrocytes myelinate multiple CNS axons simultaneously (each cell extends processes to several axons).",
+          "Schwann cells myelinate a single PNS axon segment per cell, and also assist in peripheral nerve regeneration.",
+          "Microglia are resident CNS immune cells, derived from myeloid lineage, performing phagocytosis and immune surveillance.",
+          "Ependymal cells line the ventricles and central canal, producing and circulating cerebrospinal fluid via ciliary action."
+        ]
+      },
+      {
+        "heading": "Grey and white matter organization",
+        "points": [
+          "Grey matter consists mainly of neuronal cell bodies, dendrites, and unmyelinated fibers, forming the cerebral/cerebellar cortex and deep nuclei.",
+          "White matter consists of myelinated axon tracts connecting brain regions; its pale appearance comes from myelin's high lipid content.",
+          "In the spinal cord, this arrangement is inverted relative to the brain: grey matter (butterfly-shaped) is central, surrounded by peripheral white matter tracts."
+        ]
+      }
+    ]
+  },
+  "respiratory": {
+    "name": "Respiratory",
+    "icon": "🫁",
+    "summary": "Lungs and gas exchange",
+    "physiology": [
+      {
+        "heading": "Mechanics of breathing",
+        "points": [
+          "Inspiration is active: the diaphragm and external intercostal muscles contract, increasing thoracic volume, decreasing intrapleural and alveolar pressure below atmospheric, drawing air in (Boyle's law).",
+          "Expiration at rest is passive, driven by elastic recoil of the lungs and relaxation of inspiratory muscles; forced expiration recruits internal intercostals and abdominal muscles.",
+          "Intrapleural pressure remains negative relative to atmospheric pressure throughout the respiratory cycle, keeping the lungs adherent to the chest wall via the pleural seal.",
+          "Lung compliance describes the ease of lung expansion per unit pressure change; it's reduced in fibrotic lung disease and increased in emphysema.",
+          "Tidal volume (~500ml at rest), inspiratory/expiratory reserve volumes, and residual volume together determine total lung capacity (~6L in an average adult)."
+        ]
+      },
+      {
+        "heading": "Gas exchange and transport",
+        "points": [
+          "Gas exchange occurs across the alveolar-capillary membrane by simple diffusion, driven by partial pressure gradients (Fick's law of diffusion).",
+          "The large alveolar surface area (~70m²) and thin membrane (~0.5 micron) optimize diffusion efficiency.",
+          "Most oxygen is transported bound to hemoglobin (as oxyhemoglobin); a small fraction dissolves directly in plasma.",
+          "The oxygen-hemoglobin dissociation curve is sigmoidal; it shifts right (lower O2 affinity, easier unloading) with increased temperature, CO2, H+, and 2,3-BPG (the Bohr effect).",
+          "CO2 is transported mainly as bicarbonate (via carbonic anhydrase in erythrocytes), with smaller fractions bound to hemoglobin (carbaminohemoglobin) and dissolved in plasma."
+        ]
+      },
+      {
+        "heading": "Control of breathing",
+        "points": [
+          "The medullary respiratory center (dorsal and ventral respiratory groups) generates the basic rhythm of breathing, modulated by the pontine respiratory group which fine-tunes rate and depth.",
+          "Central chemoreceptors in the medulla respond primarily to CSF pH (reflecting CO2 levels, since CO2 crosses the blood-brain barrier and forms carbonic acid).",
+          "Peripheral chemoreceptors (carotid and aortic bodies) respond mainly to blood O2 levels, becoming significant drivers only when PO2 drops substantially.",
+          "CO2/pH is the dominant driver of ventilation under normal physiological conditions, not O2, which is why supplemental O2 can be dangerous in chronic CO2 retainers relying on hypoxic drive."
+        ]
+      },
+      {
+        "heading": "Ventilation-perfusion matching",
+        "points": [
+          "Efficient gas exchange requires matching of ventilation (airflow) to perfusion (blood flow) across lung regions — the V/Q ratio.",
+          "Hypoxic pulmonary vasoconstriction redirects blood flow away from poorly ventilated alveoli, optimizing overall gas exchange efficiency.",
+          "Gravity causes regional V/Q variation in the upright lung: the apex is relatively over-ventilated relative to perfusion, the base is relatively over-perfused relative to ventilation."
+        ]
+      }
+    ],
+    "histology": [
+      {
+        "heading": "Airway epithelium",
+        "points": [
+          "The trachea and bronchi are lined with pseudostratified ciliated columnar epithelium with interspersed goblet cells, forming the mucociliary escalator that traps and clears inhaled debris.",
+          "C-shaped hyaline cartilage rings support the trachea, preventing collapse while allowing posterior flexibility against the esophagus.",
+          "As airways branch into bronchioles, epithelium transitions to simple columnar then simple cuboidal, and cartilage and goblet cells progressively disappear.",
+          "Club cells (Clara cells) in bronchioles secrete surfactant components and detoxify inhaled substances, replacing goblet cells in this region."
+        ]
+      },
+      {
+        "heading": "Alveolar structure",
+        "points": [
+          "Type I pneumocytes are thin, flat squamous cells forming the majority (~95%) of the alveolar surface area, optimized for rapid gas diffusion.",
+          "Type II pneumocytes are cuboidal, less numerous, and secrete pulmonary surfactant (a phospholipid mixture) that reduces alveolar surface tension and prevents collapse (atelectasis), especially in small alveoli (per Laplace's law).",
+          "Alveolar macrophages ('dust cells') patrol the alveolar surface, phagocytosing inhaled particulates and pathogens.",
+          "The respiratory membrane (for gas exchange) comprises the alveolar epithelium, fused basement membranes, and capillary endothelium — remarkably thin to minimize diffusion distance."
+        ]
+      }
+    ]
+  },
+  "digestive": {
+    "name": "Digestive",
+    "icon": "🍽️",
+    "summary": "Gut and nutrient uptake",
+    "physiology": [
+      {
+        "heading": "Digestion and motility",
+        "points": [
+          "Mechanical digestion (mastication, gastric churning, segmentation) and chemical digestion (enzymatic hydrolysis) work together to reduce food into absorbable molecular units.",
+          "Peristalsis — coordinated waves of smooth muscle contraction (circular muscle contracts behind the bolus, longitudinal muscle ahead) — propels contents along the GI tract.",
+          "Segmentation in the small intestine mixes chyme with digestive secretions without significant net forward movement, maximizing contact with the absorptive surface.",
+          "Gastric juice (HCl from parietal cells, pepsinogen from chief cells) denatures dietary protein and activates pepsin; the mucus-bicarbonate layer protects the stomach lining from self-digestion.",
+          "The migrating motor complex sweeps the small intestine clean of residual material between meals."
+        ]
+      },
+      {
+        "heading": "Enzymatic digestion by macronutrient",
+        "points": [
+          "Carbohydrate digestion begins with salivary amylase (starch), continues with pancreatic amylase in the duodenum, and finishes with brush-border enzymes (maltase, sucrase, lactase) producing monosaccharides.",
+          "Protein digestion begins with pepsin in the stomach (acidic environment), continues with pancreatic proteases (trypsin, chymotrypsin, carboxypeptidase, secreted as inactive zymogens), finishing with brush-border peptidases.",
+          "Fat digestion requires bile salts (from the liver, stored/concentrated in the gallbladder) to emulsify large fat droplets, increasing surface area for pancreatic lipase action, producing monoglycerides and free fatty acids that form micelles."
+        ]
+      },
+      {
+        "heading": "Absorption",
+        "points": [
+          "Villi and microvilli in the small intestine vastly increase surface area for nutrient absorption (total intestinal surface area is often compared to a tennis court).",
+          "Monosaccharides and amino acids are absorbed via secondary active transport (often Na+-coupled) into enterocytes, then into blood capillaries of the villus, ultimately reaching the hepatic portal circulation.",
+          "Long-chain fatty acids and monoglycerides are absorbed into enterocytes, re-esterified into triglycerides, packaged into chylomicrons, and absorbed into lacteals (lymphatic capillaries) rather than blood capillaries directly.",
+          "The large intestine absorbs water and electrolytes, and hosts extensive gut microbiota that ferment undigested carbohydrates (fiber), producing short-chain fatty acids and vitamins (e.g. vitamin K, some B vitamins)."
+        ]
+      },
+      {
+        "heading": "Hormonal and neural regulation",
+        "points": [
+          "Gastrin (secreted by G cells in the stomach antrum) stimulates gastric acid secretion and motility, in response to stomach distension and protein content.",
+          "Secretin (duodenal S cells) stimulates pancreatic bicarbonate secretion in response to acidic chyme entering the duodenum, protecting intestinal mucosa and optimizing enzyme pH.",
+          "Cholecystokinin (CCK, duodenal I cells) stimulates gallbladder contraction and pancreatic enzyme secretion in response to fats and proteins, and also promotes satiety.",
+          "The enteric nervous system ('the second brain') can coordinate motility and secretion reflexes largely independently of CNS input, though modulated by autonomic innervation."
+        ]
+      }
+    ],
+    "histology": [
+      {
+        "heading": "General GI wall structure",
+        "points": [
+          "The GI tract wall has four consistent layers: mucosa (epithelium, lamina propria, muscularis mucosae), submucosa (connective tissue, blood vessels, submucosal plexus), muscularis externa (inner circular and outer longitudinal smooth muscle), and serosa/adventitia.",
+          "The myenteric (Auerbach's) plexus lies between the two muscle layers and primarily regulates motility; the submucosal (Meissner's) plexus regulates secretion and local blood flow."
+        ]
+      },
+      {
+        "heading": "Regional epithelial specialization",
+        "points": [
+          "The esophagus is lined with stratified squamous (non-keratinized) epithelium, providing abrasion resistance for food passage.",
+          "The stomach has simple columnar epithelium with gastric pits leading to gastric glands containing parietal cells (HCl and intrinsic factor), chief cells (pepsinogen), and mucous neck cells.",
+          "The small intestine has simple columnar epithelium with absorptive enterocytes bearing microvilli, interspersed goblet cells, and crypts of Lieberkühn (containing stem cells and Paneth cells with antimicrobial secretions).",
+          "The large intestine has simple columnar epithelium with abundant goblet cells (lubricating mucus for solid waste passage) and no villi, since its role is absorption of water/electrolytes rather than nutrients."
+        ]
+      },
+      {
+        "heading": "Accessory organ histology",
+        "points": [
+          "The liver is organized into hexagonal lobules with hepatocytes arranged in plates radiating from a central vein, with portal triads (bile duct, hepatic artery branch, portal vein branch) at the periphery.",
+          "The exocrine pancreas consists of acinar cells producing digestive enzymes, delivered via a duct system into the duodenum; the endocrine pancreas (islets of Langerhans) is scattered among the acinar tissue."
+        ]
+      }
+    ]
+  },
+  "renal": {
+    "name": "Renal",
+    "icon": "🫘",
+    "summary": "Kidneys and filtration",
+    "physiology": [
+      {
+        "heading": "Filtration and the nephron",
+        "points": [
+          "The nephron is the functional unit of the kidney: each kidney contains roughly one million nephrons, each comprising a renal corpuscle and a renal tubule.",
+          "Glomerular filtration occurs at the glomerulus: blood pressure forces water and small solutes through fenestrated capillaries, the glomerular basement membrane, and podocyte filtration slits into Bowman's capsule; cells and large plasma proteins are retained in blood.",
+          "Glomerular filtration rate (GFR, normal ~120ml/min) is a key clinical measure of overall kidney function, influenced by afferent/efferent arteriolar tone.",
+          "Filtration fraction is the proportion of renal plasma flow that is filtered at the glomerulus (~20% under normal conditions)."
+        ]
+      },
+      {
+        "heading": "Tubular reabsorption and secretion",
+        "points": [
+          "The proximal convoluted tubule reabsorbs the bulk (~65%) of filtered water, virtually all glucose and amino acids (via Na+-coupled cotransport), and most filtered ions.",
+          "The loop of Henle establishes the medullary osmotic gradient via countercurrent multiplication: the descending limb is permeable to water but not solutes, the thick ascending limb actively transports NaCl but is impermeable to water.",
+          "The distal convoluted tubule and collecting duct perform fine-tuned, hormonally regulated reabsorption and secretion, determining final urine composition.",
+          "Tubular secretion actively transports substances (e.g. H+, K+, certain drugs) from peritubular capillaries into the tubule lumen, supplementing filtration for waste elimination."
+        ]
+      },
+      {
+        "heading": "Hormonal regulation of fluid/electrolyte balance",
+        "points": [
+          "The renin-angiotensin-aldosterone system (RAAS) is triggered by low blood pressure/volume sensed by juxtaglomerular cells: renin converts angiotensinogen to angiotensin I, ACE converts this to angiotensin II (vasoconstrictor, stimulates aldosterone release), aldosterone increases distal Na+/water reabsorption and K+ secretion.",
+          "Antidiuretic hormone (ADH/vasopressin), released from the posterior pituitary in response to high plasma osmolarity, increases aquaporin insertion in the collecting duct, increasing water reabsorption and concentrating urine.",
+          "Atrial natriuretic peptide (ANP), released by atrial myocytes in response to stretch (high blood volume), promotes natriuresis and diuresis, opposing RAAS."
+        ]
+      },
+      {
+        "heading": "Acid-base balance",
+        "points": [
+          "The kidneys regulate acid-base balance over hours to days by adjusting H+ secretion and HCO3- reabsorption/generation, complementing the faster respiratory compensation via CO2 elimination.",
+          "Intercalated cells in the collecting duct (type A secretes H+, type B secretes HCO3-) fine-tune urinary acid-base excretion based on systemic needs."
+        ]
+      }
+    ],
+    "histology": [
+      {
+        "heading": "Nephron histology",
+        "points": [
+          "The glomerulus is a tuft of fenestrated capillaries surrounded by Bowman's capsule, lined by podocytes whose interdigitating foot processes form filtration slits.",
+          "The proximal tubule has simple cuboidal epithelium with a prominent brush border (dense microvilli) maximizing reabsorptive surface area, and abundant mitochondria supporting active transport.",
+          "The thin segments of the loop of Henle have simple squamous epithelium, adapted for passive diffusion rather than active transport.",
+          "The thick ascending limb has simple cuboidal epithelium with extensive basolateral infoldings housing Na+/K+ ATPase for active NaCl reabsorption."
+        ]
+      },
+      {
+        "heading": "Cortex, medulla, and vasculature",
+        "points": [
+          "The renal cortex contains glomeruli, proximal and distal convoluted tubules; the medulla (organized into renal pyramids) contains loops of Henle and collecting ducts.",
+          "The vasa recta are specialized peritubular capillaries running parallel to the loop of Henle, preserving the medullary concentration gradient via countercurrent exchange."
+        ]
+      }
+    ]
+  },
+  "skeletal": {
+    "name": "Skeletal",
+    "icon": "🦴",
+    "summary": "Bones and structural support",
+    "physiology": [
+      {
+        "heading": "Bone as a dynamic, living tissue",
+        "points": [
+          "Bone undergoes continuous remodeling throughout life: osteoclasts (derived from monocyte lineage) resorb bone matrix via acid and enzyme secretion; osteoblasts deposit new osteoid matrix, which subsequently mineralizes with calcium hydroxyapatite.",
+          "Bone remodeling responds to mechanical stress (Wolff's law): bone strengthens along habitual lines of load and weakens/resorbs with disuse, relevant to conditions like osteoporosis in immobilized patients.",
+          "Bones serve as the body's major mineral reservoir, storing ~99% of body calcium and a majority of phosphate, buffering blood mineral levels.",
+          "Longitudinal bone growth occurs at the epiphyseal (growth) plate via endochondral ossification until plate closure at the end of puberty; bone width increases via appositional growth from the periosteum."
+        ]
+      },
+      {
+        "heading": "Hormonal regulation of bone",
+        "points": [
+          "Parathyroid hormone (PTH), released in response to low blood Ca2+, stimulates osteoclastic bone resorption, increases renal Ca2+ reabsorption, and activates vitamin D — net effect: raises blood Ca2+.",
+          "Calcitonin (from thyroid parafollicular cells) opposes PTH, inhibiting osteoclast activity and lowering blood Ca2+, though its physiological role in adult humans is comparatively minor.",
+          "Vitamin D (activated to calcitriol) increases intestinal calcium and phosphate absorption, essential for adequate mineralization.",
+          "Estrogen restrains osteoclast activity; the postmenopausal drop in estrogen is a major driver of accelerated bone loss."
+        ]
+      },
+      {
+        "heading": "Joints and biomechanics",
+        "points": [
+          "Synovial joints (e.g. knee, shoulder, hip) are freely movable, enclosed by a joint capsule lined with synovial membrane secreting lubricating, nourishing synovial fluid.",
+          "Articular cartilage (hyaline cartilage) covers joint surfaces, providing a low-friction, shock-absorbing interface, but has minimal capacity for self-repair due to lack of blood supply.",
+          "Cartilaginous joints (e.g. intervertebral discs, pubic symphysis) allow limited movement via compressible cartilage; fibrous joints (e.g. skull sutures) allow minimal to no movement.",
+          "Ligaments (bone-to-bone) and tendons (muscle-to-bone) are dense regular connective tissue, providing tensile strength while allowing some elasticity."
+        ]
+      }
+    ],
+    "histology": [
+      {
+        "heading": "Compact bone tissue structure",
+        "points": [
+          "Compact bone is organized into osteons (Haversian systems): concentric lamellae of mineralized matrix arranged around a central (Haversian) canal containing blood vessels and nerves.",
+          "Osteocytes (mature bone cells, derived from osteoblasts trapped in matrix) sit within lacunae, connected via canaliculi that allow nutrient and waste exchange through the otherwise impermeable mineralized matrix.",
+          "Volkmann's canals run perpendicular to Haversian canals, connecting the vascular supply across osteons.",
+          "Spongy (trabecular/cancellous) bone lacks true osteons, instead forming a lattice of trabeculae aligned along stress lines, with marrow filling the interstitial spaces — providing strength while minimizing weight."
+        ]
+      },
+      {
+        "heading": "Bone cell types",
+        "points": [
+          "Osteoblasts are matrix-synthesizing cells derived from mesenchymal stem cells, secreting collagen-rich osteoid that subsequently mineralizes.",
+          "Osteocytes, once entombed in matrix, act as mechanosensors, detecting mechanical strain and signaling to coordinate remodeling.",
+          "Osteoclasts are large, multinucleated cells of hematopoietic (monocyte/macrophage) origin, responsible for resorbing bone matrix via acidification and proteolytic enzymes."
+        ]
+      },
+      {
+        "heading": "Cartilage types",
+        "points": [
+          "Hyaline cartilage (e.g. articular surfaces, costal cartilage, fetal skeleton template) has a glassy, homogeneous matrix rich in collagen type II.",
+          "Fibrocartilage (e.g. intervertebral discs, menisci) has dense bundles of collagen type I interspersed with chondrocytes, providing tensile strength and compressive resistance.",
+          "Elastic cartilage (e.g. external ear, epiglottis) contains abundant elastic fibers alongside collagen, providing flexibility with recoil."
+        ]
+      }
+    ]
+  },
+  "muscular": {
+    "name": "Muscular",
+    "icon": "💪",
+    "summary": "Movement and force",
+    "physiology": [
+      {
+        "heading": "Excitation-contraction coupling",
+        "points": [
+          "A motor neuron action potential releases acetylcholine at the neuromuscular junction, triggering an end-plate potential and, if threshold is reached, a muscle fiber action potential.",
+          "The action potential propagates along the sarcolemma and down T-tubules, triggering Ca2+ release from the sarcoplasmic reticulum via ryanodine receptors.",
+          "Released Ca2+ binds troponin C, causing a conformational shift that moves tropomyosin away from myosin-binding sites on actin, allowing cross-bridge cycling to begin."
+        ]
+      },
+      {
+        "heading": "Sliding filament mechanism",
+        "points": [
+          "Muscle contraction occurs via the sliding filament model: myosin heads bind exposed actin sites, undergo a power stroke pulling thin filaments toward the sarcomere center, shortening the muscle without the filaments themselves changing length.",
+          "ATP is required both for the myosin power stroke and, critically, for myosin head detachment from actin — explaining rigor mortis, where ATP depletion after death prevents cross-bridge release, causing sustained muscle stiffness.",
+          "Ca2+ removal (via SERCA pumps returning Ca2+ to the sarcoplasmic reticulum) allows tropomyosin to re-block binding sites, ending contraction (relaxation)."
+        ]
+      },
+      {
+        "heading": "Muscle fiber types and metabolism",
+        "points": [
+          "Type I (slow-twitch, oxidative) fibers are fatigue-resistant, rely on aerobic metabolism, rich in mitochondria and myoglobin, suited for sustained/endurance activity.",
+          "Type IIa (fast-twitch, oxidative-glycolytic) fibers offer an intermediate profile of speed and endurance.",
+          "Type IIx (fast-twitch, glycolytic) fibers generate high force rapidly but fatigue quickly, relying primarily on anaerobic glycolysis.",
+          "Motor unit recruitment (activating additional motor units, generally smaller-to-larger per the size principle) and rate coding (increasing firing frequency of active units) both increase whole-muscle force output."
+        ]
+      },
+      {
+        "heading": "Length-tension and energy sources",
+        "points": [
+          "The length-tension relationship describes how force generation is optimal at a sarcomere length allowing maximal actin-myosin overlap, with reduced force at both shorter and longer lengths.",
+          "Immediate energy comes from stored ATP and the phosphocreatine system; sustained activity draws on glycolysis and oxidative phosphorylation depending on intensity and duration."
+        ]
+      }
+    ],
+    "histology": [
+      {
+        "heading": "Skeletal muscle structure",
+        "points": [
+          "Skeletal muscle fibers are long, multinucleated cells (formed by fusion of myoblasts during development), striated, with nuclei located peripherally beneath the sarcolemma.",
+          "Each fiber contains many myofibrils, composed of repeating sarcomeres — the functional contractile unit, bounded by Z-discs, containing overlapping thick (myosin) and thin (actin) filaments.",
+          "Muscle is organized hierarchically: fibers bundle into fascicles wrapped in perimysium; fascicles bundle into the whole muscle, wrapped in epimysium; individual fibers are wrapped in endomysium."
+        ]
+      },
+      {
+        "heading": "Smooth and cardiac muscle comparison",
+        "points": [
+          "Smooth muscle is non-striated (actin/myosin not arranged in regular sarcomeres), spindle-shaped, uninucleated, and involuntary — found in walls of hollow organs, vessels, and airways, contracting slowly but capable of sustained tone.",
+          "Cardiac muscle is striated but branched, typically uninucleated or binucleated, involuntary, and connected via intercalated discs containing gap junctions for coordinated contraction."
+        ]
+      },
+      {
+        "heading": "The sarcomere in detail",
+        "points": [
+          "The A-band represents the full length of thick filaments (constant length during contraction); the I-band contains only thin filaments (shortens during contraction); the H-zone is the central region with only thick filaments (shortens during contraction).",
+          "The Z-disc anchors thin filaments at sarcomere boundaries; the M-line anchors thick filaments centrally."
+        ]
+      }
+    ]
+  },
+  "endocrine": {
+    "name": "Endocrine",
+    "icon": "⚗️",
+    "summary": "Hormones and regulation",
+    "physiology": [
+      {
+        "heading": "Principles of hormone action",
+        "points": [
+          "Hormones are chemical messengers secreted directly into the bloodstream by endocrine glands, acting on distant target cells bearing specific receptors — distinguishing endocrine from paracrine (local) and autocrine (self) signaling.",
+          "Steroid and thyroid (lipid-soluble) hormones cross the cell membrane freely and act on intracellular/nuclear receptors, typically altering gene transcription over a slower timescale.",
+          "Peptide and amine (water-soluble) hormones bind cell-surface receptors, triggering intracellular second-messenger cascades (e.g. cAMP, IP3/DAG), producing rapid cellular effects.",
+          "Hormone effects depend on both circulating concentration and target-cell receptor density/sensitivity, which can be up- or down-regulated over time."
+        ]
+      },
+      {
+        "heading": "The hypothalamic-pituitary axis",
+        "points": [
+          "The hypothalamus secretes releasing and inhibiting hormones (e.g. TRH, CRH, GnRH, GHRH, somatostatin) into the hypophyseal portal system, controlling anterior pituitary hormone release.",
+          "The anterior pituitary secretes tropic hormones (TSH, ACTH, LH, FSH, GH, prolactin) regulating peripheral endocrine glands and tissues.",
+          "The posterior pituitary stores and releases hormones (ADH, oxytocin) that are actually synthesized by hypothalamic neurons and transported down their axons.",
+          "Negative feedback loops dominate endocrine regulation: rising peripheral hormone levels (e.g. thyroid hormone, cortisol) typically suppress further release at the hypothalamic and pituitary levels."
+        ]
+      },
+      {
+        "heading": "Key glands and their hormones",
+        "points": [
+          "The thyroid gland produces T3/T4 (regulating basal metabolic rate, thermogenesis, and growth) and calcitonin (minor role in calcium regulation).",
+          "The adrenal cortex produces cortisol (stress response, gluconeogenesis, immune suppression), aldosterone (Na+/K+/fluid balance), and androgens; the adrenal medulla produces epinephrine and norepinephrine as part of the sympathetic stress response.",
+          "The pancreatic islets of Langerhans produce insulin (beta cells, lowers blood glucose by promoting cellular uptake and storage) and glucagon (alpha cells, raises blood glucose via glycogenolysis and gluconeogenesis).",
+          "Growth hormone (from the anterior pituitary) promotes growth largely via stimulating hepatic IGF-1 (insulin-like growth factor 1) production."
+        ]
+      },
+      {
+        "heading": "Integration with other systems",
+        "points": [
+          "The endocrine and nervous systems overlap functionally: the hypothalamus is a direct neuroendocrine interface, and the adrenal medulla is essentially a modified sympathetic ganglion.",
+          "Hormones typically act more slowly and with longer-lasting effects than nervous signaling, suited to regulating processes like metabolism, growth, and reproduction rather than rapid moment-to-moment responses."
+        ]
+      }
+    ],
+    "histology": [
+      {
+        "heading": "Endocrine gland architecture",
+        "points": [
+          "Endocrine glands lack ducts, secreting hormones directly into the surrounding capillary bed — distinguishing them from exocrine glands, which secrete via ducts to an epithelial surface.",
+          "Endocrine tissue is typically highly vascularized to support efficient hormone delivery into the bloodstream."
+        ]
+      },
+      {
+        "heading": "Thyroid histology",
+        "points": [
+          "The thyroid is organized into spherical follicles lined by follicular epithelial cells surrounding colloid (stored thyroglobulin, the precursor for T3/T4).",
+          "Parafollicular (C) cells, located between follicles or within the follicular epithelium, secrete calcitonin."
+        ]
+      },
+      {
+        "heading": "Adrenal and pancreatic islet histology",
+        "points": [
+          "The adrenal cortex has three histologically and functionally distinct zones: zona glomerulosa (outermost, produces aldosterone), zona fasciculata (middle, produces cortisol), zona reticularis (innermost, produces androgens).",
+          "The adrenal medulla contains chromaffin cells, which secrete catecholamines directly into the bloodstream upon sympathetic stimulation.",
+          "Pancreatic islets are small, well-vascularized clusters scattered among the exocrine acinar tissue, containing alpha, beta, and delta cells."
+        ]
+      }
+    ]
+  },
+  "lymphatic": {
+    "name": "Lymphatic / immune",
+    "icon": "🛡️",
+    "summary": "Defense and fluid balance",
+    "physiology": [
+      {
+        "heading": "Lymphatic fluid return",
+        "points": [
+          "Lymphatic capillaries collect excess interstitial fluid (as lymph) that isn't reabsorbed by blood capillaries, returning it to the venous circulation via the thoracic duct (draining most of the body) and the right lymphatic duct (draining the right upper body).",
+          "Lymph flow depends on skeletal muscle contraction, respiratory pressure changes, and one-way valves, since there is no central pumping organ analogous to the heart.",
+          "Failure of lymphatic drainage results in lymphedema, localized tissue swelling from fluid accumulation."
+        ]
+      },
+      {
+        "heading": "Innate immunity",
+        "points": [
+          "Innate immunity provides immediate, non-specific defense: physical/chemical barriers (skin, mucus, stomach acid), phagocytic cells (neutrophils, macrophages), natural killer cells, and the complement system.",
+          "Inflammation (heat, redness, swelling, pain) results from vasodilation and increased vascular permeability, recruiting immune cells to the site of injury/infection.",
+          "Pattern recognition receptors (e.g. Toll-like receptors) allow innate immune cells to recognize broad classes of pathogens without prior exposure."
+        ]
+      },
+      {
+        "heading": "Adaptive immunity",
+        "points": [
+          "Adaptive immunity is slower to develop initially but highly specific and generates immunological memory, mediated by B lymphocytes (humoral immunity, antibody production) and T lymphocytes (cell-mediated immunity).",
+          "Antigen-presenting cells (dendritic cells, macrophages) process and present antigen fragments via MHC molecules, activating antigen-specific T cell responses.",
+          "Helper T cells (CD4+) coordinate immune responses by activating B cells and cytotoxic T cells; cytotoxic T cells (CD8+) directly kill infected or abnormal cells.",
+          "Memory B and T cells persist after an initial immune response, enabling a faster, stronger response upon re-exposure to the same antigen (the basis of vaccination)."
+        ]
+      }
+    ],
+    "histology": [
+      {
+        "heading": "Lymph node structure",
+        "points": [
+          "Lymph nodes have an outer cortex containing B cell-rich lymphoid follicles (some with germinal centers of actively proliferating B cells) and an inner medulla, filtering lymph as it percolates through sinuses lined with macrophages.",
+          "The paracortex, between cortex and medulla, is rich in T cells and dendritic cells, serving as a key site for antigen presentation."
+        ]
+      },
+      {
+        "heading": "Spleen and thymus histology",
+        "points": [
+          "The spleen has red pulp (filters blood, removes aged/damaged erythrocytes, stores platelets) and white pulp (periarteriolar lymphoid sheaths and follicles, providing immune surveillance of blood-borne antigens).",
+          "The thymus is the site of T lymphocyte maturation and positive/negative selection, organized into a cortex (immature thymocytes undergoing selection) and medulla (more mature thymocytes); it is most active early in life and progressively involutes with age."
+        ]
+      }
+    ]
+  },
+  "reproductive": {
+    "name": "Reproductive",
+    "icon": "🌸",
+    "summary": "Reproduction and hormones",
+    "physiology": [
+      {
+        "heading": "Hypothalamic-pituitary-gonadal axis",
+        "points": [
+          "GnRH from the hypothalamus, released in a pulsatile fashion, stimulates LH and FSH release from the anterior pituitary.",
+          "In females, FSH stimulates ovarian follicle development and estrogen production; a mid-cycle LH surge (triggered by high estrogen via positive feedback) causes ovulation; the resulting corpus luteum secretes progesterone (and some estrogen) to maintain the uterine lining.",
+          "In males, LH stimulates testicular Leydig cells to produce testosterone; FSH acts on Sertoli cells to support and regulate spermatogenesis.",
+          "Continuous (non-pulsatile) GnRH exposure paradoxically suppresses the axis — the physiological basis for GnRH agonist therapies."
+        ]
+      },
+      {
+        "heading": "The menstrual cycle",
+        "points": [
+          "The follicular phase (variable length) is characterized by rising estrogen from the developing dominant follicle, driving endometrial proliferation.",
+          "Ovulation occurs roughly at cycle midpoint, triggered by the LH surge.",
+          "The luteal phase (relatively fixed ~14 days) is dominated by progesterone from the corpus luteum, which prepares the endometrium for potential implantation; without fertilization/implantation, the corpus luteum regresses, hormone levels fall, and menstruation follows."
+        ]
+      },
+      {
+        "heading": "Gametogenesis",
+        "points": [
+          "Spermatogenesis occurs continuously from puberty onward within the seminiferous tubules, progressing through spermatogonia, primary/secondary spermatocytes, spermatids, and mature spermatozoa, taking roughly 64-72 days.",
+          "Oogenesis begins during fetal development, with oocytes arrested in prophase of meiosis I until puberty; typically one oocyte per cycle resumes and completes meiosis I (arresting again in meiosis II) around ovulation, only completing meiosis II if fertilized."
+        ]
+      }
+    ],
+    "histology": [
+      {
+        "heading": "Testicular histology",
+        "points": [
+          "Seminiferous tubules are lined by a complex, stratified epithelium of developing germ cells at sequential maturation stages, interspersed with Sertoli (supporting) cells that nourish developing sperm and form the blood-testis barrier.",
+          "Leydig cells, located in the interstitial tissue between tubules, produce testosterone under LH stimulation."
+        ]
+      },
+      {
+        "heading": "Ovarian histology",
+        "points": [
+          "Ovarian follicles at different developmental stages (primordial, primary, secondary, mature/Graafian) are found within the ovarian cortex, each comprising an oocyte surrounded by granulosa cells (and later, theca cells).",
+          "The corpus luteum, formed from the ruptured follicle after ovulation, is a temporary endocrine structure with large, lipid-rich luteal cells producing progesterone."
+        ]
+      }
+    ]
+  },
+  "integumentary": {
+    "name": "Integumentary",
+    "icon": "🧴",
+    "summary": "Skin and temperature regulation",
+    "physiology": [
+      {
+        "heading": "Thermoregulation",
+        "points": [
+          "Eccrine sweat gland secretion and evaporative cooling are the primary mechanisms for heat loss in hot conditions or during exercise, controlled by the hypothalamic thermoregulatory center via sympathetic cholinergic fibers.",
+          "Cutaneous vasodilation increases blood flow to the skin surface, promoting radiant/convective heat loss; vasoconstriction conserves core heat in cold conditions by shunting blood away from the skin.",
+          "Arrector pili muscles cause piloerection ('goosebumps'), a largely vestigial thermoregulatory response in humans that would trap an insulating air layer in more densely-furred mammals.",
+          "Shivering thermogenesis (involuntary rapid muscle contraction) generates metabolic heat as a cold response, coordinated by the hypothalamus."
+        ]
+      },
+      {
+        "heading": "Barrier and protective functions",
+        "points": [
+          "The stratum corneum (outermost epidermal layer) forms the primary physical barrier against water loss and pathogen entry, via tightly packed, keratin-filled dead corneocytes and intercellular lipids.",
+          "Melanin, produced by melanocytes and transferred to keratinocytes, absorbs and scatters UV radiation, protecting underlying DNA from UV-induced damage.",
+          "The skin's acidic surface pH and resident normal flora contribute to defense against pathogenic colonization."
+        ]
+      },
+      {
+        "heading": "Sensory and metabolic functions",
+        "points": [
+          "The skin contains diverse sensory receptors: Meissner's corpuscles (light touch), Pacinian corpuscles (deep pressure/vibration), Merkel cells (sustained touch), free nerve endings (pain, temperature) — making it the body's largest sensory organ.",
+          "Vitamin D synthesis begins in the skin: UVB radiation converts 7-dehydrocholesterol to previtamin D3, which is subsequently processed by the liver and kidneys into active calcitriol."
+        ]
+      }
+    ],
+    "histology": [
+      {
+        "heading": "Epidermal layers",
+        "points": [
+          "The epidermis is stratified squamous keratinized epithelium, organized (from deep to superficial) into stratum basale (mitotically active stem cells), stratum spinosum, stratum granulosum, (stratum lucidum, in thick skin only), and stratum corneum (dead, keratin-filled corneocytes).",
+          "Keratinocytes, the dominant epidermal cell type, migrate outward and differentiate as they progress toward the surface, ultimately being shed (desquamation).",
+          "Melanocytes reside in the stratum basale, extending processes to transfer melanin to surrounding keratinocytes; Langerhans cells (antigen-presenting immune cells) and Merkel cells (mechanoreceptor-associated) are also found within the epidermis."
+        ]
+      },
+      {
+        "heading": "Dermis and hypodermis",
+        "points": [
+          "The dermis, beneath the epidermis, is divided into the papillary layer (loose connective tissue, forms dermal papillae interlocking with the epidermis) and the reticular layer (dense irregular connective tissue, rich in collagen and elastic fibers).",
+          "The dermis contains blood vessels, nerve endings, hair follicles, sebaceous glands, and sweat glands.",
+          "The hypodermis (subcutaneous layer), technically not part of the skin proper, is composed mostly of adipose tissue, providing insulation, energy storage, and cushioning, and anchors the skin to underlying fascia/muscle."
+        ]
+      }
+    ]
+  }
 }
