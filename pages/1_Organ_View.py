@@ -2,8 +2,8 @@ import json
 import numpy as np
 import streamlit as st
 import plotly.graph_objects as go
-from utils.shapes import get_shape_for_system, real_heart_landmarks, real_brain_landmarks
-from utils.mesh_loader import load_heart_mesh, load_brain_mesh
+from utils.shapes import get_shape_for_system, real_heart_landmarks, real_brain_landmarks, real_lungs_landmarks
+from utils.mesh_loader import load_heart_mesh, load_brain_mesh, load_lungs_mesh
 
 st.set_page_config(page_title="PhysioFlow", page_icon="🫀", layout="wide")
 
@@ -35,6 +35,31 @@ col_3d, col_legend, col_info = st.columns([3, 1.3, 2])
 
 landmarks = []
 
+
+def add_landmarks(fig, landmarks, mesh_data):
+    mesh_center = np.array([
+        np.mean(mesh_data["x"]),
+        np.mean(mesh_data["y"]),
+        np.mean(mesh_data["z"]),
+    ])
+    for idx, pt in enumerate(landmarks, start=1):
+        point = np.array([pt["x"], pt["y"], pt["z"]])
+        direction = point - mesh_center
+        direction = direction / (np.linalg.norm(direction) + 1e-6)
+        offset_point = point + direction * 0.08
+
+        fig.add_trace(go.Scatter3d(
+            x=[offset_point[0]], y=[offset_point[1]], z=[offset_point[2]],
+            mode="markers+text",
+            marker=dict(size=16, color="#F5EDE8", line=dict(width=2, color="#1F1A18")),
+            text=[str(idx)],
+            textposition="middle center",
+            textfont=dict(size=12, color="#1F1A18", family="Arial Black"),
+            hovertemplate=f"<b>{idx}. {pt['name']}</b><br>{pt['desc']}<extra></extra>",
+            showlegend=False,
+        ))
+
+
 with col_3d:
     st.subheader("3D preview")
 
@@ -63,31 +88,7 @@ with col_3d:
         )])
 
         landmarks = real_heart_landmarks()
-        mesh_center = np.array([
-            np.mean(mesh_data["x"]),
-            np.mean(mesh_data["y"]),
-            np.mean(mesh_data["z"]),
-        ])
-
-        for idx, pt in enumerate(landmarks, start=1):
-            point = np.array([pt["x"], pt["y"], pt["z"]])
-            direction = point - mesh_center
-            direction = direction / (np.linalg.norm(direction) + 1e-6)
-            offset_point = point + direction * 0.08
-
-            fig.add_trace(go.Scatter3d(
-                x=[offset_point[0]], y=[offset_point[1]], z=[offset_point[2]],
-                mode="markers+text",
-                marker=dict(size=16, color="#F5EDE8", line=dict(width=2, color="#1F1A18")),
-                text=[str(idx)],
-                textposition="middle center",
-                textfont=dict(size=12, color="#1F1A18", family="Arial Black"),
-                hovertemplate=f"<b>{idx}. {pt['name']}</b><br>{pt['desc']}<extra></extra>",
-                showlegend=False,
-            ))
-        else:
-            x, y, z, colorscale = get_shape_for_system(selected)
-            fig = go.Figure(data=[go.Surface(x=x, y=y, z=z, colorscale=colorscale, showscale=False)])
+        add_landmarks(fig, landmarks, mesh_data)
 
     elif selected == "nervous":
         mesh_data = load_brain_mesh()
@@ -112,32 +113,52 @@ with col_3d:
             hoverinfo="skip",
         )])
 
-    landmarks = real_brain_landmarks()
-    mesh_center = np.array([
-            np.mean(mesh_data["x"]),
-            np.mean(mesh_data["y"]),
-            np.mean(mesh_data["z"]),
-        ])
+        landmarks = real_brain_landmarks()
+        add_landmarks(fig, landmarks, mesh_data)
 
-    for idx, pt in enumerate(landmarks, start=1):
-            point = np.array([pt["x"], pt["y"], pt["z"]])
-            direction = point - mesh_center
-            direction = direction / (np.linalg.norm(direction) + 1e-6)
-            offset_point = point + direction * 0.08
+    elif selected == "respiratory":
+        mesh_data = load_lungs_mesh()
 
-            fig.add_trace(go.Scatter3d(
-                x=[offset_point[0]], y=[offset_point[1]], z=[offset_point[2]],
-                mode="markers+text",
-                marker=dict(size=16, color="#F5EDE8", line=dict(width=2, color="#1F1A18")),
-                text=[str(idx)],
-                textposition="middle center",
-                textfont=dict(size=12, color="#1F1A18", family="Arial Black"),
-                hovertemplate=f"<b>{idx}. {pt['name']}</b><br>{pt['desc']}<extra></extra>",
-                showlegend=False,
-            ))
+        verts = np.array([mesh_data["x"], mesh_data["y"], mesh_data["z"]]).T
+        faces = np.array([mesh_data["i"], mesh_data["j"], mesh_data["k"]]).T
+
+        x_vals = verts[:, 0]
+        y_vals = verts[:, 1]
+        x_min, x_max = x_vals.min(), x_vals.max()
+        y_min, y_max = y_vals.min(), y_vals.max()
+
+        x_norm = (x_vals - x_min) / (x_max - x_min)
+        y_norm = (y_vals - y_min) / (y_max - y_min)
+        intensity = (x_norm * 0.7) + (y_norm * 0.3)
+
+        fig = go.Figure(data=[go.Mesh3d(
+            x=verts[:, 0], y=verts[:, 1], z=verts[:, 2],
+            i=faces[:, 0], j=faces[:, 1], k=faces[:, 2],
+            intensity=intensity,
+            colorscale=[
+                [0.0, "#B85C5C"],
+                [0.35, "#D89A9A"],
+                [0.65, "#E8C4A8"],
+                [1.0, "#F0B0B8"],
+            ],
+            showscale=False,
+            opacity=1.0,
+            lighting=dict(ambient=0.4, diffuse=0.9, specular=0.35, roughness=0.5),
+            flatshading=False,
+            hoverinfo="skip",
+        )])
+
+        landmarks = real_lungs_landmarks()
+        add_landmarks(fig, landmarks, mesh_data)
+        landmarks = real_lungs_landmarks()
+        add_landmarks(fig, landmarks, mesh_data)
+
+    else:
+        x, y, z, colorscale = get_shape_for_system(selected)
+        fig = go.Figure(data=[go.Surface(x=x, y=y, z=z, colorscale=colorscale, showscale=False)])
 
     fig.update_layout(
-          scene=dict(
+        scene=dict(
             xaxis=dict(visible=False, range=[-1.2, 1.2]),
             yaxis=dict(visible=False, range=[-1.2, 1.2]),
             zaxis=dict(visible=False, range=[-1.2, 1.2]),
@@ -156,20 +177,22 @@ with col_3d:
         st.caption("Heart model: HannahNewey / University of Dundee — CC BY-NC-SA")
     elif selected == "nervous":
         st.caption("Brain model: Johnson J / NIH 3D — CC BY")
+    elif selected == "respiratory":
+        st.caption("Respiratory model: kbrowne / NIH 3D (Visible Human Project) — CC BY")
 
 with col_legend:
-    if selected in ("cardiovascular", "nervous") and landmarks:
+    if selected in ("cardiovascular", "nervous", "respiratory") and landmarks:
         st.caption("Tap a number:")
         legend_box = st.container(height=520, border=True)
         with legend_box:
             for idx, pt in enumerate(landmarks, start=1):
-                if st.button(f"{idx}. {pt['name']}", key=f"landmark_{idx}", use_container_width=True):
-                    st.session_state["active_landmark"] = idx
+                if st.button(f"{idx}. {pt['name']}", key=f"landmark_{selected}_{idx}", use_container_width=True):
+                    st.session_state["active_landmark"] = (selected, idx)
 
             active = st.session_state.get("active_landmark")
-            if active:
-                pt = landmarks[active - 1]
-                st.info(f"**{active}. {pt['name']}**\n\n{pt['desc']}")
+            if active and active[0] == selected:
+                pt = landmarks[active[1] - 1]
+                st.info(f"**{active[1]}. {pt['name']}**\n\n{pt['desc']}")
 
 with col_info:
     def render_sections(sections):

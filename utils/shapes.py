@@ -335,3 +335,33 @@ def real_brain_landmarks():
             "desc": "The lowest part of the brainstem; regulates breathing, heart rate, and blood pressure.",
         }
     ]
+
+def real_lungs_landmarks():
+    """Labeled points on the lungs mesh, confirmed by hovering."""
+    return [
+        {
+            "name": "Trachea",
+            "x": -0.0398, "y": -0.7083, "z": 0.2889,
+            "desc": "The windpipe; carries air between the larynx and the bronchi, held open by C-shaped cartilage rings.",
+        },
+        {
+            "name": "Superior lobe",
+            "x": -0.4025, "y": -0.4540, "z": 0.1480,
+            "desc": "The upper lobe of the lung, one of the segments divided by the lung's fissures.",
+        },
+        {
+            "name": "Right lung",
+            "x": 0.4916, "y": -0.0851, "z": 0.3978,
+            "desc": "Has three lobes; slightly larger than the left lung, which yields space to accommodate the heart.",
+        },
+        {
+            "name": "Left lung",
+            "x": -0.5643, "y": -0.1069, "z": 0.3674,
+            "desc": "Has two lobes; smaller than the right lung due to the cardiac notch accommodating the heart.",
+        },
+        {
+            "name": "Cardiac notch",
+            "x": -0.0712, "y": 0.0291, "z": 0.4846,
+            "desc": "An indentation in the left lung's anterior border that accommodates the heart.",
+        },
+    ]
