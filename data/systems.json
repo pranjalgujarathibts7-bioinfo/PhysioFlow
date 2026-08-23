@@ -1,86 +1,157 @@
 {
   "cardiovascular": {
-    "name": "Cardiovascular",
+    "name": "Cardiovascular System",
     "icon": "❤️",
-    "summary": "Heart and blood flow",
+    "summary": "The heart and blood vessels that circulate blood, delivering oxygen and nutrients while removing metabolic waste.",
     "physiology": [
       {
-        "heading": "Cardiac chambers and valves",
+        "heading": "The Cardiac Cycle: Pressure-Volume Mechanics",
         "points": [
-          "The heart has four chambers: right atrium, right ventricle, left atrium, left ventricle, separated by the interatrial and interventricular septa.",
-          "The atrioventricular (AV) valves — tricuspid on the right, mitral (bicuspid) on the left — prevent backflow from ventricles into atria during systole.",
-          "The semilunar valves — pulmonary and aortic — prevent backflow from the great arteries into the ventricles during diastole.",
-          "Chordae tendineae anchor the AV valve cusps to papillary muscles, preventing valve prolapse into the atria under high ventricular pressure.",
-          "The left ventricle wall is roughly three times thicker than the right, reflecting the higher pressure workload of the systemic circuit versus the pulmonary circuit."
+          "The cardiac cycle divides into diastole (ventricular relaxation and filling) and systole (contraction and ejection); atrial contraction always precedes ventricular contraction, and although right- and left-heart pressures differ substantially, both sides move through an identical sequence of phases in parallel.",
+          "Isovolumetric contraction begins the instant ventricular pressure exceeds atrial pressure, snapping the AV valves shut (generating S1); because both AV and semilunar valves are transiently closed, ventricular volume cannot change even as pressure rises steeply — hence 'isovolumetric.' Contraction continues until ventricular pressure exceeds aortic (or pulmonary) pressure, at which point the semilunar valves open and the ejection phase begins.",
+          "Ejection itself has a rapid phase (roughly the first third, driven by the large pressure gradient between ventricle and great vessel) followed by a slower reduced-ejection phase as the pressure gradient narrows; only about 60% of end-diastolic volume is normally ejected per beat (the ejection fraction), leaving a residual end-systolic volume.",
+          "Isovolumetric relaxation follows semilunar valve closure (S2, occurring when ventricular pressure falls below aortic/pulmonary pressure) and lasts until ventricular pressure drops below atrial pressure, again with all four valves shut and no volume change.",
+          "Filling then proceeds through a rapid phase (large AV pressure gradient immediately after AV valve opening), a slower diastasis phase (as atrial and ventricular pressures equilibrate), and a final atrial contraction ('atrial kick') that contributes roughly the last 20% of end-diastolic volume — a contribution that becomes hemodynamically important when ventricular compliance is reduced, and is lost entirely in atrial fibrillation.",
+          "These phases are conventionally represented on a Wiggers diagram, superimposing aortic pressure, ventricular pressure, atrial pressure, ventricular volume, the ECG trace, and phonocardiogram (heart sounds) on a shared time axis — and on the pressure-volume (P-V) loop, where the enclosed area directly represents stroke work and the loop's width along the volume axis represents stroke volume."
         ]
       },
       {
-        "heading": "The cardiac cycle",
+        "heading": "Determinants of Stroke Volume and Cardiac Output",
         "points": [
-          "Diastole (relaxation/filling) and systole (contraction/ejection) alternate; at rest, a full cycle takes ~0.8 seconds at 75 bpm.",
-          "Isovolumetric contraction: ventricular pressure rises with all valves closed, until it exceeds arterial pressure and semilunar valves open.",
-          "Ejection phase: rapid ejection followed by reduced ejection as ventricular pressure falls toward the end of systole.",
-          "Isovolumetric relaxation: pressure falls with all valves closed, until it drops below atrial pressure and AV valves open.",
-          "Rapid filling, diastasis, then atrial systole ('atrial kick') contributes the final ~20% of ventricular filling.",
-          "Stroke volume = end-diastolic volume − end-systolic volume; ejection fraction (normal ~55-70%) = stroke volume / end-diastolic volume."
+          "Cardiac output (CO) = heart rate × stroke volume. Stroke volume is set by three interacting variables: preload, afterload, and contractility, each of which can be visualized as shifting the ventricular pressure-volume loop.",
+          "Preload corresponds operationally to end-diastolic volume (or, more precisely, end-diastolic sarcomere length/wall stress). The Frank-Starling mechanism describes how increasing preload increases stroke volume: stretching the sarcomere toward its optimal length increases the number of actin-myosin cross-bridge interactions possible and increases the Ca2+ sensitivity of troponin C (length-dependent activation, partly mediated by the giant sarcomeric protein titin) — meaning greater venous return produces a proportionally stronger contraction without requiring any change in intrinsic contractility.",
+          "Afterload is the wall stress the ventricle must generate to open the semilunar valve and eject blood, closely approximated clinically by aortic pressure or systemic vascular resistance for the left ventricle. Afterload is inversely related to stroke volume: at a fixed preload and contractility, raising afterload leaves more blood in the ventricle at end-systole (increasing end-systolic volume) and reduces the volume ejected.",
+          "Contractility (inotropy) is the force-generating capacity of the myocardium independent of loading conditions, governed principally by the availability of intracellular calcium during excitation-contraction coupling. Sympathetic stimulation increases contractility via beta-1 adrenergic receptor activation of protein kinase A, which phosphorylates L-type calcium channels (increasing Ca2+ influx), phospholamban (accelerating SERCA-mediated Ca2+ reuptake and thus relaxation — the lusitropic effect), and troponin I (reducing Ca2+ affinity, also aiding relaxation).",
+          "Heart rate reflects the intrinsic firing rate of the sinoatrial node, continuously modulated by autonomic tone: sympathetic input (norepinephrine acting on beta-1 receptors) accelerates the rate of diastolic (phase 4) depolarization in pacemaker cells, while vagal input (acetylcholine acting on M2 muscarinic receptors) hyperpolarizes pacemaker cells and slows phase 4 depolarization, lowering heart rate; resting heart rate is normally dominated by vagal tone."
         ]
       },
       {
-        "heading": "Cardiac conduction system",
+        "heading": "Cardiac Action Potentials and Excitation-Contraction Coupling",
         "points": [
-          "The sinoatrial (SA) node, in the right atrial wall near the superior vena cava, is the primary pacemaker, intrinsically firing ~60-100 times/min.",
-          "Impulses spread through atrial myocardium to the atrioventricular (AV) node, which imposes a ~0.1s delay, letting atrial contraction complete before ventricular contraction begins.",
-          "From the AV node, the signal travels down the bundle of His, then left/right bundle branches, then Purkinje fibers, which rapidly distribute the impulse through ventricular myocardium.",
-          "Purkinje fibers conduct faster than any other cardiac tissue (up to 4 m/s), ensuring near-simultaneous ventricular contraction.",
-          "If the SA node fails, the AV node (~40-60 bpm) or Purkinje fibers (~20-40 bpm) act as backup pacemakers."
+          "The ventricular myocyte action potential has five phases. Phase 4 is the stable resting membrane potential (~-90 mV), dominated by high resting K+ permeability through inward-rectifier channels (IK1). Phase 0 is rapid depolarization: once threshold is reached, fast voltage-gated Na+ channels open, producing a steep influx of Na+ (INa) that drives the membrane rapidly toward +50 mV — this steep upstroke is what allows rapid, coordinated propagation through the myocardium.",
+          "Phase 1 is early, partial repolarization caused by fast inactivation of Na+ channels combined with a transient outward K+ current (Ito). Phase 2, the plateau, is the defining feature of cardiac (versus neuronal or skeletal muscle) action potentials: sustained Ca2+ influx through L-type ('long-lasting') voltage-gated calcium channels roughly balances ongoing K+ efflux, holding the membrane near 0 mV for 100-200 ms. This prolonged plateau (and the resulting long refractory period) prevents the heart from being tetanized — ensuring each contraction is followed by mechanical relaxation and diastolic filling before the next beat can occur.",
+          "Phase 3 is repolarization: as L-type Ca2+ channels inactivate, outward K+ currents (chiefly the delayed rectifiers IKr and IKs) dominate and return the membrane to resting potential, closing the cycle. Genetic or pharmacological disruption of these repolarizing K+ currents underlies acquired and congenital long QT syndromes and associated arrhythmia risk.",
+          "Excitation-contraction coupling (ECC) links the electrical action potential to mechanical contraction via calcium-induced calcium release (CICR). The Ca2+ that enters through L-type channels during phase 2 does not itself directly trigger contraction in significant quantity — instead, it acts as a trigger that binds ryanodine receptors (RyR2) on the adjacent sarcoplasmic reticulum (SR), causing the SR to release a much larger quantity of stored Ca2+ into the cytosol (roughly 75% of the Ca2+ that drives contraction comes from the SR, not the extracellular space).",
+          "Cytosolic Ca2+ then binds troponin C, causing a conformational shift that displaces tropomyosin away from the myosin-binding sites on actin. This exposes the binding sites, allowing myosin cross-bridges to form and cycle (powered by ATP hydrolysis) — the sliding-filament mechanism of contraction, structurally identical to skeletal muscle at the sarcomere level.",
+          "Relaxation (lusitropy) requires cytosolic Ca2+ to fall, achieved primarily by the SERCA2a pump (sarco/endoplasmic reticulum Ca2+-ATPase) actively resequestering Ca2+ into the SR, with a smaller contribution from the sarcolemmal Na+/Ca2+ exchanger extruding Ca2+ from the cell. SERCA2a activity is itself regulated by phospholamban, which inhibits the pump at baseline; PKA-mediated phosphorylation of phospholamban (via beta-adrenergic stimulation) relieves this inhibition, accelerating both Ca2+ reuptake and myocardial relaxation."
         ]
       },
       {
-        "heading": "Regulation of cardiac output",
+        "heading": "The Cardiac Conduction System",
         "points": [
-          "Cardiac output (CO) = heart rate × stroke volume; typical resting CO is ~5 L/min.",
-          "The Frank-Starling mechanism: increased venous return stretches myocardial fibers, increasing contraction force — intrinsic regulation, independent of nervous control.",
-          "Sympathetic stimulation (via norepinephrine on β1 receptors) increases heart rate, contractility, and AV conduction velocity.",
-          "Parasympathetic stimulation (via the vagus nerve) decreases heart rate, primarily acting on the SA and AV nodes.",
-          "Baroreceptors in the carotid sinus and aortic arch detect blood pressure changes and reflexively adjust autonomic output."
+          "The sinoatrial (SA) node — a crescent-shaped cluster of specialized myocytes at the junction of the crista terminalis and superior vena cava — is the heart's dominant pacemaker because its cells lack a stable resting potential. Instead, T-type calcium channels produce a slow spontaneous depolarization ('funny current'/pacemaker potential) during phase 4, which continues until it reaches the threshold for L-type calcium channels, firing an action potential; notably, pacemaker cell depolarization (unlike working myocardium) is carried predominantly by calcium rather than sodium current.",
+          "From the SA node, the impulse spreads across atrial myocardium and converges on the atrioventricular (AV) node, situated within the interatrial septum at the Koch triangle. AV nodal conduction is deliberately slow — corresponding to the ECG's PR interval — which delays ventricular activation long enough for atrial contraction to complete ventricular filling before the ventricles depolarize.",
+          "Beyond the AV node, the impulse enters the bundle of His, then the left and right bundle branches, and finally the extensive Purkinje fiber network. Purkinje fibers conduct considerably faster than ordinary myocardium, ensuring the ventricles depolarize in a coordinated, near-simultaneous wave (activation spreading from apex to base and endocardium to epicardium) rather than a slow, disorganized spread that would produce weak, uncoordinated contraction.",
+          "Because the SA node has the fastest intrinsic firing rate, it normally suppresses the automaticity of subsidiary pacemakers (the AV node and Purkinje fibers) through overdrive suppression. If the SA node fails, the AV node (intrinsic rate ~40-60/min) or ventricular Purkinje tissue (intrinsic rate ~20-40/min) can assume pacemaker function at progressively slower rates — the physiological basis of escape rhythms."
         ]
       },
       {
-        "heading": "Blood pressure and circulation dynamics",
+        "heading": "Hemodynamics and Vascular Resistance",
         "points": [
-          "Mean arterial pressure (MAP) ≈ diastolic pressure + 1/3 (systolic − diastolic pressure); MAP = CO × total peripheral resistance.",
-          "The pulmonary circuit is a low-pressure, low-resistance system; the systemic circuit operates at much higher pressure to perfuse the whole body.",
-          "Capillary exchange is governed by Starling forces: hydrostatic pressure pushes fluid out at the arterial end, oncotic pressure draws fluid back in at the venous end.",
-          "Venous return is aided by the skeletal muscle pump, respiratory pump (thoracic pressure changes), and one-way venous valves."
+          "Blood flow (Q) through the vasculature follows the same principles governing any fluid in a tube: Q = ΔP/R (analogous to Ohm's law), where ΔP is the pressure gradient driving flow and R is vascular resistance opposing it.",
+          "By Poiseuille's law, resistance is inversely proportional to the fourth power of vessel radius (R ∝ 1/r⁴) — meaning even small changes in arteriolar diameter produce large changes in resistance. This makes arterioles, which possess substantial smooth muscle and can markedly change caliber, the principal site of resistance regulation in the entire circulation.",
+          "Mean pressure falls progressively along the circuit — aorta to large arteries to arterioles to capillaries to venules to veins — but the steepest single drop occurs across the arterioles, consistent with their dominant contribution to total peripheral resistance. Arteriolar vasoconstriction raises upstream (arterial) pressure while reducing downstream capillary flow; vasodilation has the opposite effect, the fundamental basis of both local (autoregulatory, metabolic) and systemic (autonomic) blood flow control.",
+          "Capillary exchange of fluid is governed by Starling forces: hydrostatic pressure (favoring filtration out of the capillary) opposed by plasma oncotic pressure (favoring reabsorption, driven mainly by plasma proteins, especially albumin). Net filtration versus reabsorption at any point along the capillary depends on the balance of these opposing pressures, and any imbalance can produce net fluid accumulation in the interstitium — edema (see Capillary Fluid Exchange below for the full quantitative treatment)."
+        ]
+      },
+      {
+        "heading": "Blood Pressure Regulation",
+        "points": [
+          "Systolic pressure is the peak arterial pressure during ventricular ejection; diastolic pressure is the trough pressure during ventricular relaxation/filling. Mean arterial pressure (MAP) — the average pressure driving tissue perfusion — is approximately diastolic pressure plus one-third of pulse pressure, and is fundamentally the product of cardiac output and systemic vascular resistance (MAP ≈ CO × SVR).",
+          "Short-term (second-to-second) regulation is dominated by the baroreceptor reflex. Stretch-sensitive baroreceptors in the carotid sinus and aortic arch fire tonically, increasing their firing rate as arterial wall distension increases with rising pressure. Afferent signals travel via the glossopharyngeal nerve (from the carotid sinus) and vagus nerve (from the aortic arch) to the nucleus tractus solitarius (NTS) in the medulla.",
+          "Increased baroreceptor firing (rising pressure) drives the NTS to excite the nucleus ambiguus, increasing vagal (parasympathetic) inhibitory output to the SA node — slowing heart rate — while simultaneously inhibiting sympathetic outflow from the rostral ventrolateral medulla, reducing peripheral vasoconstriction and cardiac contractility. A fall in pressure produces the mirror-image response: reduced baroreceptor firing disinhibits sympathetic outflow and reduces vagal tone, raising heart rate, contractility, and vascular resistance to restore pressure.",
+          "Longer-term regulation (minutes to days) is dominated by the renin-angiotensin-aldosterone system (RAAS). Reduced renal perfusion pressure, reduced NaCl delivery to the macula densa, or beta-1 adrenergic stimulation trigger juxtaglomerular cells to release renin, which cleaves angiotensinogen (hepatic in origin) to angiotensin I; angiotensin-converting enzyme (ACE, chiefly in pulmonary vascular endothelium) then converts this to angiotensin II.",
+          "Angiotensin II is a potent direct vasoconstrictor and also stimulates the adrenal cortex (zona glomerulosa) to secrete aldosterone, which increases distal nephron sodium (and secondary water) reabsorption — expanding plasma volume and raising blood pressure over a longer timescale than the baroreceptor reflex allows. Circulating angiotensin II additionally modulates baroreflex sensitivity via AT1 receptors in the area postrema and NTS, resetting the reflex toward higher pressures during RAAS activation."
+        ]
+      },
+      {
+        "heading": "Cardiac Energetics and Coronary Circulation",
+        "points": [
+          "Myocardial oxygen demand is set by three principal variables: heart rate, contractility, and ventricular wall stress (tension). Of these, heart rate is generally considered the most influential, since a faster rate both increases the number of contractions per minute and — critically — shortens diastole, the phase during which the left ventricle actually receives most of its blood supply.",
+          "Wall stress is formalized by the Law of Laplace: wall stress is proportional to ventricular pressure × radius, divided by wall thickness (σ ∝ P·r/h). This explains why a dilated, thin-walled ventricle generates more wall tension (and thus consumes more oxygen) for a given pressure than a normally sized or compensatorily hypertrophied one.",
+          "Uniquely among vascular beds, left ventricular coronary blood flow is predominantly diastolic rather than systolic: during systole, contracting myocardium mechanically compresses the intramural coronary microvessels (most severely in the subendocardium), impeding inflow, whereas diastolic relaxation releases this compression and allows the bulk of coronary filling to occur. Approximately 70-80% of left ventricular flow occurs in diastole, compared to a roughly even systolic/diastolic split in the lower-pressure right ventricle.",
+          "Coronary perfusion pressure (CPP) is approximated as aortic diastolic pressure minus left ventricular end-diastolic pressure (CPP = DBP − LVEDP). Tachycardia disproportionately shortens diastole (relative to systole), directly reducing the time available for coronary filling — a key reason rapid heart rates can precipitate subendocardial ischemia even without any change in coronary artery diameter.",
+          "At rest the myocardium already extracts 60-80% of the oxygen delivered by coronary blood — a far higher extraction fraction than most other tissues — meaning the heart has very limited capacity to meet increased demand by extracting more oxygen from a fixed blood supply. Instead, increased demand must be met almost entirely by increasing coronary blood flow itself, chiefly through metabolic vasodilation (adenosine release from ATP-consuming myocytes is a principal mediator) acting on coronary arteriolar smooth muscle, a mechanism termed coronary flow reserve."
+        ]
+      },
+      {
+        "heading": "Venous Return and Integration with Cardiac Function",
+        "points": [
+          "Guyton's model frames venous return as a function of the pressure gradient between mean systemic filling pressure (MSFP — the pressure that would exist throughout the systemic circulation if the heart stopped and pressure equilibrated) and right atrial pressure (RAP), divided by the resistance to venous return: VR = (MSFP − RAP) / RVR.",
+          "MSFP is determined by total circulating blood volume and venous compliance/tone; because roughly 60-70% of total blood volume resides in the highly compliant venous system at any time, changes in venous tone (via sympathetic venoconstriction) can substantially and rapidly alter effective circulating (stressed) volume without any change in actual blood volume — 'auto-transfusing' blood from unstressed venous reservoirs into the active circulation.",
+          "Plotting venous return against right atrial pressure produces the vascular function curve, which can be superimposed on the cardiac function (Frank-Starling) curve — plotting cardiac output against right atrial pressure — on the same axes. Because venous return must equal cardiac output at steady state, the intersection of these two curves defines the system's actual operating point for right atrial pressure and cardiac output.",
+          "This integrated framework explains phenomena that considering the heart in isolation cannot: for example, why hemorrhage (which lowers MSFP by reducing stressed volume) reduces cardiac output even in an otherwise-healthy heart, and why positive-pressure mechanical ventilation (which raises intrathoracic and right atrial pressure) can reduce venous return and cardiac output independent of any change in cardiac contractility."
+        ]
+      },
+      {
+        "heading": "Local (Intrinsic) Regulation of Blood Flow",
+        "points": [
+          "Beyond centralized autonomic/hormonal control, individual vascular beds regulate their own blood flow locally to match tissue metabolic demand — a property especially critical in the coronary, cerebral, and renal circulations.",
+          "Metabolic (or 'active hyperemia') regulation: increased tissue metabolic activity elevates local concentrations of vasodilator metabolites — adenosine, CO2, H+, K+, and reduced local pO2 — which relax arteriolar smooth muscle and increase flow to match the tissue's current metabolic rate. This is the principal mechanism behind coronary flow reserve and exercise-induced skeletal muscle hyperemia.",
+          "Myogenic regulation: vascular smooth muscle intrinsically contracts in response to stretch and relaxes when stretch is reduced, independent of any neural or hormonal input. This provides moment-to-moment protection against pressure-driven over-perfusion and is a major contributor to autoregulation — the capacity of an organ to maintain relatively constant blood flow across a range of perfusion pressures.",
+          "Endothelium-derived regulation: vascular endothelium is not a passive lining but an active paracrine signaling layer. Endothelial cells synthesize nitric oxide (NO, via endothelial NO synthase, stimulated by shear stress and various agonists) and prostacyclin, both potent vasodilators; they also produce endothelin-1, one of the most potent endogenous vasoconstrictors known. The balance of these endothelium-derived factors is a key determinant of vascular tone and is disrupted ('endothelial dysfunction') in atherosclerosis, diabetes, and hypertension."
+        ]
+      },
+      {
+        "heading": "Capillary Fluid Exchange and Lymphatic Return",
+        "points": [
+          "Fluid movement across the capillary wall is governed by the Starling equation: Jv = Kf[(Pc − Pi) − σ(πc − πi)], where Jv is net filtration, Kf is the filtration coefficient (capillary permeability × surface area), Pc and Pi are capillary and interstitial hydrostatic pressures, πc and πi are capillary and interstitial oncotic pressures, and σ is the reflection coefficient (how effectively the capillary wall restricts protein passage).",
+          "Capillary hydrostatic pressure typically favors filtration (fluid moving out of the capillary into the interstitium) at the arteriolar end, while plasma oncotic pressure (chiefly from albumin) opposes it; classical teaching held that pressure reverses toward net reabsorption at the venular end, though modern evidence suggests most capillary beds filter net fluid along their entire length under normal conditions, with the interstitium relying on lymphatic drainage — not venular reabsorption — to return the bulk of filtered fluid to the circulation.",
+          "The lymphatic system thus functions as an essential overflow return pathway: filtered interstitial fluid (now called lymph) is collected by blind-ended lymphatic capillaries, propelled centrally through progressively larger lymphatic vessels (aided by one-way valves and surrounding skeletal muscle contraction, since lymphatics have no central pump), and ultimately returned to the venous circulation via the thoracic duct and right lymphatic duct. Impaired lymphatic drainage, or filtration that outpaces lymphatic capacity, produces edema."
         ]
       }
     ],
     "histology": [
       {
-        "heading": "Layers of the heart wall",
+        "heading": "Cardiac Muscle Ultrastructure",
         "points": [
-          "Epicardium (visceral pericardium): outer layer, simple squamous mesothelium over connective tissue, often with adipose tissue and coronary vessels.",
-          "Myocardium: thick middle layer of cardiac muscle responsible for contraction; thickness varies by chamber, thickest in the left ventricle.",
-          "Endocardium: inner lining of simple squamous endothelium over thin connective tissue, continuous with vessel endothelium."
+          "Cardiac muscle (myocardium) is striated, like skeletal muscle, containing organized sarcomeres with the same actin-myosin banding pattern (A-bands, I-bands, Z-lines) visible under light microscopy — but cardiomyocytes differ from skeletal fibers in being shorter, branching, and typically mononucleated (occasionally binucleated) rather than long, unbranched, and multinucleated.",
+          "Neighboring cardiomyocytes are joined end-to-end at intercalated discs, which appear as dark transverse (sometimes stepped/zig-zag) lines on light microscopy. Ultrastructurally, intercalated discs contain three distinct junction types arranged regionally: fascia adherens and desmosomes concentrate at the transverse ('plicate') segments running perpendicular to the fiber and anchor actin filaments/intermediate filaments at the Z-line level, providing mechanical coupling; gap junctions concentrate at the longitudinal ('interplicate') segments and provide direct low-resistance electrical coupling between cells.",
+          "The gap junctions of the intercalated disc give cardiac muscle the functional property of a syncytium: despite being histologically composed of discrete, individually membrane-bound cells, electrical excitation passes directly cell-to-cell through connexin channels, allowing an entire chamber to depolarize and contract as a single coordinated unit.",
+          "Cardiomyocytes contain unusually abundant, large mitochondria packed between myofibrils — reflecting the myocardium's continuous, high-volume ATP demand and near-total reliance on oxidative phosphorylation — along with an extensive T-tubule system (wider and more centrally organized than in skeletal muscle, aligned at the Z-line) that allows the action potential to trigger near-synchronous Ca2+ release throughout the cell's depth.",
+          "Troponin C, I, and T mediate the calcium-dependent regulation of cross-bridge cycling described in excitation-contraction coupling; cardiac-specific isoforms of troponin I and T are released into circulation following myocardial injury and serve as the principal clinical biomarkers for diagnosing myocardial infarction."
         ]
       },
       {
-        "heading": "Cardiac muscle cell structure",
+        "heading": "Conduction System Histology",
         "points": [
-          "Cardiomyocytes are striated (organized actin-myosin sarcomeres) but branched, unlike skeletal muscle fibers.",
-          "Each cell typically has one or two centrally located nuclei, unlike multinucleated skeletal fibers.",
-          "Mitochondria are extremely abundant (up to 30-40% of cell volume), reflecting continuous high aerobic energy demand.",
-          "Intercalated discs join adjacent cardiomyocytes end-to-end via fascia adherens and desmosomes (mechanical coupling) and gap junctions (electrical coupling), letting the myocardium act as an electrical syncytium.",
-          "Purkinje fibers are histologically distinct: larger diameter, fewer myofibrils, more glycogen, located subendocardially."
+          "Pacemaker cells of the SA and AV nodes are histologically distinct from working (contractile) myocardium: smaller in diameter, with sparse and disorganized myofibrils and correspondingly faint striation, reflecting a cellular specialization for automaticity and impulse generation rather than forceful contraction.",
+          "Purkinje fibers, located in the subendocardium, are notably larger than ordinary cardiomyocytes with pale-staining cytoplasm; their myofibrils are sparse and confined to the cell periphery, while the central cytoplasm is dominated by abundant glycogen stores — an architecture that favors rapid conduction velocity over contractile force generation, allowing the ventricles to be activated almost simultaneously."
         ]
       },
       {
-        "heading": "Blood vessel wall histology",
+        "heading": "Blood Vessel Wall Histology",
         "points": [
-          "Tunica intima: innermost layer, simple squamous endothelium on a basement membrane, providing a non-thrombogenic surface.",
-          "Tunica media: smooth muscle and elastic fibers; thickest in arteries, thin or absent in capillaries.",
-          "Tunica adventitia: outer connective tissue anchoring the vessel; contains vasa vasorum (vessels supplying the vessel wall) in larger vessels.",
-          "Capillaries are classified as continuous (tight, e.g. muscle, CNS), fenestrated (small pores, e.g. kidney, endocrine glands), or sinusoidal (large gaps, e.g. liver, spleen, bone marrow)."
+          "Most blood vessels share a common three-layer wall architecture — an inner tunica intima, a middle tunica media, and an outer tunica adventitia (externa) — though the relative thickness, cellular composition, and elastic content of each layer vary considerably between arteries, veins, and capillaries.",
+          "The tunica intima consists of a single layer of simple squamous endothelial cells resting on a basal lamina. Endothelium may be continuous (tight intercellular junctions, found in most tissues including the blood-brain barrier), fenestrated (containing transcellular pores, found in renal glomeruli, choroid plexus, and intestinal mucosa to permit rapid filtration or absorption), or discontinuous (with true intercellular gaps, found in hepatic, splenic, and bone marrow sinusoids to allow passage of cells and large macromolecules).",
+          "The tunica media consists of circumferentially or diagonally arranged smooth muscle cells embedded in an extracellular matrix of collagen and elastin, separated from the intima by the internal elastic lamina. This layer is markedly thicker in arteries than veins at any comparable caliber, and is thickest of all in large elastic (conducting) arteries such as the aorta, whose abundant elastic lamellae stretch during systolic ejection and recoil during diastole — the Windkessel effect — converting pulsatile ventricular output into steadier downstream flow.",
+          "Muscular (distributing) arteries, by contrast, have proportionally more smooth muscle and less elastin in the media, reflecting their role in actively regulating regional blood flow via vasoconstriction/vasodilation rather than passive elastic recoil. Veins, especially in the limbs, additionally contain intraluminal valves — folds of the tunica intima that prevent retrograde flow and work with the surrounding skeletal muscle pump to assist venous return against gravity.",
+          "The tunica adventitia is composed predominantly of collagen (with variable elastin), anchoring the vessel to surrounding connective tissue and — in vessels thick enough that luminal diffusion cannot adequately nourish the outer wall — housing the vasa vasorum and nervi vasorum, the small nutrient vessels and autonomic nerve fibers that supply the vessel wall itself.",
+          "Capillaries, the primary site of gas, nutrient, and fluid exchange, consist of only endothelium and basal lamina (a tunica intima alone, without media or adventitia) — a minimal structure that reduces diffusion distance to the surrounding tissue, at the cost of any independent contractile or structural reinforcement."
+        ]
+      },
+      {
+        "heading": "Cardiac Wall Layers and Pericardium",
+        "points": [
+          "The heart wall comprises three layers: the epicardium (outermost, the visceral layer of serous pericardium — a single mesothelial layer over connective tissue and adipose tissue that houses the coronary vessels and cardiac nerves), the myocardium (the thick, muscular middle layer described above), and the endocardium (innermost, a single layer of simple squamous endothelium over a thin connective tissue layer, continuous with the endothelial lining of all connected blood vessels).",
+          "The pericardium as a whole consists of a fibrous outer layer (dense connective tissue, anchoring the heart within the mediastinum and limiting acute over-distension) and a serous inner layer with two divisions: the parietal pericardium (lining the fibrous sac) and visceral pericardium/epicardium (adherent to the heart surface). The potential space between parietal and visceral layers — the pericardial cavity — normally contains a thin film of serous fluid that minimizes friction during the cardiac cycle, drained by a rich local lymphatic network.",
+          "The fibrous cardiac skeleton — dense connective tissue forming the annuli fibrosi (rings encircling each valve), trigona fibrosi, and the membranous interventricular septum — electrically insulates the atria from the ventricles (forcing all normal conduction through the AV node), provides rigid anchor points for valve leaflets, and serves as the origin/insertion for atrial and ventricular myocardial fibers."
+        ]
+      },
+      {
+        "heading": "Cardiac Valve Histology",
+        "points": [
+          "Cardiac valve leaflets are avascular beyond their proximal attachment and are covered by a continuous layer of valve endothelial cells, histologically and functionally continuous with the endocardium. Beneath this endothelium, the leaflet stroma is organized into distinct layers populated by valve interstitial cells — quiescent fibroblast-like cells responsible for extracellular matrix maintenance, which can pathologically differentiate into osteoblast-like cells and drive dystrophic valve calcification in degenerative valve disease.",
+          "Atrioventricular (mitral, tricuspid) valves are classically described with three to four layers: the atrialis (facing the atrium, aligned collagen and elastic fibers), the spongiosa (loosely organized proteoglycan- and glycosaminoglycan-rich tissue that allows shear and cushions leaflet flexure), the fibrosa (the mechanically dominant layer, dense circumferentially-oriented collagen continuous with the fibrous skeleton, providing the leaflet's tensile strength), and a ventricularis (facing the ventricle, elastin-rich, supporting elastic recoil). In the AV valves, the fibrosa continues into the chordae tendineae — dense regular connective tissue cords anchoring the leaflet free edges to the papillary muscles.",
+          "Semilunar (aortic, pulmonic) valves show an analogous layered organization, typically described as arterialis, fibrosa, spongiosa, and ventricularis; the fibrosa again provides the principal load-bearing structure, while the elastin-rich ventricularis/arterialis layers support the rapid, repeated recoil these valves undergo with every cardiac cycle."
+        ]
+      },
+      {
+        "heading": "Excitation-Contraction Coupling Ultrastructure",
+        "points": [
+          "The physical basis of calcium-induced calcium release is a specialized junctional structure called the dyad (or couplon): a close physical apposition between the T-tubule membrane (bearing L-type calcium channels/dihydropyridine receptors) and the terminal cisternae of the adjacent sarcoplasmic reticulum (bearing clusters of ryanodine receptors), separated by only a narrow diadic cleft of roughly 12-15 nanometers.",
+          "This tight spatial coupling allows the relatively small Ca2+ influx through L-type channels during the action potential plateau to reach a very high local concentration within the diadic cleft, sufficient to reliably trigger ryanodine receptor opening and the much larger, amplifying SR calcium release — despite the trigger current itself being far too small to raise bulk cytosolic calcium to contraction-triggering levels on its own.",
+          "Because cardiac T-tubules are wider and more centrally distributed than their skeletal muscle counterparts (with dyads, rather than skeletal muscle's triads, at each junction), and because SR calcium stores in cardiac muscle are comparatively less extensive than in skeletal muscle, cardiac contraction remains fundamentally more dependent on trigger calcium entering from the extracellular space — a key reason cardiac muscle, unlike skeletal muscle, cannot contract in the complete absence of extracellular calcium."
         ]
       }
     ]
