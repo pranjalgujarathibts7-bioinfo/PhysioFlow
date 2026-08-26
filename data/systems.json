@@ -272,65 +272,93 @@
     ]
   },
   "respiratory": {
-    "name": "Respiratory",
+    "name": "Respiratory System",
     "icon": "🫁",
-    "summary": "Lungs and gas exchange",
+    "summary": "The airways and lungs that move air, exchange gases, and regulate acid-base balance through the elimination of carbon dioxide.",
     "physiology": [
       {
-        "heading": "Mechanics of breathing",
+        "heading": "Pulmonary Mechanics: Compliance, Surfactant, and the Law of Laplace",
         "points": [
-          "Inspiration is active: the diaphragm and external intercostal muscles contract, increasing thoracic volume, decreasing intrapleural and alveolar pressure below atmospheric, drawing air in (Boyle's law).",
-          "Expiration at rest is passive, driven by elastic recoil of the lungs and relaxation of inspiratory muscles; forced expiration recruits internal intercostals and abdominal muscles.",
-          "Intrapleural pressure remains negative relative to atmospheric pressure throughout the respiratory cycle, keeping the lungs adherent to the chest wall via the pleural seal.",
-          "Lung compliance describes the ease of lung expansion per unit pressure change; it's reduced in fibrotic lung disease and increased in emphysema.",
-          "Tidal volume (~500ml at rest), inspiratory/expiratory reserve volumes, and residual volume together determine total lung capacity (~6L in an average adult)."
+          "Inspiration is active: the diaphragm and external intercostal muscles contract, increasing thoracic volume and decreasing intrapleural and alveolar pressure below atmospheric pressure, drawing air in down the resulting pressure gradient (Boyle's law). Expiration at rest is passive, driven by elastic recoil of the lungs and relaxation of inspiratory muscles; forced expiration recruits internal intercostal and abdominal muscles.",
+          "Lung compliance (ΔV/ΔP) describes the ease of lung expansion per unit pressure change and is inversely related to elastance (elastic recoil, or stiffness). Compliance is determined by two factors: the elastic fiber content of lung tissue (collagen and elastin in the interalveolar septa, which also generate outward radial traction helping to keep alveoli open) and the surface tension of the fluid lining the alveoli.",
+          "Surface tension at the air-liquid interface inside each alveolus creates an inward collapsing force, formalized by the Law of Laplace: pressure required to keep a hollow sphere distended = 2T/r, where T is surface tension and r is alveolar radius. Because pressure rises as radius falls, smaller alveoli would — in the absence of surfactant — generate higher internal pressure than larger ones and tend to collapse and empty into neighboring larger alveoli, a destabilizing tendency.",
+          "Pulmonary surfactant, a phospholipid-rich mixture secreted by type II alveolar cells, disrupts this instability by lowering surface tension more effectively as alveolar radius decreases (since surfactant molecules become more concentrated as the alveolar surface area shrinks), roughly equalizing the effective pressure across differently-sized alveoli and preventing smaller alveoli from collapsing into larger ones. Surfactant deficiency (as in neonatal respiratory distress syndrome, since surfactant secretion typically begins around 24-28 weeks gestation) dramatically increases the pressure required to keep alveoli open and promotes widespread atelectasis.",
+          "The lung and chest wall together form a combined compliance system: the chest wall's own elastic recoil favors outward expansion, opposing the lung's inward elastic recoil; their combined balance establishes functional residual capacity (FRC), the volume remaining in the lungs after a passive, relaxed expiration."
         ]
       },
       {
-        "heading": "Gas exchange and transport",
+        "heading": "Airflow, Resistance, and Lung Volumes",
         "points": [
-          "Gas exchange occurs across the alveolar-capillary membrane by simple diffusion, driven by partial pressure gradients (Fick's law of diffusion).",
-          "The large alveolar surface area (~70m²) and thin membrane (~0.5 micron) optimize diffusion efficiency.",
-          "Most oxygen is transported bound to hemoglobin (as oxyhemoglobin); a small fraction dissolves directly in plasma.",
-          "The oxygen-hemoglobin dissociation curve is sigmoidal; it shifts right (lower O2 affinity, easier unloading) with increased temperature, CO2, H+, and 2,3-BPG (the Bohr effect).",
-          "CO2 is transported mainly as bicarbonate (via carbonic anhydrase in erythrocytes), with smaller fractions bound to hemoglobin (carbaminohemoglobin) and dissolved in plasma."
+          "Airway resistance follows the same physical principles as vascular resistance: flow = pressure gradient / resistance (Ohm's law analogy), and resistance itself is described by Poiseuille's law (resistance ∝ 1/radius⁴ for a given length and gas viscosity) — meaning airway caliber, particularly at the level of the medium-sized bronchi, is the dominant determinant of airflow resistance, and even modest bronchoconstriction produces a disproportionately large increase in resistance.",
+          "Tidal volume (~500 mL at rest), inspiratory and expiratory reserve volumes, and residual volume (air remaining after maximal forced expiration, which cannot be measured by simple spirometry since it can never be exhaled) together determine total lung capacity (~6 L in an average adult).",
+          "Intrapleural pressure remains negative relative to atmospheric pressure throughout the normal respiratory cycle — a consequence of the opposing elastic forces of lung (inward) and chest wall (outward) pulling apart on the thin pleural fluid layer between them — keeping the lungs mechanically coupled to the chest wall via this pleural seal; loss of this negative pressure (e.g., pneumothorax, where air enters the pleural space) allows the lung to collapse independently of chest wall movement."
         ]
       },
       {
-        "heading": "Control of breathing",
+        "heading": "Gas Exchange by Diffusion",
         "points": [
-          "The medullary respiratory center (dorsal and ventral respiratory groups) generates the basic rhythm of breathing, modulated by the pontine respiratory group which fine-tunes rate and depth.",
-          "Central chemoreceptors in the medulla respond primarily to CSF pH (reflecting CO2 levels, since CO2 crosses the blood-brain barrier and forms carbonic acid).",
-          "Peripheral chemoreceptors (carotid and aortic bodies) respond mainly to blood O2 levels, becoming significant drivers only when PO2 drops substantially.",
-          "CO2/pH is the dominant driver of ventilation under normal physiological conditions, not O2, which is why supplemental O2 can be dangerous in chronic CO2 retainers relying on hypoxic drive."
+          "Gas exchange across the alveolar-capillary membrane occurs by simple diffusion, governed by Fick's law: diffusion rate is proportional to membrane surface area and the partial pressure gradient across it, and inversely proportional to membrane thickness. The large alveolar surface area (~70 m²) and extremely thin respiratory membrane (~0.5 micron, comprising alveolar epithelium, fused basement membranes, and capillary endothelium) together optimize diffusion efficiency, normally allowing near-complete equilibration of blood and alveolar gas partial pressures well before blood finishes transiting the pulmonary capillary."
         ]
       },
       {
-        "heading": "Ventilation-perfusion matching",
+        "heading": "Oxygen Transport and the Oxyhemoglobin Dissociation Curve",
         "points": [
-          "Efficient gas exchange requires matching of ventilation (airflow) to perfusion (blood flow) across lung regions — the V/Q ratio.",
-          "Hypoxic pulmonary vasoconstriction redirects blood flow away from poorly ventilated alveoli, optimizing overall gas exchange efficiency.",
-          "Gravity causes regional V/Q variation in the upright lung: the apex is relatively over-ventilated relative to perfusion, the base is relatively over-perfused relative to ventilation."
+          "Only about 2% of blood oxygen is carried dissolved directly in plasma; the remaining ~98% is bound to hemoglobin as oxyhemoglobin. Hemoglobin is a tetramer of four globin chains, each with a heme group whose central iron (Fe2+) reversibly binds one O2 molecule.",
+          "Hemoglobin exhibits cooperative (allosteric) oxygen binding: it shifts between a low-affinity 'tense' (T) conformation and a high-affinity 'relaxed' (R) conformation, and the binding of each successive O2 molecule increases the affinity for the next (heme-heme interaction). This cooperativity produces the characteristic sigmoidal shape of the oxyhemoglobin dissociation curve — a flat upper plateau (where large changes in PO2 produce little change in saturation, providing a safety margin at high altitude or with mild lung disease) and a steep middle portion (where small changes in PO2 near typical tissue oxygen tensions produce large changes in O2 unloading).",
+          "The curve shifts rightward (reduced hemoglobin-oxygen affinity, favoring O2 unloading to tissues) with increased temperature, increased CO2, decreased pH, and increased 2,3-bisphosphoglycerate (2,3-BPG, a red blood cell metabolite that stabilizes the low-affinity T state) — the pH/CO2 dependence specifically termed the Bohr effect. These are all conditions characteristic of actively metabolizing tissue, meaning the curve's rightward shift is itself a physiological adaptation that promotes oxygen delivery exactly where and when it's most needed.",
+          "The curve shifts leftward (increased affinity, favoring O2 loading/retention) with fetal hemoglobin (alpha2gamma2, which binds 2,3-BPG less avidly than adult hemoglobin, allowing the fetus to extract oxygen from maternal circulation across the placenta) and with carbon monoxide poisoning (CO binds hemoglobin with roughly 240 times the affinity of O2, both directly displacing O2 and allosterically shifting remaining O2-bound sites toward tighter retention — compounding the harm of reduced oxygen-carrying capacity with impaired oxygen release from whatever hemoglobin remains available)."
+        ]
+      },
+      {
+        "heading": "Carbon Dioxide Transport",
+        "points": [
+          "CO2 is transported in blood in three forms: dissolved in plasma (~10%), bound to hemoglobin as carbaminohemoglobin (~10%, binding the amino-terminus of the globin chain, a distinct site from oxygen binding), and — the majority, ~70% — as bicarbonate (HCO3-).",
+          "Bicarbonate formation occurs predominantly within red blood cells: CO2 diffuses into the erythrocyte and combines with water, catalyzed by carbonic anhydrase, to form carbonic acid, which rapidly dissociates into H+ and HCO3-. The H+ produced is buffered by hemoglobin (deoxygenated hemoglobin is a better H+ buffer than oxygenated hemoglobin, a property termed the Haldane effect, which reciprocally supports the Bohr effect at the tissue level), while HCO3- is exported from the cell into plasma in exchange for chloride via the Cl-/HCO3- antiporter (Band 3/anion exchanger 1) — the chloride shift, giving venous blood a higher bicarbonate and lower chloride concentration than arterial blood.",
+          "In the pulmonary capillaries, this entire process reverses: as CO2 diffuses out of the blood into the alveoli (down its partial pressure gradient) and is exhaled, chloride shift and carbonic anhydrase run in reverse, HCO3- re-enters red blood cells and is converted back to CO2 for elimination."
+        ]
+      },
+      {
+        "heading": "Control of Breathing: Central and Peripheral Chemoreceptors",
+        "points": [
+          "The medullary respiratory center (dorsal and ventral respiratory groups) generates the basic rhythm of breathing, modulated by the pontine respiratory group, which fine-tunes rate and depth; this rhythm is continuously adjusted by chemoreceptor feedback reflecting the body's current metabolic gas exchange needs.",
+          "Central chemoreceptors, located on the ventral surface of the medulla, are the dominant driver of ventilatory control under normal conditions, accounting for roughly 70-80% of the response to a rise in CO2. Because H+ itself cannot cross the blood-brain barrier, central chemoreceptors do not sense blood H+ directly — instead, CO2 (which crosses the BBB readily) diffuses into the CSF, where carbonic anhydrase converts it to carbonic acid, which dissociates and lowers CSF pH; this pH drop is what directly stimulates the chemoreceptors. Because CSF contains far less protein buffering capacity than blood, CSF pH changes more readily with fluctuating PCO2, making this an unusually sensitive detection system for even small changes in ventilation adequacy.",
+          "Peripheral chemoreceptors, located in the carotid bodies (at the common carotid bifurcation, signaling via the glossopharyngeal nerve) and aortic bodies (signaling via the vagus nerve), respond mainly to a fall in arterial PO2 — becoming significant drivers of ventilation only once PO2 drops substantially (roughly below 60 mmHg), since it is the partial pressure of dissolved oxygen, not total oxygen content, that constitutes the actual stimulus (explaining why conditions like anemia, which reduce oxygen content without lowering PO2, do not directly stimulate these receptors). Peripheral chemoreceptors also respond to rising CO2/falling pH, though more weakly and with a faster response time than central chemoreceptors, and account for roughly 15-20% of the overall ventilatory drive.",
+          "Because CO2/pH is the dominant physiological driver of ventilation, chronic CO2 retainers (e.g., in advanced COPD) were classically thought to become reliant on hypoxic drive via peripheral chemoreceptors as their central chemoreceptor sensitivity blunted — the traditional rationale for cautious oxygen administration in this population. More recent evidence indicates this mechanism is less significant than previously believed, and that excess supplemental oxygen instead risks worsening hypercapnia chiefly by reversing protective hypoxic pulmonary vasoconstriction, worsening ventilation-perfusion mismatch."
+        ]
+      },
+      {
+        "heading": "Ventilation-Perfusion Matching",
+        "points": [
+          "Efficient gas exchange requires that ventilation (airflow to alveoli) and perfusion (blood flow to the surrounding capillaries) be appropriately matched at the regional level — expressed as the V/Q ratio, ideally close to 1 in a well-matched lung unit.",
+          "Hypoxic pulmonary vasoconstriction is a unique, localized reflex in which pulmonary arterioles supplying poorly-ventilated (low-PO2) alveoli constrict, redirecting blood flow toward better-ventilated regions — the opposite response seen in the systemic circulation, where hypoxia causes vasodilation. This reflex actively optimizes overall V/Q matching by minimizing blood flow to lung units that could not adequately oxygenate it anyway.",
+          "Gravity produces substantial regional V/Q variation in the upright lung: at the apex, alveoli are relatively over-ventilated relative to their perfusion (high V/Q, since gravity limits blood flow reaching the apex more than it limits ventilation there), while at the base, alveoli are relatively over-perfused relative to their ventilation (low V/Q, since gravity increases blood flow preferentially more than it increases regional ventilation) — meaning gas exchange efficiency, and the relative contribution of different lung regions to overall oxygenation, varies continuously from apex to base."
         ]
       }
     ],
     "histology": [
       {
-        "heading": "Airway epithelium",
+        "heading": "Airway Epithelium",
         "points": [
-          "The trachea and bronchi are lined with pseudostratified ciliated columnar epithelium with interspersed goblet cells, forming the mucociliary escalator that traps and clears inhaled debris.",
-          "C-shaped hyaline cartilage rings support the trachea, preventing collapse while allowing posterior flexibility against the esophagus.",
-          "As airways branch into bronchioles, epithelium transitions to simple columnar then simple cuboidal, and cartilage and goblet cells progressively disappear.",
-          "Club cells (Clara cells) in bronchioles secrete surfactant components and detoxify inhaled substances, replacing goblet cells in this region."
+          "The trachea and bronchi are lined with pseudostratified ciliated columnar epithelium with interspersed goblet cells, forming the mucociliary escalator that traps and clears inhaled debris — cilia beat in a coordinated, unidirectional wave, propelling the overlying mucus (and trapped particulates) toward the pharynx to be swallowed or expectorated.",
+          "C-shaped hyaline cartilage rings support the trachea, preventing collapse during the negative intrathoracic pressures of inspiration while allowing posterior flexibility against the adjacent esophagus during swallowing.",
+          "As airways branch progressively into bronchioles, the epithelium transitions from pseudostratified columnar to simple columnar and then simple cuboidal, while cartilage and goblet cells progressively disappear — reflecting the airway's shifting mechanical role (from structural conduit toward the highly branched, thin-walled distribution network feeding the alveoli) and the decreasing need for mucus production as inhaled particulates have typically already been filtered by more proximal airways.",
+          "Club cells (formerly termed Clara cells), found in the bronchiolar epithelium, secrete surfactant lipoprotein components, detoxify inhaled xenobiotics via cytochrome P450 enzymes, and act as regional progenitor cells capable of re-epithelializing the bronchiolar lining after injury, functionally replacing the goblet cells that are absent at this level."
         ]
       },
       {
-        "heading": "Alveolar structure",
+        "heading": "Alveolar Structure",
         "points": [
-          "Type I pneumocytes are thin, flat squamous cells forming the majority (~95%) of the alveolar surface area, optimized for rapid gas diffusion.",
-          "Type II pneumocytes are cuboidal, less numerous, and secrete pulmonary surfactant (a phospholipid mixture) that reduces alveolar surface tension and prevents collapse (atelectasis), especially in small alveoli (per Laplace's law).",
-          "Alveolar macrophages ('dust cells') patrol the alveolar surface, phagocytosing inhaled particulates and pathogens.",
-          "The respiratory membrane (for gas exchange) comprises the alveolar epithelium, fused basement membranes, and capillary endothelium — remarkably thin to minimize diffusion distance."
+          "Type I pneumocytes are thin, flat squamous cells forming the large majority (~95%) of the alveolar surface area despite being outnumbered by type II cells; their extreme thinness is specifically optimized to minimize diffusion distance for gas exchange, and — having essentially no capacity for cell division — they are particularly vulnerable to toxic or infectious lung injury.",
+          "Type II pneumocytes are cuboidal, fewer in number but metabolically active, secreting pulmonary surfactant via lamellar bodies (specialized secretory organelles); they also serve as the stem/progenitor cell population responsible for regenerating both type I and type II cells following alveolar injury.",
+          "Alveolar macrophages ('dust cells') patrol the alveolar luminal surface, phagocytosing inhaled particulates, microorganisms, and cellular debris; unlike much of the mucociliary escalator's mechanical clearance, this defense operates at the level of the alveolus itself, where cilia and mucus are absent.",
+          "The respiratory membrane — the actual gas-exchange barrier between alveolar air and capillary blood — comprises the type I pneumocyte, a fused basement membrane shared between the alveolar epithelium and capillary endothelium, and the capillary endothelial cell itself; at roughly 0.5 microns thick in its thinnest regions, this multilayered barrier is nonetheless thin enough to permit near-complete gas equilibration during the brief transit time of a red blood cell through the pulmonary capillary."
+        ]
+      },
+      {
+        "heading": "Pleura",
+        "points": [
+          "The lung is enveloped by visceral pleura (a single mesothelial layer adherent directly to the lung surface, following its every fissure and contour) and separated by a thin, potential pleural space from the parietal pleura (mesothelium lining the inner chest wall, diaphragm, and mediastinum).",
+          "The pleural space normally contains only a thin film of serous lubricating fluid, continuously produced and reabsorbed, allowing the visceral and parietal layers to glide smoothly against one another during breathing while the fluid's surface tension keeps the two layers mechanically coupled — the physical basis for the lung following chest wall movement despite having no direct structural attachment to it."
         ]
       }
     ]
