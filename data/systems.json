@@ -364,69 +364,77 @@
     ]
   },
   "digestive": {
-    "name": "Digestive",
+    "name": "Digestive System",
     "icon": "🍽️",
-    "summary": "Gut and nutrient uptake",
+    "summary": "The gastrointestinal tract and accessory organs that mechanically and chemically break down food, absorb nutrients, and eliminate waste.",
     "physiology": [
       {
-        "heading": "Digestion and motility",
+        "heading": "The Enteric Nervous System and GI Motility Pacemaking",
         "points": [
-          "Mechanical digestion (mastication, gastric churning, segmentation) and chemical digestion (enzymatic hydrolysis) work together to reduce food into absorbable molecular units.",
-          "Peristalsis — coordinated waves of smooth muscle contraction (circular muscle contracts behind the bolus, longitudinal muscle ahead) — propels contents along the GI tract.",
-          "Segmentation in the small intestine mixes chyme with digestive secretions without significant net forward movement, maximizing contact with the absorptive surface.",
-          "Gastric juice (HCl from parietal cells, pepsinogen from chief cells) denatures dietary protein and activates pepsin; the mucus-bicarbonate layer protects the stomach lining from self-digestion.",
-          "The migrating motor complex sweeps the small intestine clean of residual material between meals."
+          "The gastrointestinal tract is innervated by the enteric nervous system (ENS), a division of the peripheral nervous system capable of controlling motility and secretion largely independently of central input, though normally modulated by autonomic (sympathetic/parasympathetic) innervation. The ENS comprises two interconnected networks: the myenteric (Auerbach's) plexus, situated between the circular and longitudinal layers of the muscularis externa and primarily governing motility, and the submucosal (Meissner's) plexus, governing secretion and local blood flow.",
+          "Interstitial cells of Cajal (ICCs), specialized pacemaker cells interspersed between smooth muscle cells and enteric nerve endings throughout the GI tract, generate the rhythmic, spontaneous slow-wave electrical activity that underlies coordinated GI motility — analogous in concept to the SA node's role in the heart, though the GI tract's slow waves set the rhythm and frequency of contraction rather than directly causing it (an actual contraction still requires the slow wave to reach threshold, typically via superimposed neural or hormonal input).",
+          "Peristalsis — coordinated waves of muscular contraction propelling luminal contents distally — depends on coordinated activity between excitatory (acetylcholine, substance P) and inhibitory (nitric oxide, vasoactive intestinal peptide) myenteric motor neurons acting on the ICC network: contraction of the circular muscle behind the bolus and relaxation ahead of it, both propagating in a coordinated wave via gap-junction communication between myenteric neurons.",
+          "The migrating motor complex (MMC) is a distinct, cyclical pattern of motility occurring in the fasted (interdigestive) state, sweeping the stomach and small intestine clear of residual debris and bacteria in a series of phases (a quiescent period, an irregular period, and a brief but intense period of peak contractile activity) that migrate progressively from stomach to terminal ileum roughly every 90-120 minutes; the hormone motilin, released from the duodenum and jejunum, closely correlates with and helps drive the onset of the MMC's active phase."
         ]
       },
       {
-        "heading": "Enzymatic digestion by macronutrient",
+        "heading": "Gastric Acid Secretion",
         "points": [
-          "Carbohydrate digestion begins with salivary amylase (starch), continues with pancreatic amylase in the duodenum, and finishes with brush-border enzymes (maltase, sucrase, lactase) producing monosaccharides.",
-          "Protein digestion begins with pepsin in the stomach (acidic environment), continues with pancreatic proteases (trypsin, chymotrypsin, carboxypeptidase, secreted as inactive zymogens), finishing with brush-border peptidases.",
-          "Fat digestion requires bile salts (from the liver, stored/concentrated in the gallbladder) to emulsify large fat droplets, increasing surface area for pancreatic lipase action, producing monoglycerides and free fatty acids that form micelles."
+          "Gastric parietal cells secrete hydrochloric acid via the H+/K+-ATPase (proton pump), which actively exchanges cytoplasmic H+ for luminal K+ against a massive concentration gradient — gastric juice can reach a pH near 0.8-1, meaning luminal H+ concentration is roughly a million-fold higher than in blood plasma. In the resting state, this pump sits inactive within cytoplasmic tubulovesicles; upon stimulation, these vesicles fuse with the apical membrane, inserting active proton pumps into the canalicular surface.",
+          "Three convergent signals stimulate acid secretion, acting on distinct parietal cell receptors: acetylcholine (from vagal/enteric neurons, acting on muscarinic M3 receptors), gastrin (from antral G cells, acting on CCK2 receptors), and histamine (from neighboring enterochromaffin-like cells, acting on H2 receptors). Histamine's H2-receptor-mediated cAMP signaling is the dominant and rate-limiting pathway, which is why H2 blockers and proton pump inhibitors (targeting the final common pathway) are both effective acid-suppressing therapies, and why acetylcholine/gastrin also potentiate acid secretion partly by promoting local histamine release.",
+          "Acid secretion is classically divided into three overlapping phases: the cephalic phase (triggered by the sight, smell, taste, or thought of food, mediated via vagal output, accounting for a substantial fraction of total secretion before food even reaches the stomach), the gastric phase (triggered by gastric distension and the presence of peptides/amino acids, the largest contributor, mediated by both local reflexes and gastrin release), and the intestinal phase (initially stimulatory as chyme enters the duodenum, but rapidly becoming net inhibitory as acid, fat, and hypertonicity in the duodenum trigger feedback signals — including secretin and the enterogastric reflex — that suppress further gastric acid output and emptying).",
+          "During active acid secretion, bicarbonate generated intracellularly (from CO2 and water via carbonic anhydrase, alongside the H+ pumped into the lumen) exits the parietal cell across the basolateral membrane in exchange for chloride, producing a measurable rise in blood bicarbonate after a meal — the alkaline tide."
         ]
       },
       {
-        "heading": "Absorption",
+        "heading": "Enzymatic Digestion of Macronutrients",
         "points": [
-          "Villi and microvilli in the small intestine vastly increase surface area for nutrient absorption (total intestinal surface area is often compared to a tennis court).",
-          "Monosaccharides and amino acids are absorbed via secondary active transport (often Na+-coupled) into enterocytes, then into blood capillaries of the villus, ultimately reaching the hepatic portal circulation.",
-          "Long-chain fatty acids and monoglycerides are absorbed into enterocytes, re-esterified into triglycerides, packaged into chylomicrons, and absorbed into lacteals (lymphatic capillaries) rather than blood capillaries directly.",
-          "The large intestine absorbs water and electrolytes, and hosts extensive gut microbiota that ferment undigested carbohydrates (fiber), producing short-chain fatty acids and vitamins (e.g. vitamin K, some B vitamins)."
+          "Carbohydrate digestion begins with salivary amylase (starch), is interrupted by gastric acid (which denatures amylase), and resumes with pancreatic amylase in the duodenum, ultimately producing disaccharides that are cleaved by brush-border enzymes (maltase, sucrase, lactase) into absorbable monosaccharides.",
+          "Protein digestion begins with pepsin in the stomach (a protease active only at low pH, itself activated from pepsinogen by existing gastric acid — an autocatalytic activation loop), continues with pancreatic proteases secreted as inactive zymogens (trypsinogen, chymotrypsinogen, procarboxypeptidase) that are sequentially activated in the duodenum — enteropeptidase (a brush-border enzyme) converts trypsinogen to active trypsin, which then activates the remaining pancreatic zymogens, including more trypsinogen (a further autocatalytic amplification) — and finishes with brush-border peptidases producing free amino acids and small peptides.",
+          "Fat digestion requires bile salts (amphipathic molecules synthesized in the liver from cholesterol, conjugated with glycine or taurine to increase water solubility) to emulsify large fat globules into an oil-in-water suspension, dramatically increasing the surface area available for pancreatic lipase (which requires a co-secreted protein cofactor, colipase, to function effectively at this lipid-water interface). Lipase products (free fatty acids, monoglycerides) then combine with bile salts and other lipid-soluble products to form micelles, which shuttle these otherwise water-insoluble products to the enterocyte brush border for absorption."
         ]
       },
       {
-        "heading": "Hormonal and neural regulation",
+        "heading": "Absorption Mechanisms",
         "points": [
-          "Gastrin (secreted by G cells in the stomach antrum) stimulates gastric acid secretion and motility, in response to stomach distension and protein content.",
-          "Secretin (duodenal S cells) stimulates pancreatic bicarbonate secretion in response to acidic chyme entering the duodenum, protecting intestinal mucosa and optimizing enzyme pH.",
-          "Cholecystokinin (CCK, duodenal I cells) stimulates gallbladder contraction and pancreatic enzyme secretion in response to fats and proteins, and also promotes satiety.",
-          "The enteric nervous system ('the second brain') can coordinate motility and secretion reflexes largely independently of CNS input, though modulated by autonomic innervation."
+          "Villi and microvilli in the small intestine vastly amplify the absorptive surface area. Glucose and galactose are absorbed via SGLT1, a secondary active transporter on the apical enterocyte membrane that couples sugar uptake to the inward Na+ gradient established by basolateral Na+/K+-ATPase; fructose, lacking this Na+-coupling, instead enters via GLUT5 through facilitated diffusion. All three monosaccharides then exit the enterocyte's basolateral membrane via GLUT2, entering the bloodstream and ultimately reaching the hepatic portal circulation.",
+          "Amino acids and small peptides are absorbed by multiple apical transport systems, many Na+-coupled (secondary active transport, analogous to SGLT1); intracellular peptidases further hydrolyze absorbed oligopeptides to free amino acids before basolateral export into the interstitial space and portal circulation.",
+          "Long-chain fatty acids and monoglycerides, delivered to the enterocyte brush border within bile salt micelles, diffuse across the apical membrane (the bile salts themselves are left behind in the lumen for eventual reabsorption further downstream). Within the enterocyte, these products are re-esterified into triglycerides, packaged with cholesterol and apolipoproteins into chylomicrons, and — unlike sugars and amino acids — exported into lacteals (specialized lymphatic capillaries within each villus) rather than blood capillaries directly, since chylomicrons are too large to cross typical capillary endothelium.",
+          "Bile salts are not absorbed alongside the fats they helped digest; instead, they remain in the intestinal lumen throughout its length (maintaining a high luminal bile salt concentration to maximize ongoing lipid digestion) and are actively reabsorbed specifically at the terminal ileum via a Na+-coupled apical transporter. Reabsorbed bile salts return to the liver via the portal circulation for re-secretion — the enterohepatic circulation — with roughly 95% of the bile salt pool recycled this way per cycle and only a small fraction lost to fecal excretion (compensated by new hepatic synthesis)."
+        ]
+      },
+      {
+        "heading": "Hormonal Regulation of Digestion",
+        "points": [
+          "Gastrin, secreted by antral G cells in response to gastric distension, luminal peptides/amino acids, and vagal stimulation, is the primary stimulus for gastric acid secretion and also promotes gastric motility and mucosal growth.",
+          "Secretin, secreted by duodenal S cells in response to acidic chyme entering the duodenum, stimulates pancreatic ductal cells to secrete bicarbonate-rich fluid, neutralizing gastric acid and creating the near-neutral pH environment pancreatic enzymes require for optimal activity; it also inhibits gastric acid secretion and motility, contributing to the intestinal phase's negative feedback on gastric emptying.",
+          "Cholecystokinin (CCK), secreted by duodenal I cells in response to luminal fats and amino acids, stimulates gallbladder contraction (releasing stored bile) and pancreatic acinar cell secretion of digestive enzymes, while also slowing gastric emptying and promoting satiety — coordinating enzyme/bile delivery with the actual presence of substrate requiring them.",
+          "Motilin, released cyclically from the duodenum during the fasted state, is the principal hormonal driver of the migrating motor complex's periodic housekeeping contractions."
         ]
       }
     ],
     "histology": [
       {
-        "heading": "General GI wall structure",
+        "heading": "General GI Wall Architecture",
         "points": [
-          "The GI tract wall has four consistent layers: mucosa (epithelium, lamina propria, muscularis mucosae), submucosa (connective tissue, blood vessels, submucosal plexus), muscularis externa (inner circular and outer longitudinal smooth muscle), and serosa/adventitia.",
-          "The myenteric (Auerbach's) plexus lies between the two muscle layers and primarily regulates motility; the submucosal (Meissner's) plexus regulates secretion and local blood flow."
+          "The GI tract wall, from esophagus to anal canal, follows a consistent four-layer plan: the mucosa (epithelium, lamina propria connective tissue, and a thin muscularis mucosae layer that independently allows local folding/movement of the mucosal surface), the submucosa (denser connective tissue containing larger blood vessels, lymphatics, and the submucosal plexus), the muscularis externa (typically an inner circular and outer longitudinal smooth muscle layer, with the myenteric plexus sandwiched between them), and the outermost serosa (in intraperitoneal segments) or adventitia (in retroperitoneal/extraperitoneal segments, lacking a mesothelial covering)."
         ]
       },
       {
-        "heading": "Regional epithelial specialization",
+        "heading": "Regional Epithelial Specialization",
         "points": [
-          "The esophagus is lined with stratified squamous (non-keratinized) epithelium, providing abrasion resistance for food passage.",
-          "The stomach has simple columnar epithelium with gastric pits leading to gastric glands containing parietal cells (HCl and intrinsic factor), chief cells (pepsinogen), and mucous neck cells.",
-          "The small intestine has simple columnar epithelium with absorptive enterocytes bearing microvilli, interspersed goblet cells, and crypts of Lieberkühn (containing stem cells and Paneth cells with antimicrobial secretions).",
-          "The large intestine has simple columnar epithelium with abundant goblet cells (lubricating mucus for solid waste passage) and no villi, since its role is absorption of water/electrolytes rather than nutrients."
+          "The esophagus is lined with stratified squamous non-keratinized epithelium, providing resistance to the mechanical abrasion of swallowed food boluses — an epithelial type shared with other high-friction surfaces (the epidermis, by contrast, is keratinized, reflecting its additional need for a durable, desiccation-resistant outer barrier).",
+          "The stomach transitions to simple columnar epithelium, organized into gastric pits leading down to gastric glands whose cellular composition varies by region: the body/fundus glands contain parietal cells (HCl and intrinsic factor secretion, recognizable by their abundant mitochondria and characteristic intracellular canaliculi), chief cells (pepsinogen secretion, with basal rough ER and apical zymogen granules typical of a protein-secreting cell), and mucous neck cells; antral glands are comparatively richer in mucous and gastrin-secreting G cells.",
+          "The small intestine's simple columnar epithelium bears prominent microvilli (the ultrastructural basis of the light-microscopic 'brush border'), interspersed with mucus-secreting goblet cells (increasing in density distally, correlating with the shift from primarily absorptive duodenum/jejunum toward more mucus-dependent ileum) and, at the base of each crypt of Lieberkühn, Paneth cells (secreting antimicrobial peptides and lysozyme, helping regulate local microbial populations) alongside the intestinal stem cells responsible for continuously repopulating the rapidly-turning-over epithelium.",
+          "The large intestine's simple columnar epithelium has abundant goblet cells and straight, unbranched crypts, but — reflecting its role in water/electrolyte absorption and waste consolidation rather than nutrient absorption — lacks the villi present throughout the small intestine, giving its mucosal surface a comparatively flat appearance on cross-section."
         ]
       },
       {
-        "heading": "Accessory organ histology",
+        "heading": "Accessory Organ Histology",
         "points": [
-          "The liver is organized into hexagonal lobules with hepatocytes arranged in plates radiating from a central vein, with portal triads (bile duct, hepatic artery branch, portal vein branch) at the periphery.",
-          "The exocrine pancreas consists of acinar cells producing digestive enzymes, delivered via a duct system into the duodenum; the endocrine pancreas (islets of Langerhans) is scattered among the acinar tissue."
+          "The liver's functional architecture is classically described in terms of the hepatic lobule: hexagonal units with a central vein at the center and portal triads (a bile ductule, hepatic artery branch, and portal vein branch, traveling together) at each of the six corners. Hepatocytes are arranged in single-cell-thick plates radiating outward from the central vein, with blood flowing from the portal triads through low-pressure sinusoids (lined by discontinuous, fenestrated endothelium permitting free exchange of plasma proteins) toward the central vein, while bile flows in the opposite direction — from hepatocytes into bile canaliculi and outward toward the portal bile ductules — an anatomically countercurrent arrangement relative to blood flow.",
+          "The exocrine pancreas consists of acinar cells (pyramidal, protein-secreting cells with basal rough ER and apical zymogen granules, closely resembling gastric chief cells structurally) arranged in grape-like clusters (acini) that drain via a branching ductal system into the main pancreatic duct; duct cells contribute the bicarbonate-rich fluid that neutralizes gastric acid entering the duodenum. The endocrine pancreas (islets of Langerhans) forms small, well-vascularized cell clusters scattered among the exocrine acinar tissue, distinguishable histologically by their comparatively pale-staining cytoplasm relative to the surrounding zymogen-rich acinar cells.",
+          "The gallbladder is lined by simple columnar epithelium with extensive apical microvilli, adapted for its function of concentrating stored bile by actively absorbing water and electrolytes; its wall lacks a submucosa and distinct muscularis mucosae, and its muscularis is composed of smooth muscle bundles running in multiple orientations (rather than the GI tract's typical distinct circular/longitudinal layering) to support efficient, omnidirectional contraction during gallbladder emptying."
         ]
       }
     ]
