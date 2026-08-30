@@ -525,62 +525,68 @@
     ]
   },
   "skeletal": {
-    "name": "Skeletal",
+    "name": "Skeletal System",
     "icon": "🦴",
-    "summary": "Bones and structural support",
+    "summary": "The bones, cartilage, and joints that provide structural support, enable movement, protect internal organs, and regulate mineral homeostasis.",
     "physiology": [
       {
-        "heading": "Bone as a dynamic, living tissue",
+        "heading": "Bone Remodeling: The RANKL/RANK/OPG Pathway",
         "points": [
-          "Bone undergoes continuous remodeling throughout life: osteoclasts (derived from monocyte lineage) resorb bone matrix via acid and enzyme secretion; osteoblasts deposit new osteoid matrix, which subsequently mineralizes with calcium hydroxyapatite.",
-          "Bone remodeling responds to mechanical stress (Wolff's law): bone strengthens along habitual lines of load and weakens/resorbs with disuse, relevant to conditions like osteoporosis in immobilized patients.",
-          "Bones serve as the body's major mineral reservoir, storing ~99% of body calcium and a majority of phosphate, buffering blood mineral levels.",
-          "Longitudinal bone growth occurs at the epiphyseal (growth) plate via endochondral ossification until plate closure at the end of puberty; bone width increases via appositional growth from the periosteum."
+          "Bone is continuously remodeled throughout life via tightly coupled cycles of osteoclastic resorption followed by osteoblastic formation, occurring within discrete bone remodeling compartments — a process that repairs microdamage, allows adaptation to mechanical loading, and provides a mechanism for regulating blood calcium levels.",
+          "Osteoclast differentiation and activation are governed by the RANKL/RANK/OPG signaling axis: osteoblasts (and osteocytes) express RANKL (receptor activator of nuclear factor kappa-B ligand) on their surface, which binds RANK receptors on osteoclast precursor cells (derived from the monocyte/macrophage hematopoietic lineage), driving their differentiation into mature, bone-resorbing osteoclasts. Osteoblasts simultaneously secrete osteoprotegerin (OPG), a soluble decoy receptor that binds RANKL and prevents it from engaging RANK — meaning the ratio of RANKL to OPG produced by osteoblasts is the central determinant of local osteoclast activity and bone resorption rate.",
+          "Numerous systemic and local factors regulate bone turnover by shifting this RANKL/OPG ratio: parathyroid hormone increases RANKL and decreases OPG production (promoting resorption), while estrogen suppresses RANKL and osteoclast survival (explaining the sharp increase in bone turnover following the postmenopausal drop in estrogen). Glucocorticoids similarly increase RANKL and decrease OPG while directly promoting osteoblast apoptosis — a combination that explains the significant bone loss associated with chronic glucocorticoid therapy.",
+          "Osteocytes — former osteoblasts that become entombed within the mineralized matrix during bone formation, comprising over 90% of all bone cells — are now recognized as the primary mechanosensory cells of bone. Embedded within lacunae and interconnected via an extensive canalicular network, osteocytes detect mechanical strain (partly via strain-induced fluid flow through the canalicular system) and respond by adjusting their own RANKL and sclerostin production, directly linking local mechanical loading to local remodeling activity — the cellular basis of Wolff's law, whereby bone architecture adapts to habitual mechanical stress, strengthening along lines of load and undergoing resorption with disuse."
         ]
       },
       {
-        "heading": "Hormonal regulation of bone",
+        "heading": "The Parathyroid Hormone-Vitamin D Axis and Calcium Homeostasis",
         "points": [
-          "Parathyroid hormone (PTH), released in response to low blood Ca2+, stimulates osteoclastic bone resorption, increases renal Ca2+ reabsorption, and activates vitamin D — net effect: raises blood Ca2+.",
-          "Calcitonin (from thyroid parafollicular cells) opposes PTH, inhibiting osteoclast activity and lowering blood Ca2+, though its physiological role in adult humans is comparatively minor.",
-          "Vitamin D (activated to calcitriol) increases intestinal calcium and phosphate absorption, essential for adequate mineralization.",
-          "Estrogen restrains osteoclast activity; the postmenopausal drop in estrogen is a major driver of accelerated bone loss."
+          "Serum calcium is tightly regulated (normal range roughly 8.5-10.5 mg/dL) via the calcium-sensing receptor (CaSR), a G-protein-coupled receptor on parathyroid chief cells that continuously monitors extracellular ionized calcium concentration. Falling calcium reduces CaSR activation, which — counterintuitively for a typical negative-feedback receptor — disinhibits PTH release (i.e., low calcium promotes PTH secretion, while high calcium binding CaSR suppresses it).",
+          "PTH raises blood calcium through three coordinated actions across three organ systems. In bone, PTH increases the RANKL/OPG ratio (as above), promoting osteoclastic resorption and liberating both calcium and phosphate into the bloodstream — though this skeletal effect develops over hours to days, slower than PTH's renal actions. In the kidney, PTH acts rapidly (within minutes) to increase distal tubular calcium reabsorption (via upregulation of the TRPV5 calcium channel) while simultaneously decreasing proximal tubular phosphate reabsorption — a dual action that raises serum calcium while lowering serum phosphate, preventing the calcium-phosphate product from rising high enough to risk soft-tissue calcification.",
+          "PTH's third, indirect action is on the intestine: PTH has no direct intestinal receptor effect, but stimulates renal 1-alpha-hydroxylase, the enzyme converting inactive 25-hydroxyvitamin D to active calcitriol (1,25-dihydroxyvitamin D); calcitriol then acts on intestinal epithelium to increase active calcium (and phosphate) absorption, roughly 70-80% of which occurs in the ileum. This makes vitamin D activation itself PTH-dependent, and explains why PTH's full calcium-raising effect, though initiated rapidly at the kidney, only reaches its maximum over several hours as calcitriol synthesis and intestinal absorption ramp up.",
+          "Calcitonin, secreted by thyroid parafollicular (C) cells in response to hypercalcemia, opposes PTH by inhibiting osteoclast activity and modestly increasing renal calcium excretion — though its physiological role in adult human calcium homeostasis is considered comparatively minor relative to the dominant PTH-vitamin D axis, evidenced by the absence of significant calcium derangement in patients who have undergone total thyroidectomy (and thus lack calcitonin production)."
         ]
       },
       {
-        "heading": "Joints and biomechanics",
+        "heading": "Endochondral Ossification and Longitudinal Bone Growth",
         "points": [
-          "Synovial joints (e.g. knee, shoulder, hip) are freely movable, enclosed by a joint capsule lined with synovial membrane secreting lubricating, nourishing synovial fluid.",
-          "Articular cartilage (hyaline cartilage) covers joint surfaces, providing a low-friction, shock-absorbing interface, but has minimal capacity for self-repair due to lack of blood supply.",
-          "Cartilaginous joints (e.g. intervertebral discs, pubic symphysis) allow limited movement via compressible cartilage; fibrous joints (e.g. skull sutures) allow minimal to no movement.",
-          "Ligaments (bone-to-bone) and tendons (muscle-to-bone) are dense regular connective tissue, providing tensile strength while allowing some elasticity."
+          "Most bones of the body (excluding the flat bones of the skull and clavicle, which form via intramembranous ossification directly within mesenchymal tissue) develop through endochondral ossification: a hyaline cartilage template is progressively replaced by bone, beginning with a primary ossification center in the diaphysis (shaft) during fetal development and a secondary ossification center in each epiphysis (end) typically after birth.",
+          "Longitudinal bone growth after birth occurs at the epiphyseal (growth) plate, a persisting band of cartilage between epiphysis and diaphysis, organized into sequential functional zones: the resting zone (small, relatively inactive chondrocytes serving as a stem-cell-like reserve, secreting factors that orient the columns of proliferating cells below), the proliferative zone (chondrocytes arranged in columns parallel to the bone's long axis, undergoing rapid mitosis under growth hormone/IGF-1 influence — the zone primarily responsible for the actual increase in bone length), the hypertrophic zone (chondrocytes stop dividing and dramatically enlarge, accumulating glycogen and alkaline phosphatase in preparation for matrix calcification), and the zone of calcification/ossification (the hypertrophic cartilage matrix mineralizes, hypertrophic chondrocytes undergo apoptosis, and invading osteoblasts deposit new bone matrix on the calcified cartilage remnants, which are continuously remodeled into mature bone).",
+          "This growth process continues until the growth plate itself is eventually replaced by bone (epiphyseal closure/fusion, driven by rising sex steroid levels during puberty — explaining why growth plates close earlier in individuals with earlier puberty), after which further longitudinal growth is no longer possible; bone width, by contrast, can continue to increase throughout life via appositional growth, as osteoblasts in the periosteum deposit new bone on the external surface while osteoclasts resorb bone from the internal (endosteal) surface, jointly widening the medullary cavity to keep the bone's weight proportional to its increasing diameter."
+        ]
+      },
+      {
+        "heading": "Joint Biomechanics",
+        "points": [
+          "Synovial joints (e.g., knee, shoulder, hip) are freely movable and enclosed by a fibrous joint capsule lined internally by a synovial membrane, which secretes synovial fluid — a viscous, hyaluronic acid-rich filtrate of plasma that lubricates the joint, nourishes the avascular articular cartilage via diffusion, and provides shock absorption. Articular (hyaline) cartilage covering the bone surfaces provides an extremely low-friction interface (coefficient of friction lower than most engineered lubricated bearings) but has minimal intrinsic capacity for self-repair, since mature cartilage is avascular, aneural, and contains a sparse chondrocyte population with limited proliferative capacity.",
+          "Cartilaginous joints (e.g., the intervertebral discs, pubic symphysis) permit limited movement through the compressibility of interposed cartilage, while fibrous joints (e.g., cranial sutures) permit minimal to no movement, their bones united by dense fibrous connective tissue. Ligaments (connecting bone to bone) and tendons (connecting muscle to bone) are both composed of dense regular connective tissue with highly aligned collagen fibers, providing substantial tensile strength along the axis of habitual loading while retaining a degree of elasticity that helps absorb sudden mechanical loads."
         ]
       }
     ],
     "histology": [
       {
-        "heading": "Compact bone tissue structure",
+        "heading": "Compact Bone: The Osteon (Haversian System)",
         "points": [
-          "Compact bone is organized into osteons (Haversian systems): concentric lamellae of mineralized matrix arranged around a central (Haversian) canal containing blood vessels and nerves.",
-          "Osteocytes (mature bone cells, derived from osteoblasts trapped in matrix) sit within lacunae, connected via canaliculi that allow nutrient and waste exchange through the otherwise impermeable mineralized matrix.",
-          "Volkmann's canals run perpendicular to Haversian canals, connecting the vascular supply across osteons.",
-          "Spongy (trabecular/cancellous) bone lacks true osteons, instead forming a lattice of trabeculae aligned along stress lines, with marrow filling the interstitial spaces — providing strength while minimizing weight."
+          "Compact (cortical) bone is organized into osteons: cylindrical structural units consisting of concentric rings (lamellae) of mineralized bone matrix arranged around a central Haversian canal, which houses blood vessels and nerve fibers running roughly parallel to the bone's long axis. Perpendicular Volkmann's (perforating) canals interconnect adjacent Haversian canals, distributing the vascular supply across the full thickness of compact bone.",
+          "Each osteon is bounded by a cement line — a thin layer of matrix, low in collagen, that marks the outer limit of a given remodeling episode and is thought to help arrest the propagation of microcracks by deflecting them along the osteon boundary rather than allowing continued growth through adjacent, mechanically distinct osteons.",
+          "Osteocytes occupy lacunae between adjacent lamellae, with fine cytoplasmic processes extending through canaliculi (small radiating channels within the matrix) to contact neighboring osteocytes via gap junctions, forming an extensive interconnected network that supports both nutrient/waste exchange through the otherwise impermeable mineralized matrix and the mechanosensory signaling described in bone remodeling physiology above."
         ]
       },
       {
-        "heading": "Bone cell types",
+        "heading": "Bone Cell Types",
         "points": [
-          "Osteoblasts are matrix-synthesizing cells derived from mesenchymal stem cells, secreting collagen-rich osteoid that subsequently mineralizes.",
-          "Osteocytes, once entombed in matrix, act as mechanosensors, detecting mechanical strain and signaling to coordinate remodeling.",
-          "Osteoclasts are large, multinucleated cells of hematopoietic (monocyte/macrophage) origin, responsible for resorbing bone matrix via acidification and proteolytic enzymes."
+          "Osteoprogenitor cells, derived from mesenchymal stem cells, reside in the periosteum and endosteum and serve as the proliferative reserve population from which osteoblasts are generated as needed for bone formation or repair.",
+          "Osteoblasts are cuboidal, matrix-synthesizing cells lining bone surfaces, secreting osteoid (unmineralized collagen-rich matrix) that subsequently mineralizes with calcium hydroxyapatite; following completion of matrix deposition, an individual osteoblast follows one of three fates — becoming a quiescent bone-lining cell, undergoing apoptosis, or becoming entombed within the matrix it just deposited to become an osteocyte.",
+          "Osteoclasts are large, multinucleated cells of hematopoietic (monocyte/macrophage lineage) origin, formed by fusion of multiple mononuclear precursors under RANKL stimulation; they resorb bone by sealing a region of matrix (forming a ruffled border and a specialized acidic microenvironment beneath, the Howship's lacuna) and secreting both acid (dissolving the mineral component) and proteolytic enzymes such as cathepsin K (degrading the organic collagen matrix)."
         ]
       },
       {
-        "heading": "Cartilage types",
+        "heading": "Bone Architecture and Cartilage Types",
         "points": [
-          "Hyaline cartilage (e.g. articular surfaces, costal cartilage, fetal skeleton template) has a glassy, homogeneous matrix rich in collagen type II.",
-          "Fibrocartilage (e.g. intervertebral discs, menisci) has dense bundles of collagen type I interspersed with chondrocytes, providing tensile strength and compressive resistance.",
-          "Elastic cartilage (e.g. external ear, epiglottis) contains abundant elastic fibers alongside collagen, providing flexibility with recoil."
+          "Spongy (trabecular/cancellous) bone lacks the discrete cylindrical osteons of compact bone, instead forming an open lattice of interconnected trabeculae oriented along the bone's principal lines of mechanical stress, with adjacent marrow spaces filling the interstitial gaps; this architecture provides substantial strength relative to its mass, favoring locations (vertebral bodies, epiphyses of long bones) where weight reduction is advantageous without sacrificing load-bearing capacity.",
+          "Hyaline cartilage (found at articular surfaces, costal cartilage, and forming the fetal skeletal template/growth plate) has a glassy, relatively homogeneous matrix rich in type II collagen and proteoglycans, providing smooth, compression-resistant surfaces.",
+          "Fibrocartilage (found in intervertebral discs and menisci) contains dense bundles of type I collagen interspersed with chondrocytes, combining substantial tensile strength with compressive resistance — an intermediate structural profile between hyaline cartilage and dense connective tissue.",
+          "Elastic cartilage (found in the external ear and epiglottis) contains an abundance of elastic fibers in addition to its collagen matrix, providing the flexibility and recoil these structures require."
         ]
       }
     ]
