@@ -592,64 +592,80 @@
     ]
   },
   "muscular": {
-    "name": "Muscular",
+    "name": "Muscular System",
     "icon": "💪",
-    "summary": "Movement and force",
+    "summary": "The skeletal, cardiac, and smooth muscle tissues that generate force for movement, posture, and the function of hollow organs.",
     "physiology": [
       {
-        "heading": "Excitation-contraction coupling",
+        "heading": "The Neuromuscular Junction",
         "points": [
-          "A motor neuron action potential releases acetylcholine at the neuromuscular junction, triggering an end-plate potential and, if threshold is reached, a muscle fiber action potential.",
-          "The action potential propagates along the sarcolemma and down T-tubules, triggering Ca2+ release from the sarcoplasmic reticulum via ryanodine receptors.",
-          "Released Ca2+ binds troponin C, causing a conformational shift that moves tropomyosin away from myosin-binding sites on actin, allowing cross-bridge cycling to begin."
+          "The neuromuscular junction (NMJ) is the specialized synapse between a motor neuron and a skeletal muscle fiber; each mature skeletal muscle fiber is innervated by a single motor nerve terminal, which docks not by penetrating the muscle membrane but by fitting into deep sarcolemmal invaginations called junctional folds, densely packed with nicotinic acetylcholine receptors at their crests.",
+          "An arriving presynaptic action potential opens voltage-gated (P/Q-type) Ca2+ channels concentrated at the nerve terminal's active zones, and the resulting Ca2+ influx triggers fusion of acetylcholine-containing synaptic vesicles with the presynaptic membrane; each vesicle contains roughly 5,000-10,000 acetylcholine molecules (a 'quantum'), and even at rest, spontaneous single-vesicle release produces tiny miniature end-plate potentials, providing a baseline readout of NMJ integrity.",
+          "Released acetylcholine crosses the roughly 50 nm synaptic cleft and binds nicotinic receptors on the motor end plate, opening ligand-gated cation channels that shift the local membrane potential from around -90 mV toward roughly -45 mV — generating the end-plate potential (EPP). Unlike graded postsynaptic potentials in central synapses, a normal EPP is always well above threshold, reliably triggering a full muscle fiber action potential that then propagates along the sarcolemma and into the T-tubule system.",
+          "Acetylcholinesterase, concentrated within the synaptic cleft, rapidly hydrolyzes acetylcholine, ensuring each nerve impulse produces a single, precisely timed muscle response rather than sustained receptor activation — the pharmacological target of both therapeutic (pyridostigmine, for myasthenia gravis) and toxic (organophosphate) acetylcholinesterase inhibitors, which produce sustained depolarization and eventual neuromuscular blockade through receptor desensitization."
         ]
       },
       {
-        "heading": "Sliding filament mechanism",
+        "heading": "Excitation-Contraction Coupling",
         "points": [
-          "Muscle contraction occurs via the sliding filament model: myosin heads bind exposed actin sites, undergo a power stroke pulling thin filaments toward the sarcomere center, shortening the muscle without the filaments themselves changing length.",
-          "ATP is required both for the myosin power stroke and, critically, for myosin head detachment from actin — explaining rigor mortis, where ATP depletion after death prevents cross-bridge release, causing sustained muscle stiffness.",
-          "Ca2+ removal (via SERCA pumps returning Ca2+ to the sarcoplasmic reticulum) allows tropomyosin to re-block binding sites, ending contraction (relaxation)."
+          "Depolarization spreading along the T-tubules (transverse invaginations of the sarcolemma positioned at the A-I band junction in skeletal muscle) triggers a conformational change in dihydropyridine receptors (voltage sensors embedded in the T-tubule membrane); because these are mechanically coupled to adjacent ryanodine receptors on the sarcoplasmic reticulum (forming the triad junction, distinct from cardiac muscle's diad arrangement), this conformational change directly opens the ryanodine receptor channel without requiring a trigger calcium current — a purely mechanical (rather than calcium-induced) coupling mechanism unique to skeletal muscle.",
+          "Ca2+ released from the sarcoplasmic reticulum binds troponin C on the thin filament; this binding is cooperative — each Ca2+ ion bound increases the affinity of troponin C for the next, up to four Ca2+ ions per troponin C complex — producing a steep, switch-like relationship between rising cytosolic Ca2+ and the fraction of thin filament sites made available for contraction, rather than a gradual one.",
+          "Ca2+ binding causes a conformational shift in the troponin complex that displaces tropomyosin away from the myosin-binding sites on actin, exposing them for cross-bridge formation. Relaxation requires cytosolic Ca2+ to fall, driven by the SERCA (sarco/endoplasmic reticulum Ca2+-ATPase) pump actively returning Ca2+ to the sarcoplasmic reticulum; within the SR, the Ca2+-binding protein calsequestrin buffers free Ca2+ concentration, reducing the concentration gradient SERCA must pump against and thereby lowering the pump's overall workload."
         ]
       },
       {
-        "heading": "Muscle fiber types and metabolism",
+        "heading": "The Cross-Bridge Cycle",
         "points": [
-          "Type I (slow-twitch, oxidative) fibers are fatigue-resistant, rely on aerobic metabolism, rich in mitochondria and myoglobin, suited for sustained/endurance activity.",
-          "Type IIa (fast-twitch, oxidative-glycolytic) fibers offer an intermediate profile of speed and endurance.",
-          "Type IIx (fast-twitch, glycolytic) fibers generate high force rapidly but fatigue quickly, relying primarily on anaerobic glycolysis.",
-          "Motor unit recruitment (activating additional motor units, generally smaller-to-larger per the size principle) and rate coding (increasing firing frequency of active units) both increase whole-muscle force output."
+          "With myosin-binding sites exposed, the cross-bridge cycle proceeds through a defined sequence: starting from the rigor state (myosin bound to actin with no nucleotide present — the state responsible for rigor mortis once ATP synthesis ceases after death), ATP binding to the myosin head causes myosin to detach from actin, breaking the cross-bridge.",
+          "ATP hydrolysis to ADP and inorganic phosphate (Pi) causes the myosin head to change conformation, 're-cocking' into a high-energy position and advancing toward a new binding site further along the actin filament (without yet generating force, since the head is not yet attached). Myosin then rebinds actin at this new site, forming a fresh cross-bridge.",
+          "Release of the inorganic phosphate triggers the power stroke — the myosin head pivots, pulling the actin filament toward the sarcomere's center and generating the force of contraction — followed by ADP release, which returns myosin to the rigor state, bound tightly to actin, ready to repeat the cycle once new ATP binds. Each cycle advances the thin filament only a small increment, so sustained contraction requires many rapid, repeated cross-bridge cycles across the many myosin heads of each thick filament, continuing for as long as Ca2+ remains bound to troponin C and ATP remains available."
         ]
       },
       {
-        "heading": "Length-tension and energy sources",
+        "heading": "Motor Unit Recruitment and Force Grading",
         "points": [
-          "The length-tension relationship describes how force generation is optimal at a sarcomere length allowing maximal actin-myosin overlap, with reduced force at both shorter and longer lengths.",
-          "Immediate energy comes from stored ATP and the phosphocreatine system; sustained activity draws on glycolysis and oxidative phosphorylation depending on intensity and duration."
+          "A motor unit comprises a single motor neuron and every muscle fiber it innervates; because all fibers within one motor unit contract together in an all-or-nothing fashion whenever their neuron fires, whole-muscle force is graded not by varying individual fiber force but by two mechanisms: recruiting additional motor units, and adjusting each active unit's firing frequency (rate coding).",
+          "Motor unit recruitment follows Henneman's size principle: motor neurons are recruited in strict order from smallest to largest, because smaller motor neurons have higher input resistance and therefore reach firing threshold with less synaptic excitation than larger neurons. Since motor neuron size correlates closely with the number (and typically the fatigue-resistance) of muscle fibers they innervate, this ordering means the smallest, most fatigue-resistant motor units are recruited first for fine, low-force tasks, with progressively larger, more powerful (but more fatigable) units recruited only as greater force is demanded — an efficient strategy that reserves the most fatigable resources for when they are truly needed.",
+          "Rate coding complements recruitment: within an already-active motor unit, increasing the motor neuron's firing frequency causes successive twitches to summate (since a new contractile response can be triggered before the previous one has fully relaxed), producing progressively greater sustained force up to a smooth, fused tetanic contraction at sufficiently high firing rates."
+        ]
+      },
+      {
+        "heading": "Muscle Fiber Types and Metabolism",
+        "points": [
+          "Type I (slow-twitch, oxidative) fibers express a myosin heavy chain isoform with relatively low ATPase activity (slow cross-bridge cycling), are rich in mitochondria and myoglobin (giving them a characteristic dark red color), rely predominantly on oxidative phosphorylation, and are highly fatigue-resistant — suited to sustained, low-intensity activity such as postural maintenance.",
+          "Type IIx (fast-twitch, glycolytic) fibers express a myosin isoform with high ATPase activity (rapid cross-bridge cycling, generating high force and velocity quickly), rely predominantly on anaerobic glycolysis, contain comparatively few mitochondria, and fatigue rapidly — suited to brief, high-intensity efforts.",
+          "Type IIa fibers represent an intermediate profile: fast cross-bridge cycling combined with substantial oxidative capacity, offering a compromise between speed/force and fatigue resistance. Muscle fiber type composition within a given muscle is influenced by both genetics and training — endurance training tends to shift fiber metabolic properties toward a more oxidative profile, while resistance/sprint training favors glycolytic characteristics, though the extent to which fibers can convert between major types remains an area of ongoing research."
+        ]
+      },
+      {
+        "heading": "The Length-Tension Relationship",
+        "points": [
+          "Isometric force generation varies with sarcomere length according to the degree of overlap between thick and thin filaments: at an optimal resting length, the maximum possible number of myosin heads can form cross-bridges with actin, producing peak force. At shorter lengths, thin filaments from opposite ends of the sarcomere begin to overlap each other (interfering with effective cross-bridge formation) and the thick filament may abut the Z-discs, both reducing force output; at longer lengths, progressively less thick-thin filament overlap leaves fewer myosin heads within reach of actin, again reducing force.",
+          "This length-tension relationship has direct physiological relevance: it partly explains why joint angle affects maximal force output during resistance exercise (since joint angle determines muscle length and thus sarcomere length), and — at the whole-organ level — is conceptually analogous to (though mechanistically distinct in its molecular basis from) the length-dependent activation underlying the cardiac Frank-Starling mechanism."
         ]
       }
     ],
     "histology": [
       {
-        "heading": "Skeletal muscle structure",
+        "heading": "Skeletal Muscle Structure",
         "points": [
-          "Skeletal muscle fibers are long, multinucleated cells (formed by fusion of myoblasts during development), striated, with nuclei located peripherally beneath the sarcolemma.",
-          "Each fiber contains many myofibrils, composed of repeating sarcomeres — the functional contractile unit, bounded by Z-discs, containing overlapping thick (myosin) and thin (actin) filaments.",
-          "Muscle is organized hierarchically: fibers bundle into fascicles wrapped in perimysium; fascicles bundle into the whole muscle, wrapped in epimysium; individual fibers are wrapped in endomysium."
+          "Skeletal muscle fibers are long, cylindrical, multinucleated cells formed during development by the fusion of many individual myoblasts; their nuclei are characteristically located peripherally, just beneath the sarcolemma, leaving the central cytoplasm free for the densely packed contractile apparatus.",
+          "Each fiber contains hundreds to thousands of myofibrils, threadlike bundles running the length of the cell, each composed of a linear series of repeating sarcomeres — the fundamental contractile unit, bounded at each end by a Z-disc and containing the interdigitating thick and thin filaments responsible for the fiber's cross-striated appearance under light microscopy.",
+          "Muscle tissue is organized hierarchically with nested connective tissue wrappings: individual fibers are surrounded by endomysium (fine reticular connective tissue, also housing the capillary network supplying each fiber); groups of fibers are bundled into fascicles wrapped in perimysium (denser connective tissue, also carrying larger blood vessels and nerve branches); and the whole muscle is enveloped by epimysium, continuous with the deep fascia and, ultimately, the tendon."
         ]
       },
       {
-        "heading": "Smooth and cardiac muscle comparison",
+        "heading": "The Sarcomere in Detail",
         "points": [
-          "Smooth muscle is non-striated (actin/myosin not arranged in regular sarcomeres), spindle-shaped, uninucleated, and involuntary — found in walls of hollow organs, vessels, and airways, contracting slowly but capable of sustained tone.",
-          "Cardiac muscle is striated but branched, typically uninucleated or binucleated, involuntary, and connected via intercalated discs containing gap junctions for coordinated contraction."
+          "The A-band represents the full length of the thick (myosin) filaments and remains constant in length regardless of contraction state, since it reflects filament length rather than the degree of overlap. The I-band contains only thin (actin) filaments (not overlapped by thick filaments) and shortens as the sarcomere contracts, since increasing thick-thin filament overlap progressively encroaches on this zone. The H-zone, the central region of the A-band containing only thick filaments (not yet overlapped by thin filaments extending in from either side), also shortens with contraction and can disappear entirely at very short sarcomere lengths.",
+          "The Z-disc, a dense protein lattice (principally alpha-actinin) at each end of the sarcomere, anchors the thin filaments and serves as the structural boundary defining one sarcomere from the next; the M-line, at the sarcomere's center, similarly anchors and cross-links the thick filaments, stabilizing their precise hexagonal lateral spacing relative to one another."
         ]
       },
       {
-        "heading": "The sarcomere in detail",
+        "heading": "Smooth and Cardiac Muscle Compared to Skeletal Muscle",
         "points": [
-          "The A-band represents the full length of thick filaments (constant length during contraction); the I-band contains only thin filaments (shortens during contraction); the H-zone is the central region with only thick filaments (shortens during contraction).",
-          "The Z-disc anchors thin filaments at sarcomere boundaries; the M-line anchors thick filaments centrally."
+          "Smooth muscle contains the same actin and myosin proteins as striated muscle but lacks the regular sarcomeric organization (and therefore the troponin complex and visible cross-striations) of skeletal and cardiac muscle; its thin and thick filaments are instead anchored to dense bodies scattered through the cytoplasm and attached to the cell membrane, arranged somewhat obliquely so that contraction produces a corkscrew-like shortening of the whole spindle-shaped, uninucleated cell. Because smooth muscle lacks troponin, its calcium-dependent regulation instead operates through calmodulin and myosin light-chain kinase, a fundamentally different molecular switch from the troponin-tropomyosin system of striated muscle.",
+          "Cardiac muscle retains the sarcomeric organization and cross-striations of skeletal muscle (and uses the same troponin-based regulatory mechanism) but consists of shorter, branching, typically uninucleated or binucleated cells joined end-to-end at intercalated discs, whose gap junctions allow direct electrical coupling between cells — a feature entirely absent from skeletal muscle, where each fiber is electrically independent and contracts only in direct response to its own individual neuromuscular junction input."
         ]
       }
     ]
