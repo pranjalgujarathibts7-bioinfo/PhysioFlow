@@ -740,49 +740,66 @@
     ]
   },
   "lymphatic": {
-    "name": "Lymphatic / immune",
+    "name": "Lymphatic and Immune System",
     "icon": "🛡️",
-    "summary": "Defense and fluid balance",
+    "summary": "The vessels, nodes, and organs that return interstitial fluid to the bloodstream and coordinate innate and adaptive immune defense.",
     "physiology": [
       {
-        "heading": "Lymphatic fluid return",
+        "heading": "Lymphatic Fluid Return",
         "points": [
-          "Lymphatic capillaries collect excess interstitial fluid (as lymph) that isn't reabsorbed by blood capillaries, returning it to the venous circulation via the thoracic duct (draining most of the body) and the right lymphatic duct (draining the right upper body).",
-          "Lymph flow depends on skeletal muscle contraction, respiratory pressure changes, and one-way valves, since there is no central pumping organ analogous to the heart.",
-          "Failure of lymphatic drainage results in lymphedema, localized tissue swelling from fluid accumulation."
+          "Lymphatic capillaries — blind-ended, highly permeable vessels with overlapping endothelial cells that act as one-way microvalves — collect excess interstitial fluid (now termed lymph) that filtration from blood capillaries continuously produces but that venous reabsorption alone cannot fully reclaim. This lymph is progressively channeled through larger, valved lymphatic vessels and ultimately returned to the venous circulation via the thoracic duct (draining the lower body, left upper body, and most viscera) and the right lymphatic duct (draining the right arm, right chest, and right head/neck).",
+          "Because the lymphatic system has no central pumping organ analogous to the heart, lymph flow depends on extrinsic mechanisms (skeletal muscle contraction compressing adjacent lymphatic vessels, and respiratory pressure changes generating a pumping gradient) and an intrinsic mechanism (rhythmic contraction of smooth muscle within the walls of larger lymphatic vessels, termed lymphangions, each segment bounded by one-way valves that prevent retrograde flow) — together propelling lymph unidirectionally toward the thorax against gravity in much of the body.",
+          "Failure or obstruction of lymphatic drainage — whether from congenital malformation, surgical lymph node removal, radiation, or parasitic infection (filariasis) — results in lymphedema, a chronic, disfiguring accumulation of protein-rich interstitial fluid in the affected region, distinguished from other forms of edema by its high protein content (since ordinary venous/capillary-driven edema fluid is comparatively protein-poor)."
         ]
       },
       {
-        "heading": "Innate immunity",
+        "heading": "Innate Immunity",
         "points": [
-          "Innate immunity provides immediate, non-specific defense: physical/chemical barriers (skin, mucus, stomach acid), phagocytic cells (neutrophils, macrophages), natural killer cells, and the complement system.",
-          "Inflammation (heat, redness, swelling, pain) results from vasodilation and increased vascular permeability, recruiting immune cells to the site of injury/infection.",
-          "Pattern recognition receptors (e.g. Toll-like receptors) allow innate immune cells to recognize broad classes of pathogens without prior exposure."
+          "Innate immunity provides immediate, broadly reactive defense present from birth, without requiring prior exposure to a specific pathogen. Its components include physical/chemical barriers (intact skin, mucus, low gastric pH, lysozyme in tears/saliva), phagocytic cells (neutrophils, the first responders recruited to acute infection/inflammation; macrophages, longer-lived tissue-resident phagocytes), natural killer (NK) cells (which detect and kill virally infected or malignant cells lacking normal self MHC class I expression, without requiring prior sensitization), and the complement system.",
+          "Innate immune cells recognize broad, evolutionarily conserved molecular patterns common to many pathogens (pathogen-associated molecular patterns, PAMPs) via pattern recognition receptors such as Toll-like receptors — a strategy that trades pathogen specificity for immediate readiness, in contrast to adaptive immunity's highly specific but comparatively slow-to-develop response.",
+          "Inflammation — the cardinal signs being heat, redness, swelling, and pain — results from local vasodilation (increasing blood flow, causing heat and redness) and increased vascular permeability (allowing plasma proteins and immune cells to exit into the tissue, causing swelling), both driven by inflammatory mediators (histamine, prostaglandins, complement anaphylatoxins) released at the site of injury or infection; this coordinated vascular response is what recruits circulating immune cells to the site where they are needed."
         ]
       },
       {
-        "heading": "Adaptive immunity",
+        "heading": "The Complement System",
         "points": [
-          "Adaptive immunity is slower to develop initially but highly specific and generates immunological memory, mediated by B lymphocytes (humoral immunity, antibody production) and T lymphocytes (cell-mediated immunity).",
-          "Antigen-presenting cells (dendritic cells, macrophages) process and present antigen fragments via MHC molecules, activating antigen-specific T cell responses.",
-          "Helper T cells (CD4+) coordinate immune responses by activating B cells and cytotoxic T cells; cytotoxic T cells (CD8+) directly kill infected or abnormal cells.",
-          "Memory B and T cells persist after an initial immune response, enabling a faster, stronger response upon re-exposure to the same antigen (the basis of vaccination)."
+          "Complement is a system of roughly 30 plasma proteins (numbered C1-C9, along with regulatory factors) that, once activated, form an amplifying proteolytic cascade converging on three effector outcomes: opsonization (coating pathogen surfaces with complement fragments such as C3b, marking them for enhanced phagocytosis), generation of anaphylatoxins (C3a and C5a, small fragments that recruit and activate leukocytes and increase vascular permeability, directly contributing to the inflammatory response), and formation of the membrane attack complex (MAC, C5b-9), which inserts into and perforates the pathogen's membrane, causing osmotic lysis.",
+          "Three distinct pathways can initiate the complement cascade, converging on a shared terminal sequence: the classical pathway is triggered when C1q binds antibody (IgG or IgM) already bound to antigen — meaning it functionally links complement to the adaptive humoral immune response; the lectin pathway is triggered when mannose-binding lectin recognizes characteristic carbohydrate patterns on microbial surfaces, independent of antibody; and the alternative pathway is continuously and spontaneously initiated at a low background rate (a 'tick-over' mechanism) and becomes selectively amplified on pathogen surfaces that lack the host regulatory proteins that normally suppress it on healthy self cells.",
+          "All three pathways converge on the formation of a C3 convertase enzyme (which cleaves C3 into C3a and C3b, the central amplification step of the entire cascade) and subsequently a C5 convertase, initiating the shared terminal pathway culminating in MAC assembly — an architecture that allows complement to be triggered by multiple independent recognition strategies while relying on one common, well-regulated destructive endpoint."
+        ]
+      },
+      {
+        "heading": "Adaptive Immunity: T Cell Activation",
+        "points": [
+          "Adaptive immunity generates a highly specific response to a particular pathogen, is comparatively slow to develop on first exposure (days), but produces durable immunological memory. T lymphocytes recognize antigen only when it is presented as a short peptide fragment bound within a major histocompatibility complex (MHC) molecule on another cell's surface, rather than recognizing free/soluble antigen directly (unlike B cells).",
+          "MHC class I molecules, expressed on essentially all nucleated cells, present peptides derived from intracellular (cytosolic) proteins — including viral or tumor proteins actively being synthesized within the cell — to CD8+ cytotoxic T cells, allowing any infected or transformed cell in the body to signal its abnormal internal state to immune surveillance. MHC class II molecules, expressed only on professional antigen-presenting cells (dendritic cells, macrophages, B cells), present peptides derived from extracellular material that has been internalized and processed, to CD4+ helper T cells.",
+          "Full T cell activation requires two simultaneous signals: T cell receptor engagement with its specific peptide-MHC complex (signal one, providing specificity) and a co-stimulatory signal (signal two, most classically CD28 on the T cell binding B7 molecules on the antigen-presenting cell, confirming that the antigen-presenting cell is itself appropriately activated/dangerous). T cell receptor engagement without adequate co-stimulation produces anergy (functional unresponsiveness) rather than activation — a safeguard against inappropriate activation by self-antigens routinely presented on non-activated cells.",
+          "Activated CD4+ helper T cells coordinate the broader immune response by secreting cytokines that direct macrophage activation, B cell antibody class-switching, and cytotoxic T cell activation, differentiating into functionally distinct subsets (Th1, Th2, Th17, among others) according to the cytokine environment present during activation. Activated CD8+ cytotoxic T cells directly kill their target cell via perforin/granzyme-mediated apoptosis or Fas ligand engagement, providing the principal cellular defense against intracellular pathogens (particularly viruses) and malignant cells."
+        ]
+      },
+      {
+        "heading": "Adaptive Immunity: B Cell Activation and Affinity Maturation",
+        "points": [
+          "Naive B cells first encounter antigen — often captured and displayed intact on the surface of follicular dendritic cells or subcapsular sinus macrophages within a lymph node — via their B cell receptor (a membrane-bound antibody), triggering initial activation and antigen internalization/processing for presentation to helper T cells.",
+          "T cell-dependent B cell activation (required to generate the highest-affinity, longest-lasting antibody responses) requires the activated B cell to receive help from a cognate CD4+ T follicular helper cell recognizing the same antigen presented on the B cell's own MHC class II — driving the B cell to migrate into a lymphoid follicle and establish a germinal center.",
+          "Within the germinal center, B cells cycle between two functionally distinct zones: in the dark zone, rapidly proliferating B cells undergo somatic hypermutation, introducing random point mutations into their antibody variable-region genes; in the light zone, these mutated B cell clones compete for a strictly limited pool of antigen (displayed on follicular dendritic cells) and, critically, for limited T follicular helper cell interaction — since T cell help is preferentially provided to B cells presenting the greatest quantity of peptide-MHC complex, which correlates with how efficiently that B cell's newly mutated receptor can bind and capture antigen.",
+          "Repeated cycling between dark and light zones, with each round selecting for progressively higher-affinity B cell clones (while lower-affinity or self-reactive mutants are eliminated by apoptosis, since they fail to win T cell help), produces affinity maturation — antibody affinity for the original antigen increasing substantially over the course of an immune response, a cellular-level analog of Darwinian selection. Successful germinal center B cells ultimately differentiate into either long-lived plasma cells (which migrate to the bone marrow and continuously secrete high-affinity antibody) or memory B cells (which persist quiescently, poised for rapid, strong reactivation upon future re-exposure to the same antigen — the cellular basis of vaccination and long-term immunity)."
         ]
       }
     ],
     "histology": [
       {
-        "heading": "Lymph node structure",
+        "heading": "Lymph Node Structure",
         "points": [
-          "Lymph nodes have an outer cortex containing B cell-rich lymphoid follicles (some with germinal centers of actively proliferating B cells) and an inner medulla, filtering lymph as it percolates through sinuses lined with macrophages.",
-          "The paracortex, between cortex and medulla, is rich in T cells and dendritic cells, serving as a key site for antigen presentation."
+          "Lymph nodes are encapsulated, bean-shaped organs positioned along lymphatic vessels, organized into an outer cortex (containing B cell-rich lymphoid follicles — primary follicles being dense and quiescent, secondary follicles containing an active pale-staining germinal center as described in B cell activation physiology above), a paracortex between cortex and medulla (rich in T cells and dendritic cells, the principal site of T cell activation and T-B cell interaction), and an inner medulla (containing medullary cords of plasma cells and macrophages, and medullary sinuses through which lymph percolates on its way to the efferent lymphatic vessel).",
+          "Afferent lymphatic vessels enter the node at multiple points around its convex surface, draining lymph into the subcapsular sinus, from which it filters progressively inward through cortical and medullary sinuses (lined by sinus-lining macrophages that filter and sample the passing lymph for antigen and pathogens) before exiting via one or a few efferent lymphatic vessels at the node's hilum — the same site where the supplying artery enters and the draining vein exits."
         ]
       },
       {
-        "heading": "Spleen and thymus histology",
+        "heading": "Spleen and Thymus Histology",
         "points": [
-          "The spleen has red pulp (filters blood, removes aged/damaged erythrocytes, stores platelets) and white pulp (periarteriolar lymphoid sheaths and follicles, providing immune surveillance of blood-borne antigens).",
-          "The thymus is the site of T lymphocyte maturation and positive/negative selection, organized into a cortex (immature thymocytes undergoing selection) and medulla (more mature thymocytes); it is most active early in life and progressively involutes with age."
+          "The spleen's parenchyma is organized into red pulp and white pulp, readily distinguished on gross section by color. Red pulp consists of a meshwork of splenic sinusoids and cords (of Billroth), through which blood percolates slowly, allowing splenic macrophages to identify and remove aged, damaged, or antibody-opsonized erythrocytes and to recycle iron; the spleen also serves as a reservoir for platelets. White pulp consists of periarteriolar lymphoid sheaths (T cell-rich cuffs surrounding small splenic arterioles) and associated lymphoid follicles (B cell-rich, structurally and functionally analogous to lymph node follicles), together providing immune surveillance of blood-borne antigens — the spleen's unique role, since (unlike lymph nodes, which filter lymph) it is the primary lymphoid organ responsible for filtering and mounting immune responses against pathogens circulating in blood itself.",
+          "The thymus, the site of T lymphocyte development and selection, is organized into an outer cortex (densely packed with immature, proliferating thymocytes undergoing positive selection — testing whether their T cell receptor can weakly bind self-MHC, a prerequisite for functional utility) and an inner, paler-staining medulla (containing more mature thymocytes undergoing negative selection — eliminating those whose receptors bind self-antigen too strongly, preventing autoimmunity) along with characteristic epithelial whorls called Hassall's corpuscles, whose precise function remains incompletely understood but is thought to relate to regulatory T cell development. Thymic tissue is most abundant and active in early life, undergoing progressive involution (replacement by adipose tissue) with age — correlating with the well-documented decline in naive T cell output and adaptive immune responsiveness seen in older adults."
         ]
       }
     ]
