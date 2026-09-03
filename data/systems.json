@@ -805,48 +805,58 @@
     ]
   },
   "reproductive": {
-    "name": "Reproductive",
+    "name": "Reproductive System",
     "icon": "🌸",
-    "summary": "Reproduction and hormones",
+    "summary": "The organs and hormonal axes responsible for gamete production, sexual development, and reproduction.",
     "physiology": [
       {
-        "heading": "Hypothalamic-pituitary-gonadal axis",
+        "heading": "The Hypothalamic-Pituitary-Gonadal Axis and GnRH Pulse Coding",
         "points": [
-          "GnRH from the hypothalamus, released in a pulsatile fashion, stimulates LH and FSH release from the anterior pituitary.",
-          "In females, FSH stimulates ovarian follicle development and estrogen production; a mid-cycle LH surge (triggered by high estrogen via positive feedback) causes ovulation; the resulting corpus luteum secretes progesterone (and some estrogen) to maintain the uterine lining.",
-          "In males, LH stimulates testicular Leydig cells to produce testosterone; FSH acts on Sertoli cells to support and regulate spermatogenesis.",
-          "Continuous (non-pulsatile) GnRH exposure paradoxically suppresses the axis — the physiological basis for GnRH agonist therapies."
+          "Hypothalamic neurons (originating embryologically from the olfactory placode and migrating into the hypothalamus during development) secrete gonadotropin-releasing hormone (GnRH) in a pulsatile fashion into the hypophyseal portal circulation, stimulating gonadotroph cells of the anterior pituitary to release luteinizing hormone (LH) and follicle-stimulating hormone (FSH). Continuous, non-pulsatile GnRH exposure paradoxically suppresses rather than stimulates gonadotropin release (via receptor downregulation) — the physiological basis for GnRH agonist therapies used to achieve medical castration or suppress puberty.",
+          "The frequency of GnRH pulses differentially encodes the balance of LH versus FSH release: rapid pulse frequency preferentially promotes LH synthesis and secretion, while slower pulse frequency favors FSH — meaning the same hypothalamic hormone, through pulse-timing alone, can selectively bias pituitary output toward one gonadotropin or the other according to the body's current reproductive requirements.",
+          "Gonadal steroid and peptide hormones close the loop via negative feedback at both the hypothalamus and pituitary: testosterone (and its metabolites, estradiol and dihydrotestosterone) suppress GnRH and LH in men, while inhibin B, secreted by Sertoli cells (men) or granulosa cells (women) specifically in response to FSH, provides a second, LH-independent feedback signal that selectively suppresses FSH — allowing the axis to regulate LH and FSH secretion at least partially independently of one another."
         ]
       },
       {
-        "heading": "The menstrual cycle",
+        "heading": "Testicular Steroidogenesis and Spermatogenesis",
         "points": [
-          "The follicular phase (variable length) is characterized by rising estrogen from the developing dominant follicle, driving endometrial proliferation.",
-          "Ovulation occurs roughly at cycle midpoint, triggered by the LH surge.",
-          "The luteal phase (relatively fixed ~14 days) is dominated by progesterone from the corpus luteum, which prepares the endometrium for potential implantation; without fertilization/implantation, the corpus luteum regresses, hormone levels fall, and menstruation follows."
+          "LH binds G-protein-coupled receptors on Leydig cells (located in the testicular interstitium, outside the seminiferous tubules), activating adenylyl cyclase/cAMP signaling that drives cholesterol-derived testosterone synthesis; testosterone then acts locally (paracrine) at very high intratesticular concentration to support spermatogenesis, as well as systemically (endocrine) to mediate male secondary sexual characteristics and exert negative feedback on the axis.",
+          "FSH acts on Sertoli cells, the sole somatic cell type lining the seminiferous tubules, which do not themselves produce testosterone but instead express androgen receptors and depend on Leydig cell-derived testosterone (delivered locally at concentrations roughly 25-100 times higher than in peripheral blood) to support their function — including nourishing developing germ cells, secreting androgen-binding protein (concentrating testosterone within the tubule lumen), and forming the blood-testis barrier via tight junctions between adjacent Sertoli cells.",
+          "Spermatogenesis proceeds through a defined sequence within the seminiferous tubule epithelium, progressing from the basal compartment (outside the blood-testis barrier) toward the luminal compartment (inside it): spermatogonia (diploid stem cells) undergo mitotic division and differentiate into primary spermatocytes, which cross the blood-testis barrier (via transient, dynamically remodeled Sertoli-Sertoli junctions) and complete meiosis I to form secondary spermatocytes, then meiosis II to form haploid spermatids. Spermatids undergo spermiogenesis — a dramatic morphological transformation (acrosome formation, flagellum development, cytoplasm shedding) without further division — to become mature spermatozoa, a process taking roughly 64-72 days from spermatogonium to mature sperm release into the tubule lumen (spermiation).",
+          "The blood-testis barrier serves a critical immunological function beyond simply compartmentalizing the maturation process: because haploid spermatids and spermatozoa first appear at puberty, long after immune self-tolerance has been established, their surface antigens would otherwise be recognized as foreign; the barrier sequesters these developing germ cells from the immune system, and its disruption (e.g., by trauma or infection) can trigger autoimmune antisperm antibody formation."
         ]
       },
       {
-        "heading": "Gametogenesis",
+        "heading": "Ovarian Steroidogenesis: The Two-Cell, Two-Gonadotropin Theory",
         "points": [
-          "Spermatogenesis occurs continuously from puberty onward within the seminiferous tubules, progressing through spermatogonia, primary/secondary spermatocytes, spermatids, and mature spermatozoa, taking roughly 64-72 days.",
-          "Oogenesis begins during fetal development, with oocytes arrested in prophase of meiosis I until puberty; typically one oocyte per cycle resumes and completes meiosis I (arresting again in meiosis II) around ovulation, only completing meiosis II if fertilized."
+          "Estrogen synthesis within the developing ovarian follicle requires the coordinated action of two distinct cell layers, each responding to a different gonadotropin — the two-cell, two-gonadotropin theory. LH receptors are expressed on theca interna cells (the outer follicular layer), where LH stimulates cholesterol-derived androgen synthesis (chiefly androstenedione, with a smaller contribution of testosterone).",
+          "These theca-derived androgens diffuse across the basement membrane into the granulosa cell layer (the inner follicular layer immediately surrounding the oocyte, which — unlike theca cells — has no direct blood supply and instead depends entirely on diffusion for its precursor substrate), where FSH stimulates aromatase enzyme activity, converting the theca-derived androgens into estrone and then estradiol. This division of labor means neither cell layer alone can efficiently produce estrogen — theca cells lack significant aromatase activity, while granulosa cells (particularly early in folliculogenesis) have limited independent access to androgen substrate — making follicular estrogen synthesis intrinsically dependent on synchronized LH and FSH signaling.",
+          "As a dominant follicle matures and its granulosa cell mass expands, follicular estradiol output rises; low-to-moderate estradiol concentrations exert negative feedback on pituitary LH/FSH release (as in the earlier follicular phase), but once estradiol sustains a sufficiently high concentration for approximately 48 hours, the direction of feedback reverses — the same hormone now exerts positive feedback, increasing GnRH pulse frequency and triggering the LH surge that initiates ovulation, a switch in feedback polarity unique to the estrogen-gonadotropin relationship in the periovulatory window.",
+          "Following the LH surge, granulosa cells undergo luteinization (acquiring LH receptors and shifting their steroidogenic output from estrogen toward progesterone), and the ruptured follicle reorganizes into the corpus luteum, which secretes progesterone (with continued estrogen contribution) to maintain the secretory endometrium; absent fertilization/implantation, the corpus luteum regresses (luteolysis) after roughly 14 days, progesterone and estrogen levels fall, and menstruation follows as the hormonally-dependent endometrial lining is shed."
+        ]
+      },
+      {
+        "heading": "Oogenesis and Folliculogenesis",
+        "points": [
+          "Unlike the continuous, demand-driven production of spermatogenesis, oogenesis begins during fetal development, when oogonia undergo mitotic proliferation and then enter meiosis I, arresting in prophase I (specifically the diplotene stage) — a suspended state that can persist for decades, meaning the oocyte ovulated in a woman's fourth decade of life has technically been arrested in meiosis since before her own birth.",
+          "Each menstrual cycle, a cohort of primordial follicles (each a primary oocyte surrounded by a single layer of flattened granulosa cells) is recruited into active growth; as the follicle enlarges, granulosa cells proliferate and a theca cell layer differentiates from surrounding stroma (forming the secondary follicle), and a fluid-filled antral cavity eventually develops (forming the mature Graafian follicle) — though typically only one follicle per cycle (the dominant follicle, selected based on superior FSH sensitivity/granulosa cell mass) completes this process while the remainder undergo atresia (programmed regression).",
+          "The primary oocyte only resumes and completes meiosis I (extruding the first polar body, a means of discarding half the chromosomal material without discarding needed cytoplasmic organelles/nutrients) immediately before ovulation, in response to the LH surge; the resulting secondary oocyte then immediately begins meiosis II, but arrests again — this time at metaphase II — and this second arrest is only released if fertilization actually occurs, meaning meiosis II is completed by the zygote (in the presence of the fertilizing sperm), not by the unfertilized egg alone."
         ]
       }
     ],
     "histology": [
       {
-        "heading": "Testicular histology",
+        "heading": "Testicular Histology",
         "points": [
-          "Seminiferous tubules are lined by a complex, stratified epithelium of developing germ cells at sequential maturation stages, interspersed with Sertoli (supporting) cells that nourish developing sperm and form the blood-testis barrier.",
-          "Leydig cells, located in the interstitial tissue between tubules, produce testosterone under LH stimulation."
+          "Seminiferous tubules are lined by a complex, stratified germinal epithelium containing developing germ cells at every stage of spermatogenesis simultaneously, arranged in a spatial gradient from the basal lamina (spermatogonia) toward the tubule lumen (mature spermatids) — interspersed among tall, columnar Sertoli cells, which extend from the basal lamina to the lumen and whose lateral tight junctions with neighboring Sertoli cells constitute the physical blood-testis barrier described in spermatogenesis physiology above.",
+          "Leydig cells occupy the interstitial connective tissue between adjacent seminiferous tubules; they are large, polygonal, eosinophilic cells with abundant smooth endoplasmic reticulum (consistent with their steroidogenic function) and are frequently found in small clusters closely associated with testicular capillaries and lymphatics."
         ]
       },
       {
-        "heading": "Ovarian histology",
+        "heading": "Ovarian Histology",
         "points": [
-          "Ovarian follicles at different developmental stages (primordial, primary, secondary, mature/Graafian) are found within the ovarian cortex, each comprising an oocyte surrounded by granulosa cells (and later, theca cells).",
-          "The corpus luteum, formed from the ruptured follicle after ovulation, is a temporary endocrine structure with large, lipid-rich luteal cells producing progesterone."
+          "The ovarian cortex contains follicles at every stage of development simultaneously: primordial follicles (a primary oocyte with a single flattened granulosa cell layer, the resting pool from which each cycle's cohort is recruited), primary follicles (granulosa cells become cuboidal and proliferate into multiple layers, and the zona pellucida — a glycoprotein layer mediating sperm-egg recognition — first appears around the oocyte), secondary follicles (a theca cell layer differentiates external to the granulosa, and the follicle continues to enlarge), and the mature Graafian follicle (a fluid-filled antral cavity has formed within the granulosa cell mass, with the oocyte itself displaced eccentrically within a granulosa cell mound called the cumulus oophorus).",
+          "Following ovulation, the corpus luteum is a temporary but substantial endocrine structure formed from the collapsed follicle wall, dominated by large, lipid-rich luteinized granulosa cells (producing progesterone, with a lower-volume contribution from luteinized theca cells producing androgens/estrogen precursor); if pregnancy does not occur, the corpus luteum regresses over roughly two weeks into a fibrous scar, the corpus albicans."
         ]
       }
     ]
