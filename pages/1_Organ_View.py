@@ -264,7 +264,7 @@ with col_3d:
                 i=faces[:, 0], j=faces[:, 1], k=faces[:, 2],
                 color="#EAE0C8",
                 lighting=dict(ambient=0.5, diffuse=0.85, specular=0.3, roughness=0.5),
-                hoverinfo="x+y+z",
+                hoverinfo="skip",
             )])
             all_skel_landmarks = real_skeletal_landmarks()
             landmarks = all_skel_landmarks[6:]
@@ -569,20 +569,185 @@ with col_info:
 
     btn_col1, btn_col2 = st.columns(2)
 
+       # ------------------ ORIGINAL TEXT DISPLAY UP TOP ------------------
+    # Reverted back to your 2-column selector profile for clean text navigation
+    btn_col1, btn_col2 = st.columns(2)
+
     with btn_col1:
-        if st.button("🔬 Physiology", use_container_width=True):
+        if st.button("🫁 Physiology", use_container_width=True):
             st.session_state["info_panel"] = "physiology"
 
     with btn_col2:
-        if st.button("🧫 Histology", use_container_width=True):
+        if st.button("🔬 Histology", use_container_width=True):
             st.session_state["info_panel"] = "histology"
+
+    panel_mode = st.session_state.get("info_panel", "physiology")
+    
+    # Ensure it cleanly defaults to your classic text layout if flashcards were left active
+    if panel_mode not in ["physiology", "histology"]:
+        panel_mode = "physiology"
 
     content_box = st.container(height=520, border=True)
 
     with content_box:
-        if st.session_state["info_panel"] == "physiology":
-            render_sections(sysdata.get("physiology"))
-        elif st.session_state["info_panel"] == "histology":
-            render_sections(sysdata.get("histology"))
+        if panel_mode == "physiology":
+            render_sections(sysdata.get("physiology", []))
+        elif panel_mode == "histology":
+            render_sections(sysdata.get("histology", []))
+
+
+# ==============================================================================
+# 2. NEW ACTIVE RECALL STUDIO (Appended stacked vertically down below)
+# ==============================================================================
+st.divider()
+st.markdown("## 🧠 Active Recall Studio")
+st.caption("Test your clinical knowledge and build active recall items for this organ system.")
+
+# ------------------ 1. FLASHCARDS PANEL (TOP) ------------------
+st.subheader("🎴 Flashcards")
+
+if "custom_flashcards" not in st.session_state:
+    st.session_state["custom_flashcards"] = {}
+if selected not in st.session_state["custom_flashcards"]:
+    st.session_state["custom_flashcards"][selected] = []
+    
+stock_cards = sysdata.get("flashcards", [])
+user_cards = st.session_state["custom_flashcards"][selected]
+all_cards = stock_cards + user_cards
+
+with st.expander("➕ Create Your Own Custom Flashcard"):
+    with st.form("custom_card_form", clear_on_submit=True):
+        new_front = st.text_input("Card Question / Front Side:")
+        new_back = st.text_area("Card Answer / Back Side:")
+        submit_card = st.form_submit_button("Save Card to Deck", use_container_width=True)
+        
+        if submit_card:
+            if new_front.strip() and new_back.strip():
+                st.session_state["custom_flashcards"][selected].append({
+                    "front": new_front.strip(),
+                    "back": new_back.strip()
+                })
+                st.success("🎉 Custom card added to your review deck!")
+                st.rerun()
+            else:
+                st.error("Please fill out both the front and back fields.")
+
+if not all_cards:
+    st.info("No flashcards found for this system.")
+else:
+    fc_idx_key = f"fc_idx_{selected}"
+    fc_flip_key = f"fc_flip_{selected}"
+    
+    if fc_idx_key not in st.session_state:
+        st.session_state[fc_idx_key] = 0
+        st.session_state[fc_flip_key] = False
+        
+    idx = st.session_state[fc_idx_key]
+    if idx >= len(all_cards):
+        idx = 0
+        st.session_state[fc_idx_key] = 0
+        
+    current_card = all_cards[idx]
+    
+    st.caption(f"Card {idx + 1} of {len(all_cards)}")
+    st.progress((idx + 1) / len(all_cards))
+    
+    with st.container(border=True):
+        if not st.session_state[fc_flip_key]:
+            st.markdown(f"<div style='min-height:140px; display:flex; align-items:center; justify-content:center;'><p class='flashcard-text' style='color:#E2E8F0;'>🔍 {current_card['front']}</p></div>", unsafe_allow_html=True)
+            if st.button("🔄 Reveal Answer", key=f"flip_{selected}_{idx}", use_container_width=True):
+                st.session_state[fc_flip_key] = True
+                st.rerun()
         else:
-            st.caption("Select Physiology or Histology to view detailed content.")
+            st.markdown(f"<div style='min-height:140px; display:flex; align-items:center; justify-content:center; background-color:#1E3A8A; border-radius:8px;'><p class='flashcard-text' style='color:#38BDF8;'>💡 {current_card['back']}</p></div>", unsafe_allow_html=True)
+            if st.button("🔄 Show Question", key=f"unflip_{selected}_{idx}", use_container_width=True):
+                st.session_state[fc_flip_key] = False
+                st.rerun()
+    
+    c1, c2 = st.columns(2)
+    with c1:
+        if st.button("⬅️ Previous Card", key=f"prev_fc_{selected}", disabled=(idx == 0), use_container_width=True):
+            st.session_state[fc_idx_key] -= 1
+            st.session_state[fc_flip_key] = False
+            st.rerun()
+    with c2:
+        if st.button("Next Card ➡️", key=f"next_fc_{selected}", disabled=(idx == len(all_cards) - 1), use_container_width=True):
+            st.session_state[fc_idx_key] += 1
+            st.session_state[fc_flip_key] = False
+            st.rerun()
+
+
+# Small separator spacing between tools
+st.markdown("<br><hr><br>", unsafe_allow_html=True)
+
+
+# ------------------ 2. PRACTICE QUIZ PANEL (BOTTOM) ------------------
+st.subheader("🧠 Multiple Choice Quiz")
+quiz_data = sysdata.get("quiz", {})
+
+difficulty = st.selectbox("🎯 Choose Challenge Level:", ["Level 1: Easy", "Level 2: Medium", "Level 3: Hard"])
+level_map = {"Level 1: Easy": "level1", "Level 2: Medium": "level2", "Level 3: Hard": "level3"}
+level_key = level_map[difficulty]
+
+quiz_questions = quiz_data.get(level_key, []) if isinstance(quiz_data, dict) else []
+
+if not quiz_questions:
+    st.info(f"No questions configured for {difficulty} yet.")
+else:
+    q_idx_key = f"q_idx_{selected}_{level_key}"
+    q_score_key = f"q_score_{selected}_{level_key}"
+    q_ans_key = f"q_ans_{selected}_{level_key}"
+    q_choices_key = f"q_choices_{selected}_{level_key}"
+    
+    if q_idx_key not in st.session_state:
+        st.session_state[q_idx_key] = 0
+        st.session_state[q_score_key] = 0
+        st.session_state[q_ans_key] = False
+        
+    q_idx = st.session_state[q_idx_key]
+    
+    if q_idx >= len(quiz_questions):
+        st.success(f"🏆 {difficulty} Complete! Final Score: {st.session_state[q_score_key]}/{len(quiz_questions)}")
+        if st.button("🔄 Restart Level", key=f"restart_{selected}_{level_key}", use_container_width=True):
+            st.session_state[q_idx_key] = 0
+            st.session_state[q_score_key] = 0
+            st.session_state[q_ans_key] = False
+            st.rerun()
+    else:
+        current_q = quiz_questions[q_idx]
+        
+        import random
+        state_choice_key = f"{q_choices_key}_{q_idx}"
+        if state_choice_key not in st.session_state:
+            shuffled = list(current_q['choices'])
+            random.shuffle(shuffled)
+            st.session_state[state_choice_key] = shuffled
+        
+        display_choices = st.session_state[state_choice_key]
+        
+        st.markdown(f"### **Question {q_idx + 1}:** {current_q['question']}")
+        
+        user_choice = st.radio(
+            "Select your answer choice below:",
+            display_choices,
+            key=f"radio_{selected}_{level_key}_{q_idx}"
+        )
+        
+        if not st.session_state[q_ans_key]:
+            if st.button("Submit Answer", key=f"submit_{selected}_{level_key}_{q_idx}", use_container_width=True):
+                st.session_state[q_ans_key] = True
+                if user_choice == current_q['correct']:
+                    st.session_state[q_score_key] += 1
+                st.rerun()
+        else:
+            if user_choice == current_q['correct']:
+                st.success("✨ Correct Answer!")
+            else:
+                st.error(f"❌ Incorrect. The correct answer was: {current_q['correct']}")
+                
+            st.info(f"💡 *Rationale:* {current_q.get('explanation', '')}")
+            
+            if st.button("Next Question ➡️", key=f"next_q_{selected}_{level_key}_{q_idx}", use_container_width=True):
+                st.session_state[q_idx_key] += 1
+                st.session_state[q_ans_key] = False
+                st.rerun()

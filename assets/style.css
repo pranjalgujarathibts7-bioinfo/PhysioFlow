@@ -14,3 +14,24 @@ h1, h2, h3 {
 p, span, label, div {
     color: #F5EDE8;
 }
+
+/* Make quiz questions and options highly visible */
+.stRadio label p {
+    font-size: 1.15rem !important;
+    font-weight: 500 !important;
+    color: #F8FAFC !important;
+}
+
+/* Enlarge the main question text */
+div[data-testid="stMarkdownContainer"] p strong {
+    font-size: 1.25rem !important;
+    line-height: 1.6 !important;
+}
+
+/* Give flashcards a clean, high-contrast text sizing */
+.flashcard-text {
+    font-size: 1.3rem !important;
+    font-weight: bold !important;
+    line-height: 1.5 !important;
+    text-align: center;
+}
