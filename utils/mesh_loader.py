@@ -371,44 +371,6 @@ def load_upper_body_system():
 def load_endocrine_system():
     base = "models/endocrine/"
     files = {
-        "pituitary": "FMA13889",
-        "adrenal_R": "FMA15629",
-        "adrenal_L": "FMA15630",
-        "thymus_R": "FMA71194",
-        "thymus_L": "FMA71195",
-        "pineal": "FMA62033",
-        "hypothalamus": "FMA62008nsn",
-    }
-
-    def path(fid):
-        return f"{base}{fid}.stl"
-
-    meshes = {k: trimesh.load(path(v), force="mesh") for k, v in files.items()}
-    all_verts = np.vstack([m.vertices for m in meshes.values()])
-    center = all_verts.mean(axis=0)
-    scale = np.abs(all_verts - center).max()
-
-    def process(mesh):
-        v = (mesh.vertices - center) / scale
-        f = mesh.faces
-        return {
-            "x": v[:, 0].tolist(), "y": v[:, 1].tolist(), "z": v[:, 2].tolist(),
-            "i": f[:, 0].tolist(), "j": f[:, 1].tolist(), "k": f[:, 2].tolist(),
-        }
-
-    result = {k: process(m) for k, m in meshes.items()}
-
-    # Thyroid cartilage as placement anchor for the stylized thyroid (not rendered itself)
-    cartilage = trimesh.load(path("FMA55099"), force="mesh")
-    anchor = ((cartilage.vertices.mean(axis=0) - center) / scale).tolist()
-    result["_thyroid_anchor"] = anchor
-
-    return result
-
-@st.cache_resource
-def load_endocrine_system():
-    base = "models/endocrine/"
-    files = {
         "pituitary": "FMA13889", "adrenal_R": "FMA15629", "adrenal_L": "FMA15630",
         "thymus_R": "FMA71194", "thymus_L": "FMA71195", "pineal": "FMA62033",
         "hypothalamus": "FMA62008nsn", "testis_R": "FMA7211", "testis_L": "FMA7212",

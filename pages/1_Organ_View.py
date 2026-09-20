@@ -58,6 +58,13 @@ load_css("assets/style.css")
 with open("data/systems.json", encoding="utf-8") as f:
     systems = json.load(f)
 
+# --- NEW: bridge query-param navigation from the front-page hero (?system=...) ---
+# into session_state, so links/clicks coming from front.py land on the right system.
+query_system = st.query_params.get("system")
+if query_system and query_system in systems:
+    st.session_state["selected_system"] = query_system
+# --- end new block ---
+
 selected = st.session_state.get("selected_system")
 
 if selected is None or selected not in systems:
@@ -65,6 +72,9 @@ if selected is None or selected not in systems:
     st.stop()
 
 sysdata = systems[selected]
+
+if st.button("← All systems", key="back_to_systems"):
+    st.switch_page("pages/0_Organ_Systems.py")
 
 st.markdown(f"## {sysdata['icon']} {sysdata['name']}")
 st.write(sysdata["summary"])
@@ -567,8 +577,6 @@ with col_info:
     if "info_panel" not in st.session_state:
         st.session_state["info_panel"] = None
 
-    btn_col1, btn_col2 = st.columns(2)
-
        # ------------------ ORIGINAL TEXT DISPLAY UP TOP ------------------
     # Reverted back to your 2-column selector profile for clean text navigation
     btn_col1, btn_col2 = st.columns(2)
@@ -654,12 +662,12 @@ else:
     
     with st.container(border=True):
         if not st.session_state[fc_flip_key]:
-            st.markdown(f"<div style='min-height:140px; display:flex; align-items:center; justify-content:center;'><p class='flashcard-text' style='color:#E2E8F0;'>🔍 {current_card['front']}</p></div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='min-height:140px; display:flex; align-items:center; justify-content:center;'><p class='flashcard-text' style='color:#F5EDE8;'>🔍 {current_card['front']}</p></div>", unsafe_allow_html=True)
             if st.button("🔄 Reveal Answer", key=f"flip_{selected}_{idx}", use_container_width=True):
                 st.session_state[fc_flip_key] = True
                 st.rerun()
         else:
-            st.markdown(f"<div style='min-height:140px; display:flex; align-items:center; justify-content:center; background-color:#1E3A8A; border-radius:8px;'><p class='flashcard-text' style='color:#38BDF8;'>💡 {current_card['back']}</p></div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='min-height:140px; display:flex; align-items:center; justify-content:center; background-color:#2E211C; border-radius:8px; border:1px solid #4A3831;'><p class='flashcard-text' style='color:#F5EDE8;'>💡 {current_card['back']}</p></div>", unsafe_allow_html=True)
             if st.button("🔄 Show Question", key=f"unflip_{selected}_{idx}", use_container_width=True):
                 st.session_state[fc_flip_key] = False
                 st.rerun()
@@ -727,18 +735,30 @@ else:
         
         st.markdown(f"### **Question {q_idx + 1}:** {current_q['question']}")
         
+        # --- CHANGED: index=None so no answer is pre-selected; user must actively pick one ---
         user_choice = st.radio(
             "Select your answer choice below:",
             display_choices,
+            index=None,
             key=f"radio_{selected}_{level_key}_{q_idx}"
         )
+        # --- end change ---
         
         if not st.session_state[q_ans_key]:
-            if st.button("Submit Answer", key=f"submit_{selected}_{level_key}_{q_idx}", use_container_width=True):
+            # --- CHANGED: submit is disabled until the user picks an answer ---
+            if st.button(
+                "Submit Answer",
+                key=f"submit_{selected}_{level_key}_{q_idx}",
+                use_container_width=True,
+                disabled=(user_choice is None),
+            ):
                 st.session_state[q_ans_key] = True
                 if user_choice == current_q['correct']:
                     st.session_state[q_score_key] += 1
                 st.rerun()
+            if user_choice is None:
+                st.caption("Pick an answer above to enable Submit.")
+            # --- end change ---
         else:
             if user_choice == current_q['correct']:
                 st.success("✨ Correct Answer!")

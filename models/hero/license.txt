@@ -1,0 +1,11 @@
+Model: organs.glb (front-page hero — brain, heart, lungs, liver, kidneys L/R,
+spleen, pancreas, small intestine, large intestine, bladder)
+
+Source: HuBMAP Human Reference Atlas (derived from the Visible Human Project)
+License: CC BY 4.0
+
+Redistributed via the anatomy-3d-viewer project (esma-dev-studio), which
+packaged and mutually aligned these organ meshes to a shared torso frame:
+https://github.com/esma-dev-studio/anatomy-3d-viewer
+
+Attribution required on redistribution/display per CC BY 4.0.
